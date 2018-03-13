@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="BillHarlOff">
+	<meta name="author" content="Taqi Raza Khan">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BillHarlOff</title>
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/second_style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Navbar Default -->
+	<header>
+		<div class="container topheader">
+			<div class="row">
+				<div class="col-md-6 col-sm-8">
+					<ul class="left-list">
+						<li>
+							<a href="">
+								<i class="fa fa-clock-o"></i>
+								24/7 Availible
+							</a>
+						</li>
+						<li>
+							<a href="tel:+000098374888">
+								<i class="fa fa-phone"></i>
+								+000098374-888
+							</a>
+						</li>
+						<li>
+							<a href="mailto:info@billharloff.com">
+								<i class="fa fa-envelope"></i>
+								info@billharloff.com
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-sm-4">
+					<ul class="right-list">
+						<li>
+							<a href="">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-google"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</header>
+
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt="BillHarlOff" class="img-responsive"></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      	<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="coaching.html">COACHING</a></li>
+				<li><a href="courses.html">COURSES</a></li>
+				<li><a href="events.html">EVENTS</a></li>
+				<li><a href="contact.html">Contacts</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav pull-right nav2">
+		    	<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="fa fa-bars"></span>
+						<span class="visibility-hidden">Less <i class="fa fa-times"></i></span>
+					</a>
+					<ul class="dropdown-menu pull-left nav2">
+					  <li><a href="#">SUCCESS STORIES</a></li>
+					  <li><a href="#">SELF ASSESSMENTS</a></li>
+					  <li><a href="#">GROWTH SOLUTIONS</a></li>
+					  <li><a href="#">MEDIA LIBRARY</a></li>
+					  <li class="seprator"><a href="#"></a></li>
+					  <li><a href="#">BREAKTHROUGH MOBILE</a></li>
+					  <li><a href="#">GET INVOLVED</a></li>
+					  <li><a href="#">WE’RE HIRING</a></li>
+					  <li><a href="#">TERMS OF SERVICE</a></li>
+					  <li><a href="#">PRIVACY POLICY</a></li>
+					</ul>
+				</li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="clearfix"></div>
+
+
+	<section class="webinar_banner">
+		<div class="container">
+			<div class="col-md-6 col-sm-12 pull-right text-center text-white bg_transparent_op">
+				<h3 class="active">Free Training Webinar Reveals...</h3>
+				<h2 class="section_head_inner2">The Complete Short Sales Process</h2>
+				<h2 class="subhead">How to Make Money Instantly by Investing in Real Estate</h2>
+				<button class="btn btn-block btn-info claim-btn">CLAIM MY SPOT NOW</button>
+				<p>* Only 250 spots are available for this webinar, so claim yours now! *</p>
+			</div>
+		</div>
+	</section>
+	<div class="clearfix"></div>
+	
+	<section class="webinar_dates text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="col-md-4 nopaddingleft">
+						<i class="fa fa-calendar fa-5x"></i>
+					</div>
+					<div class="col-md-8">
+						<div class="event_day">Test Webinar: Thursday, March 22nd</div>
+						<p class="inner_event"><strong>3:00 PM EST, 12:00 PM PST</strong></p>
+						
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-4 nopaddingleft">
+						<i class="fa fa-users fa-5x"></i>
+					</div>
+					<div class="col-md-8">
+						<div class="event_day">Only 250 Spots Available</div>
+						<p class="inner_event">Reserve Yours Now!</p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<div class="clearfix"></div>
+
+	<section class="comming_soon bg-info">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="section_head_inner text-white font_play">This Webinar Starts In</div>
+
+				<div class="widget">
+				    <div class="lp-countdown">
+				        <div class="countdown-container">
+				            <div class="time-section-wrap">
+				                <div class="time-section">
+				                    <div class="time-wrapper"> <span class="days">0</span> </div>
+				                    <div class="time-name">Days</div>
+				                </div>
+				            </div>
+				            <div class="time-section-wrap">
+				                <div class="time-section">
+				                    <div class="time-wrapper"> <span class="hours">0</span> </div>
+				                    <div class="time-name">Hours</div>
+				                </div>
+				            </div>
+				            <div class="time-section-wrap">
+				                <div class="time-section">
+				                    <div class="time-wrapper"> <span class="minutes">0</span> </div>
+				                    <div class="time-name">Minutes</div>
+				                </div>
+				            </div>
+				            <div class="time-section-wrap">
+				                <div class="time-section">
+				                    <div class="time-wrapper"> <span class="seconds">0</span> </div>
+				                    <div class="time-name">Seconds</div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="clearfix"></div>
+
+	<section class="free_webinar">
+		<div class="container">
+			<div class="col-md-12 text-center">
+				<h2 class="section_head_inner font_play">This <strong>Free Webinar</strong> Will Show You:</h2>
+			</div>
+			<div class="col-md-12 webinar_area">
+				<div class="col-md-4 form-group">
+					<div class="webinar_image text-center">
+						<img src="{% static 'images/webinar_image1.jpg' %}" alt="" class="img-responsive">
+						<h2 class="active"><strong>Tip #1</strong></h2>
+						<div class="webinar_text_area">
+                            <ol><li>If you’re not embarrassed by your offer, you’ve offered too much</li>
+                            <li>Know your exit strategy, before you buy the property</li>
+                                <li>3: Know your After Repair Value (ARV)</li></ol>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 form-group">
+					<div class="webinar_image text-center">
+						<img src="{% static 'images/webinar_image2.jpg' %}" alt="" class="img-responsive">
+						<h2 class="active"><strong>Tip #2</strong></h2>
+						<div class="webinar_text_area">
+							The exact lead magnet (or "opt-in bribe") you should be giving away to grow your email list fast.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 form-group">
+					<div class="webinar_image text-center">
+						<img src="{% static 'images/webinar_image3.jpg' %}" alt="" class="img-responsive">
+						<h2 class="active"><strong>Tip #3</strong></h2>
+						<div class="webinar_text_area">
+							How to create a 1-page dashboard to easily monitor the health and growth of your business.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12 text-center">
+				<div class="free_bonus"><strong> Plus FREE Registration Bonus:</strong>Register….. send you the Offer to Purchase and Contract for Short Sales - an essential document for successful Short Sale Investing we’ll be covering in the webinar!</div>
+
+				<button class="btn btn-info claim-btn2">CLAIM MY SPOT NOW</button>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="col-md-5">
+				<div class="follow-us">FOLLOW US <br> ON FACEBOOK</div>
+			</div>
+			<div class="col-md-7">
+				<p class="copy-rights">©2018 • PRIVACY POLICY</p>
+			</div>
+			<div class="company-info">BILL HARLOFF, MOTIVATOR & MENTOR</div>
+		</div>
+	</footer>
+	
+	<script src="{% static 'js/moment.min.js' %}"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/fullcalendar.min.js' %}"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+			 $(".dropdown-toggle").click(function(){
+			 	$(".visibility-hidden").toggle();
+			 	$(".fa-bars").toggle();
+			 });  				 
+  		});
+    </script>
+
+    <script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      defaultDate: '2018-03-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2018-03-01'
+        },
+        
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-09T16:00:00'
+        },
+        
+        {
+          title: 'Birthday Party',
+          start: '2018-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Web',
+          url: 'http://www.taqirazakhan.com/',
+          start: '2018-03-28'
+        }
+      ]
+    });
+
+  });
+
+</script>
+    
+</body>
+</html>
