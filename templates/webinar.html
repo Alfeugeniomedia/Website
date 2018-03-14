@@ -81,12 +81,12 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      	<ul class="nav navbar-nav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="coaching.html">COACHING</a></li>
-				<li><a href="courses.html">COURSES</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-				<li><a href="contact.html">Contacts</a></li>
+
+				<li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'coaching' %}">COACHING</a></li>
+                <li><a href="{% url 'courses' %}">COURSES</a></li>
+                <li><a href="{% url 'events' %}">EVENTS</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
 		    </ul>
 		    <ul class="nav navbar-nav pull-right nav2">
 		    	<li class="dropdown">
@@ -120,7 +120,7 @@
 				<h3 class="active">Free Training Webinar Reveals...</h3>
 				<h2 class="section_head_inner2">The Complete Short Sales Process</h2>
 				<h2 class="subhead">How to Make Money Instantly by Investing in Real Estate</h2>
-				<button class="btn btn-block btn-info claim-btn">CLAIM MY SPOT NOW</button>
+                <button class="btn btn-block btn-info claim-btn"><a href="https://mailchi.mp/f36c084e14f5/gzg2ljh52m">CLAIM MY SPOT NOW</a></button>
 				<p>* Only 250 spots are available for this webinar, so claim yours now! *</p>
 			</div>
 		</div>
@@ -136,7 +136,7 @@
 					</div>
 					<div class="col-md-8">
 						<div class="event_day">Test Webinar: Thursday, March 22nd</div>
-						<p class="inner_event"><strong>3:00 PM EST, 12:00 PM PST</strong></p>
+						<p class="inner_event"><strong>2:00 PM EST, 12:00 PM PST</strong></p>
 						
 					</div>
 				</div>
@@ -237,7 +237,7 @@
 			<div class="col-md-12 text-center">
 				<div class="free_bonus"><strong> Plus FREE Registration Bonus:</strong>Register….. send you the Offer to Purchase and Contract for Short Sales - an essential document for successful Short Sale Investing we’ll be covering in the webinar!</div>
 
-				<button class="btn btn-info claim-btn2">CLAIM MY SPOT NOW</button>
+				<button class="btn btn-info claim-btn2"><a href="https://mailchi.mp/f36c084e14f5/gzg2ljh52m">CLAIM MY SPOT NOW</a></button>
 			</div>
 		</div>
 	</section>
@@ -261,7 +261,7 @@
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
     <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 1, 2018 23:00:25").getTime();
+var countDownDate = new Date("March 22, 2018 14:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
