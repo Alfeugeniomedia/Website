@@ -131,13 +131,67 @@
 
 
 
+
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+					<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ <script>
+ 
+ $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:2,
+        itemsDesktop:[1000,2],
+        itemsDesktopSmall:[979,2],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:false,
+        autoplay:true
+    });
+});
+ 
+ 
+ 
+ 
+ </script>
+
       
 
 
 
                     <!--  Carousel Slider -->
 
-
+					<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<div id="testimonial-slider" class="owl-carousel">
+										<div class="testimonial">
+											<div class="pic">
+												<img src="images/img-1.jpg">
+											</div>
+											<h3 class="title">Williamson</h3>
+											<span class="post">Web Developer</span>
+											<p class="description">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit arcu sed scelerisque auctor. Vestibulum justo enim, dapibus sed magna sed, consequat accumsan nunc. Vivamus.
+											</p>
+										</div>
+						 
+										<div class="testimonial">
+											<div class="pic">
+												<img src="images/img-2.jpg">
+											</div>
+											<h3 class="title">Kristina</h3>
+											<span class="post">Web Designer</span>
+											<p class="description">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit arcu sed scelerisque auctor. Vestibulum justo enim, dapibus sed magna sed, consequat accumsan nunc. Vivamus.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
 
                     <!--  Carousel Slider -->
