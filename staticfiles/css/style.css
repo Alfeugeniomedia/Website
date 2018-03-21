@@ -47,15 +47,15 @@ URL : http://www.taqirazakhan.com
 
 
 body{
-	margin: 0;
-	padding:0;
-	font-size: 14px;
-	line-height: 1.25;
-	font-family: 'Roboto', Arial, sans-serf;
+  margin: 0;
+  padding:0;
+  font-size: 14px;
+  line-height: 1.25;
+  font-family: 'Roboto', Arial, sans-serf;
   color: #2b2e33;
 }
 a{
-	color: #2d2d2d;
+  color: #2d2d2d;
 }
 a:hover, a:focus, .active{
   text-decoration: none;
@@ -67,8 +67,8 @@ ul{
   list-style: none;
 }
 img{
-	width: 100%;
-	vertical-align: top;
+  width: 100%;
+  vertical-align: top;
 }
 .thumbnail {
     padding: 15px;
@@ -77,20 +77,20 @@ img{
     box-shadow: 0 0 3px #ddd;
 }
 .nopadding{
-	padding: 0;
+  padding: 0;
 }
 .btn{
   border-radius: 2px;
   padding: 10px 30px;
 }
 .nopaddingleft{
-	padding-left: 0;
+  padding-left: 0;
 }
 .nopaddingright{
-	padding-right: 0;
+  padding-right: 0;
 }
 .form-control{
-	border-radius: 0px;
+  border-radius: 0px;
 }
 textarea{resize: none}
 .navbar-default{
@@ -453,61 +453,6 @@ header{
   margin-left: -40px;
 }
 
-#quote-carousel 
-{
-  padding: 0 10px 30px 10px;
-  margin-top: 30px;
-}
-
-/* Control buttons  */
-#quote-carousel .carousel-control
-{
-  background: none;
-  color: #2d2d2d;
-  font-size: 2.3em;
-  text-shadow: none;
-  margin-top: 30px;
-  opacity: 1;
-}
-/* Previous button  */
-#quote-carousel .carousel-control.left 
-{
-  left: -18%;
-  top: 30%;
-}
-/* Next button  */
-#quote-carousel .carousel-control.right 
-{
-  right: -18%;
-  top: 30%;
-}
-/* Changes the position of the indicators */
-#quote-carousel .carousel-indicators 
-{
-  right: 50%;
-  top: auto;
-  bottom: 0px;
-  margin-right: -19px;
-}
-/* Changes the color of the indicators */
-#quote-carousel .carousel-indicators li 
-{
-  background: #c0c0c0;
-}
-#quote-carousel .carousel-indicators .active 
-{
-  background: #333333;
-}
-#quote-carousel img
-{
-  width: 250px;
-  height: 100px
-}
-#quote-carousel .carousel-inner>.item{
-  height: 195px;
-}
-/* End carousel */
-
 .item.active{
   color: #2d2d2d
 }
@@ -666,99 +611,7 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
 }
 /* Carousel */
 
-#testmonials_carousel {
-    padding: 0 10px 30px 10px;
-    margin-top: 150px;
-    /* Control buttons  */
-    /* Previous button  */
-    /* Next button  */
-    /* Changes the position of the indicators */
-    /* Changes the color of the indicators */
-}
-#testmonials_carousel .carousel-control {
-    background: none;
-    color: #CACACA;
-    font-size: 2.3em;
-    text-shadow: none;
-    margin-top: 30px;
-}
-#testmonials_carousel .carousel-control.left {
-    left: -60px;
-}
-#testmonials_carousel .carousel-control.right {
-    right: -60px;
-}
 
-#testmonials_carousel .carousel-indicators {
-  right: 50%;
-  top: auto;
-  top: -140px;
-  margin-right: -19px;
-}
-#testmonials_carousel .carousel-indicators li {
-    width: 50px;
-    height: 50px;
-    margin: 5px ;
-    cursor: pointer;
-    border: 2px solid #CCC;
-    border-radius: 50px;
-    opacity: 0.7;
-    overflow: hidden;
-    transition: all 0.4s;
-}
-#testmonials_carousel .carousel-indicators .active {
-    background: #333333;
-    width: 128px;
-    height: 128px;
-    border-radius: 100px;
-    border-color: #43bdfe;
-    opacity: 1;
-    overflow: hidden;
-}
-#testmonials_carousel .carousel-control{
-  color: #43bdfe;
-  opacity: 1;
-}
-#testmonials_carousel .carousel-inner {
-  max-width: 95%;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 195px;
-}
-#testmonials_carousel .carousel-inner .item blockquote {
-    border-left: none;
-    margin: 0;
-    padding: 30px 5px 5px;
-}
-#testmonials_carousel .carousel-inner .item blockquote p:before {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    float: left;
-    margin-right: 10px;
-}
-
-.testmonial_main_text blockquote {
-    border-left: none;
-    margin: 0;
-    padding: 30px 40px 5px;
-    color: #fff;
-    position: relative;
-    max-width: 60%;
-    text-align: center;
-}
-.testmonial_main_text blockquote:before , .testmonial_main_text blockquote:after {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    margin-right: 10px;
-    position: absolute;
-    z-index: 9999;
-    margin: 0 ;
-    left: 0;
-}
-.testmonial_main_text blockquote:after{
-  right: 50px;
-  left: auto;
-}
 .relative{
   position: relative;
 }
@@ -944,11 +797,12 @@ footer{
   position: relative;
 }
 .follow-us{
-	font-size: 28px;
-	padding-left: 0;
-	text-transform: uppercase;
-	font-weight: 700;
+  font-size: 28px;
+  padding-left: 0;
+  text-transform: uppercase;
+  font-weight: 700;
 }
+.follow-us a{color:#fff}
 .company-info{
   background: #43bdfe;
   padding:35px;
@@ -997,38 +851,12 @@ footer{
 }
 
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    #quote-carousel 
-    {
-      margin-bottom: 0;
-      padding: 0 40px 30px 40px;
-      height: 230px;
-     /* overflow: hidden;
-      font-size: 4px;*/
-    }
-    
-}
+
 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) { 
     
-    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-    
-    #quote-carousel .carousel-indicators {
-        bottom: -20px !important;  
-    }
-    #quote-carousel .carousel-indicators li {
-        display: inline-block;
-        margin: 0px 5px;
-        width: 15px;
-        height: 15px;
-    }
-    #quote-carousel .carousel-indicators li.active {
-        margin: 0px 5px;
-        width: 20px;
-        height: 20px;
-    }
+
     .text-half {
       max-width: 100%;
     }
@@ -1082,10 +910,10 @@ footer{
     font-size: 40px; 
   }
   .follow-us{
-	font-size: 28px;
-	padding-left: 0;
-	text-transform: uppercase;
-	font-weight: 700;
+  font-size: 28px;
+  padding-left: 0;
+  text-transform: uppercase;
+  font-weight: 700;
 }
   .company-info{
     left: 0px;
@@ -1126,85 +954,102 @@ footer{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.testimonial{ margin: 0 20px 50px; }
+.testimonial{
+  padding: 70px 30px 50px;
+  margin: 50px 30px 30px;
+  border: 1px solid #ea816b;
+  position: relative;
+}
 .testimonial .pic{
-    display: inline-block;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin: 0 15px 15px 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #337ab7;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
 }
 .testimonial .pic img{
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-.testimonial .testimonial-profile{
-    display: inline-block;
-    position: relative;
-    top: 15px;
-}
-.testimonial .title{
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    color: #2f2f2f;
-    text-transform: capitalize;
-    margin: 0 0 7px 0;
-}
-.testimonial .post{
-    display: block;
-    font-size: 14px;
-    color: #5d7aa7;
+  width: 100% !important;
+  height: 100% !important;
 }
 .testimonial .description{
-    padding: 20px 22px;
-    background: #1f487e;
-    font-size: 15px;
-    color: #fff;
-    line-height: 25px;
-    margin: 0;
-    position: relative;
+  font-size: 15px;
+  color: #5e595b;
+  line-height: 27px;
+  text-align: center;
+  margin: 0;
+  position: relative;
 }
-.testimonial .description:before,
-.testimonial .description:after{
-    content: "";
-    border-width: 18px 0 0 18px;
-    border-style: solid;
-    border-color: #5d7aa7 transparent transparent;
-    position: absolute;
-    bottom: -18px;
-    left: 0;
+.testimonial .description:before{
+  content: "\f10d";
+  font-family: 'FontAwesome';
+  font-size: 25px;
+  color: #337ab7;
+  position: absolute;
+  top: -20px;
+  left: -5px;
 }
-.testimonial .description:after{
-    border-width: 18px 18px 0 0;
-    left: auto;
-    right: 0;
+.testimonial .title{
+  display: inline-table;
+  padding: 10px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ea816b;
+  font-size: 20px;
+  font-weight: 700;
+  color: #337ab7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  width: 350px;
+  text-align: center;
+  margin-left: -175px;
+}
+.testimonial .post{
+  font-size: 15px;
+  color: #671a36;
 }
 .owl-theme .owl-controls{
-    margin-top: 10px;
-    margin-left: 30px;
+  width: 100%;
+  height: 50px;
+  opacity: 1;
+  position: absolute;
+  top: 38%;
 }
 .owl-theme .owl-controls .owl-buttons div{
-    opacity: 0.8;
-    background: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 0;
+  background: transparent;
 }
-.owl-prev:before,
-.owl-next:before{
-    content: "\f053";
-    font-family: 'FontAwesome';
-    font-size: 20px;
-    color: #1f487e;
+.owl-prev{
+  position: absolute;
+  left: -5%;
 }
-.owl-next:before{ content: "\f054"; }
+.owl-next{
+  position: absolute;
+  right: -5%;
+}
+.owl-prev:after,
+.owl-next:after{
+  content: "\f104";
+  font-family: 'FontAwesome';
+  font-size: 30px;
+  color: #c7373c;
+  opacity: 1;
+}
+.owl-next:after{ content: "\f105"; }
+
+@media only screen and (max-width: 479px){
+  .testimonial{ padding: 70px 10px 30px; }
+  .testimonial .description:before{ top: -20px }
+  .testimonial .title{ font-size: 12px;width: 210px;margin-left: -105px; }
+  .testimonial .post{ font-size: 11px; }
+}
