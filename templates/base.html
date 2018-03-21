@@ -10,7 +10,9 @@
 	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
-	<link href="{% static 'css/second_style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -182,6 +184,21 @@
         });
 
       });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+    items:1,
+    itemsDesktop:[1000,1],
+    itemsDesktopSmall:[979,1],
+    itemsTablet:[768,1],
+    pagination:false,
+    navigation:true,
+    navigationText:["",""],
+    autoPlay:true
+    });
+    });
     </script>
     {% block script %}
     {% endblock %}
