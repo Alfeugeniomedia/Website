@@ -4,7 +4,7 @@
 {% block navbar %}
 
     <li><a href="{% url 'about' %}">ABOUT</a></li>
-    <li class="active"><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
     <li><a href="{% url 'courses' %}">COURSES</a></li>
     <li><a href="{% url 'events' %}">EVENTS</a></li>
     <li><a href="{% url 'contact' %}">contact</a></li>
@@ -15,15 +15,15 @@
         <div class="container relative">
             <div class="testmonial_main_text">
 
-                <img style="margin : auto ; max-width : 30%;" class="img-responsive" src="{% static 'images/auther_2.png' %}" alt="">
 
-                <blockquote style="margin : auto ;">After attending Bill’s intensive 1-day live bootcamp on getting started with wholesaling
+                <blockquote>After attending Bill’s intensive 1-day live bootcamp on getting started with wholesaling
                     properties, I not only have the confidence to start my investing career, but I feel I feel well
                     equipped with all the tools to face every challenge as they come. It truly was the best investment
                     I’ve ever made!” - Victoria V<br>
                 </blockquote>
             </div>
-        <!--    <img src="{% static 'images/auther_2.png' %}" class="test_ban"> -->
+{#            <img style="margin : auto ; max-width : 30%;" class="img-responsive" src="{% static 'images/auther_2.png' %}" alt="">#}
+            <img src="{% static 'images/auther_2.png' %}" class="test_ban">
         </div>
     </section>
 
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="section-title">Our Valued Customers</div>
             <div class="row">
-                <div class="col-md-offset-2 col-md-8">
+                <div class="col-md-offset-1 col-md-10">
                     <div id="testimonial-slider" class="owl-carousel">
                         <div class="testimonial">
                             <div class="pic">

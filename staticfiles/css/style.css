@@ -816,7 +816,7 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
     position: absolute;
     top: -80px;
     right: 12%;
-    width: 242px;
+    width: 274px;
 }
 
 
@@ -1116,6 +1116,7 @@ footer{
   font-size: 42px;
   padding-left: 15%;
 }
+.follow-us a{color: #fff;}
 .company-info{
   background: #43bdfe;
   padding:35px;
