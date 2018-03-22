@@ -1129,6 +1129,7 @@ footer{
   left: 45%;
   top: 0;
   z-index: 9999;
+  text-transform: uppercase;
 }
 .copy-rights{
   margin-top: 100px;
