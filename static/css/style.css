@@ -1120,6 +1120,8 @@ footer{
   padding-left: 15%;
 }
 .follow-us a{color: #fff;}
+.follow-us a:hover{text-decoration: underline; color: #e0f018}
+
 .company-info{
   background: #43bdfe;
   padding:35px;

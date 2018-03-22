@@ -3,7 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/style.css" afterPath="$PROJECT_DIR$/staticfiles/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt-BR.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ro.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ro.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ru.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ru.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sk.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sk.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sv.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sv.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/th.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/th.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tr.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tr.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/uk.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/uk.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/vi.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/vi.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-CN.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-CN.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-TW.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-TW.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.js" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.min.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.min.js" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style1.css" afterPath="$PROJECT_DIR$/assets/css/style1.css" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bg-head.jpg" afterPath="$PROJECT_DIR$/assets/images/bg-head.jpg" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +77,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/staticfiles/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="1128" column="11" lean-forward="true" selection-start-line="1128" selection-start-column="11" selection-end-line="1128" selection-end-column="11" />
+            <state relative-caret-position="119">
+              <caret line="1122" column="0" lean-forward="false" selection-start-line="1122" selection-start-column="0" selection-end-line="1123" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="1117" column="11" lean-forward="true" selection-start-line="1117" selection-start-column="11" selection-end-line="1117" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="1131" column="16" lean-forward="true" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -91,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="339">
-              <caret line="206" column="7" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
+              <caret line="206" column="7" lean-forward="false" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -109,7 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>follow-us</find>
       <find>follow us on</find>
       <find>197</find>
       <find>3 months commitment</find>
@@ -139,6 +178,7 @@
       <find>Coming Soon!</find>
       <find>company-info</find>
       <find>.company-info</find>
+      <find>.follow-us a</find>
     </findStrings>
     <replaceStrings>
       <replace>&gt;contact</replace>
@@ -195,12 +235,12 @@
         <option value="$PROJECT_DIR$/templates/courses1.html" />
         <option value="$PROJECT_DIR$/staticfiles/css/comming-soon.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/templates/webinar.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/comming-soon.html" />
         <option value="$PROJECT_DIR$/staticfiles/css/style.css" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -251,7 +291,19 @@
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
@@ -650,7 +702,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521733329328</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Index page updated">
+      <created>1521734231787</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1521734231787</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -958,20 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="1131" column="27" lean-forward="false" selection-start-line="1131" selection-start-column="27" selection-end-line="1131" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="1131" column="27" lean-forward="false" selection-start-line="1131" selection-start-column="27" selection-end-line="1131" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1014,7 +1059,7 @@
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="206" column="7" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
+          <caret line="206" column="7" lean-forward="false" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1029,8 +1074,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/staticfiles/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="1128" column="11" lean-forward="true" selection-start-line="1128" selection-start-column="11" selection-end-line="1128" selection-end-column="11" />
+        <state relative-caret-position="119">
+          <caret line="1122" column="0" lean-forward="false" selection-start-line="1122" selection-start-column="0" selection-end-line="1123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="1131" column="16" lean-forward="true" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="1117" column="11" lean-forward="true" selection-start-line="1117" selection-start-column="11" selection-end-line="1117" selection-end-column="11" />
           <folding />
         </state>
       </provider>
