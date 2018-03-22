@@ -4110,7 +4110,7 @@ form[data-form-id] button:disabled{
     padding: 10px 20px;
   }
   .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li.active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-nav > li > .dropdown-menu > li > a:hover{
-    color: #fff;
+    color: #fff !important;
   }
   .main_banner p{padding: 0 20px; }
   .signup{min-height: 150px;}
