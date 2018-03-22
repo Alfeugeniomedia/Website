@@ -670,12 +670,15 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
 }
 .text_course{
   padding:15px;
-  height: 180px;
+  max-height: 180px;
+}
+.courses_list img{
+  max-height: 165px;
 }
 .auther_area {
   display: block;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .auther_area img{
   max-width: 50px;

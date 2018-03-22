@@ -12,6 +12,9 @@ class Coaching(View):
     def get(self, request):
         return render(request, 'coaching.html')
 
+class CommingSoon(View):
+    def get(self, request):
+        return render(request, 'comming-soon.html')
 
 class Contact(View):
     def get(self, request):

@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'webinar$', Webinar.as_view(), name='webinar'),
     url(r'course-funnel$', CourseFunnel.as_view(), name='course_funnel'),
     url(r'signup$', Signup.as_view(), name='signup'),
+    url(r'comming-soon$', CommingSoon.as_view(), name='comming-soon'),
     url(r'thank_you$', ThankYou.as_view(), name='thankyou'),
     url(r'coaching$', Coaching.as_view(), name='coaching'),
     url(r'contact$', Contact.as_view(), name='contact'),
