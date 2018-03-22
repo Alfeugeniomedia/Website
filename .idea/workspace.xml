@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/webinar1.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Website/urls.py" afterPath="$PROJECT_DIR$/Website/urls.py" />
-      <change beforePath="$PROJECT_DIR$/Website/views.py" afterPath="$PROJECT_DIR$/Website/views.py" />
       <change beforePath="$PROJECT_DIR$/templates/webinar.html" afterPath="$PROJECT_DIR$/templates/webinar.html" />
+      <change beforePath="$PROJECT_DIR$/templates/webinar1.html" afterPath="$PROJECT_DIR$/templates/webinar1.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +31,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+            <state relative-caret-position="339">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,14 +51,14 @@
       <file leaf-file-name="comming-soon.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2516">
+            <state relative-caret-position="17">
               <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -73,19 +71,23 @@
       <file leaf-file-name="webinar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/webinar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="220">
+              <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webinar1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webinar1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/webinar1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="139" column="81" lean-forward="false" selection-start-line="139" selection-start-column="81" selection-end-line="139" selection-end-column="81" />
-              <folding />
+            <state relative-caret-position="39">
+              <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,9 +115,11 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="34" column="32" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="34" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="339">
+              <caret line="106" column="25" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="106" selection-end-column="25" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -221,9 +225,9 @@
         <option value="$PROJECT_DIR$/templates/comming-soon.html" />
         <option value="$PROJECT_DIR$/staticfiles/css/style.css" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/webinar.html" />
         <option value="$PROJECT_DIR$/Website/urls.py" />
         <option value="$PROJECT_DIR$/Website/views.py" />
+        <option value="$PROJECT_DIR$/templates/webinar.html" />
         <option value="$PROJECT_DIR$/templates/webinar1.html" />
       </list>
     </option>
@@ -536,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521735041584</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Webinar1 page created&#10;Date Updated&#10;Link Updated">
+      <created>1521741644216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1521741644216</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -580,7 +591,8 @@
     <MESSAGE value="follow us on text converted" />
     <MESSAGE value="Index page updated" />
     <MESSAGE value="Style updated - &gt; Taqi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style updated - &gt; Taqi" />
+    <MESSAGE value="Webinar1 page created&#10;Date Updated&#10;Link Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Webinar1 page created&#10;Date Updated&#10;Link Updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
@@ -869,18 +873,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="34" column="32" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="1125" column="22" lean-forward="false" selection-start-line="1125" selection-start-column="22" selection-end-line="1125" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webinar.html">
+    <entry file="file://$PROJECT_DIR$/Website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="339">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -893,27 +897,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+        <state relative-caret-position="17">
+          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="106" column="25" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="106" selection-end-column="25" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webinar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webinar1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="139" column="81" lean-forward="false" selection-start-line="139" selection-start-column="81" selection-end-line="139" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1125" column="22" lean-forward="false" selection-start-line="1125" selection-start-column="22" selection-end-line="1125" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="39">
+          <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
