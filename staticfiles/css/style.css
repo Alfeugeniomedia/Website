@@ -4042,58 +4042,54 @@ form[data-form-id] button:disabled{
 
 /*Media Quries*/
 
-@media screen and (max-width: 980px){
+@media screen and (max-width: 1024px){
+  body{overflow: hidden}
   .nav > li > a{
     padding: 10px 0;
   }
   .navbar-brand:before{
-    right: 65%;
+    right: 55%;
   }
-}
-
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    #quote-carousel
-    {
-      margin-bottom: 0;
-      padding: 0 40px 30px 40px;
-      height: 230px;
-     /* overflow: hidden;
-      font-size: 4px;*/
-    }
+  .signup {font-size: 19px;}
+  .signup .btn{padding: 10px 20px}
+  .follow-us a{font-size: 20px;padding-right: 41px;    display: block;}
+  .company-info{padding: 30px 15px; font-size: 20px;}
+  .copy-rights {    margin-top: 80px;}
 
 }
+
+
+
 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) {
 
-    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
 
-    #quote-carousel .carousel-indicators {
-        bottom: -20px !important;
-    }
-    #quote-carousel .carousel-indicators li {
-        display: inline-block;
-        margin: 0px 5px;
-        width: 15px;
-        height: 15px;
-    }
-    #quote-carousel .carousel-indicators li.active {
-        margin: 0px 5px;
-        width: 20px;
-        height: 20px;
-    }
     .text-half {
       max-width: 100%;
     }
     .about_me_area p{
       width: 100%;
     }
-    .company-info{
-      font-size: 21px;
-      text-align: center;
-    }
+    .navbar-header{padding: 3px 0;    min-width: 230px;}
+  .navbar-nav{margin: 8px 0}
+  .container .navbar-brand img {min-height: 40px; width: 90%;}
+  .navbar-default {
+    background-position: -110px 0px;
+  }
+  .container .navbar-header{margin-right: 15px;}
+  .navbar-nav.nav2 {margin: 8px 0 0 10px;}
+  .navbar-nav > li > .dropdown-menu {left: -145px;}
+  .coaching-text{    max-width: 100%;padding: 0 0px 0 50px;}
+  .courses_list img { max-height: 160px;}
+  .courses_list h2{font-size: 20px}
+      .test_ban {
+      right: 2%;
+      width: 285px;
+  }
+
+
+
 }
 
 
@@ -4196,6 +4192,9 @@ form[data-form-id] button:disabled{
   .pom-agile input[type="text"], .pom-agile input[type="password"]{
     width: 90%;
   }
+    .container .navbar-header{margin-right: 0;}
+    .navbar{    background: #43bdfe;}
+
 
 }
 

@@ -150,10 +150,10 @@
          display: block;
     }
      .watch-section img{
-         width: 20%;
+         width: 40%;
     }
      .right-section{
-         width: 90%;
+         width: 100%;
          padding: 0 5%;
          float: left;
     }
@@ -185,7 +185,7 @@
      .main-content h2{
          font-family: 'Roboto Condensed', sans-serif;
          font-size: 22px;
-         color: #396f90;
+         color: #222;
          font-weight: 700;
          text-transform: uppercase;
          letter-spacing: -0.5px;
@@ -212,7 +212,7 @@
          font-size: 15px;
     }
      ul.info li a{
-         color: #4a4a4a;
+         color: #fff;
          text-decoration: none;
     }
      ul.info li a:hover{
