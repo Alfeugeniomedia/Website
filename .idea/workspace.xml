@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/templates/comming-soon.html" afterPath="$PROJECT_DIR$/templates/comming-soon.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comming-soon.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="comming-soon.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="151" column="70" lean-forward="false" selection-start-line="151" selection-start-column="70" selection-end-line="151" selection-end-column="70" />
+            <state relative-caret-position="311">
+              <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -76,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
@@ -89,8 +90,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="117" column="43" lean-forward="false" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
+            <state relative-caret-position="339">
+              <caret line="206" column="7" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -198,8 +199,8 @@
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/staticfiles/css/style.css" />
         <option value="$PROJECT_DIR$/templates/webinar.html" />
-        <option value="$PROJECT_DIR$/templates/comming-soon.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/comming-soon.html" />
       </list>
     </option>
   </component>
@@ -635,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521732619705</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Index page updated">
+      <created>1521732683477</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1521732683477</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -996,26 +1004,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="151" column="70" lean-forward="false" selection-start-line="151" selection-start-column="70" selection-end-line="151" selection-end-column="70" />
+        <state relative-caret-position="237">
+          <caret line="36" column="96" lean-forward="false" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="117" column="43" lean-forward="false" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
+        <state relative-caret-position="339">
+          <caret line="206" column="7" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="36" column="96" lean-forward="false" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
+        <state relative-caret-position="311">
+          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
           <folding />
         </state>
       </provider>
