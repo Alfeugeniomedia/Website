@@ -20,6 +20,7 @@ from .views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'webinar$', Webinar.as_view(), name='webinar'),
+    url(r'webinar1$', Webinar1.as_view(), name='webinar1'),
     url(r'course-funnel$', CourseFunnel.as_view(), name='course_funnel'),
     url(r'signup$', Signup.as_view(), name='signup'),
     url(r'comming-soon$', CommingSoon.as_view(), name='comming-soon'),

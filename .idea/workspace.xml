@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/webinar1.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt-BR.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt-BR.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ro.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ro.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ru.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ru.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sk.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sk.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sv.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sv.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/th.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/th.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tr.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tr.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/uk.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/uk.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/vi.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/vi.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-CN.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-CN.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-TW.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-TW.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.js" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.min.js" afterPath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.min.js" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style1.css" afterPath="$PROJECT_DIR$/assets/css/style1.css" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg-head.jpg" afterPath="$PROJECT_DIR$/assets/images/bg-head.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/Website/urls.py" afterPath="$PROJECT_DIR$/Website/urls.py" />
+      <change beforePath="$PROJECT_DIR$/Website/views.py" afterPath="$PROJECT_DIR$/Website/views.py" />
+      <change beforePath="$PROJECT_DIR$/templates/webinar.html" afterPath="$PROJECT_DIR$/templates/webinar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +23,18 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Website/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -50,7 +43,7 @@
       <file leaf-file-name="courses1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/courses1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1244">
+            <state relative-caret-position="476">
               <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding />
             </state>
@@ -60,28 +53,8 @@
       <file leaf-file-name="comming-soon.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="2516">
               <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coaching.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/coaching.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/staticfiles/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="1122" column="0" lean-forward="false" selection-start-line="1122" selection-start-column="0" selection-end-line="1123" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,8 +63,28 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="1117" column="11" lean-forward="true" selection-start-line="1117" selection-start-column="11" selection-end-line="1117" selection-end-column="11" />
+            <state relative-caret-position="17">
+              <caret line="1125" column="22" lean-forward="false" selection-start-line="1125" selection-start-column="22" selection-end-line="1125" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webinar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webinar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webinar1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webinar1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="139" column="81" lean-forward="false" selection-start-line="139" selection-start-column="81" selection-end-line="139" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -100,18 +93,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="1131" column="16" lean-forward="true" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testmonials.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testmonials.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="33" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+            <state relative-caret-position="19227">
+              <caret line="1131" column="16" lean-forward="false" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -120,8 +103,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="36" column="96" lean-forward="false" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
+            <state relative-caret-position="-23">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,8 +113,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="206" column="7" lean-forward="false" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
+            <state relative-caret-position="411">
+              <caret line="34" column="32" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="34" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -149,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>follow us on</find>
       <find>197</find>
       <find>3 months commitment</find>
       <find>.testimonial</find>
@@ -179,6 +161,7 @@
       <find>company-info</find>
       <find>.company-info</find>
       <find>.follow-us a</find>
+      <find>claim</find>
     </findStrings>
     <replaceStrings>
       <replace>&gt;contact</replace>
@@ -229,18 +212,19 @@
         <option value="$PROJECT_DIR$/templates/testmonials.html" />
         <option value="$PROJECT_DIR$/templates/contact.html" />
         <option value="$PROJECT_DIR$/templates/courses.html" />
-        <option value="$PROJECT_DIR$/Website/views.py" />
-        <option value="$PROJECT_DIR$/Website/urls.py" />
         <option value="$PROJECT_DIR$/templates/about.html" />
         <option value="$PROJECT_DIR$/templates/courses1.html" />
         <option value="$PROJECT_DIR$/staticfiles/css/comming-soon.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/webinar.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/comming-soon.html" />
         <option value="$PROJECT_DIR$/staticfiles/css/style.css" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/webinar.html" />
+        <option value="$PROJECT_DIR$/Website/urls.py" />
+        <option value="$PROJECT_DIR$/Website/views.py" />
+        <option value="$PROJECT_DIR$/templates/webinar1.html" />
       </list>
     </option>
   </component>
@@ -275,7 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,28 +281,6 @@
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="staticfiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="staticfiles" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -330,7 +292,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,161 +303,19 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/static/images" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\assets\css" />
-      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\static\css" />
-      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\assets\images" />
-      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\static\images" />
-      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\staticfiles\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/staticfiles/images" />
       <recent name="$PROJECT_DIR$/staticfiles/css" />
       <recent name="$PROJECT_DIR$/staticfiles" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/Website.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Website/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Website/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/style.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/style.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/css/style.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/about.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/base.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/contact.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/courses.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/courses1.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/testmonials.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/webinar.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Website/django</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/comming-soon.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/bg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/comingsoonpage2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/watch.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/jquery.countdown.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/comming-soon.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/comingsoonpage2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/watch.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/css/comming-soon.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/images/bg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/images/comingsoonpage2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/images/watch.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/staticfiles/js/jquery.countdown.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/comming-soon.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/requirments.txt</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Taqi RAza\PycharmProjects\Website\templates" />
+      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\assets\css" />
+      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\static\css" />
+      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\assets\images" />
+      <recent name="C:\Users\Taqi Raza Khan\PycharmProjects\Website\static\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -709,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521734231787</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Style updated - &gt; Taqi">
+      <created>1521735041584</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1521735041584</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -717,10 +544,10 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.49707174" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33228347" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@Website" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33228347" sideWeight="0.49121523" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14128843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -728,28 +555,15 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33228347" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14128843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -765,7 +579,8 @@
     <MESSAGE value="urls updated" />
     <MESSAGE value="follow us on text converted" />
     <MESSAGE value="Index page updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Index page updated" />
+    <MESSAGE value="Style updated - &gt; Taqi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style updated - &gt; Taqi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -774,7 +589,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BillHarloff/coaching.html" />
     <entry file="file://$PROJECT_DIR$/BillHarloff/contact.html" />
     <entry file="file://$PROJECT_DIR$/BillHarloff/courses.html" />
     <entry file="file://$PROJECT_DIR$/BillHarloff/events.html" />
@@ -948,24 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/staticfiles/js/jquery.countdown.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1025,56 +821,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webinar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="252" column="70" lean-forward="false" selection-start-line="252" selection-start-column="70" selection-end-line="252" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/coaching.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="595">
           <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/courses1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1244">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="36" column="96" lean-forward="false" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="206" column="7" lean-forward="false" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/staticfiles/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="19074">
           <caret line="1122" column="0" lean-forward="false" selection-start-line="1122" selection-start-column="0" selection-end-line="1123" selection-end-column="0" />
           <folding />
         </state>
@@ -1082,16 +839,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="1131" column="16" lean-forward="true" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
+        <state relative-caret-position="19227">
+          <caret line="1131" column="16" lean-forward="false" selection-start-line="1131" selection-start-column="16" selection-end-line="1131" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/courses1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/comming-soon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="34" column="32" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="34" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webinar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webinar1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="139" column="81" lean-forward="false" selection-start-line="139" selection-start-column="81" selection-end-line="139" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="1117" column="11" lean-forward="true" selection-start-line="1117" selection-start-column="11" selection-end-line="1117" selection-end-column="11" />
+        <state relative-caret-position="17">
+          <caret line="1125" column="22" lean-forward="false" selection-start-line="1125" selection-start-column="22" selection-end-line="1125" selection-end-column="22" />
           <folding />
         </state>
       </provider>
