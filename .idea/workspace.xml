@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/comming-soon.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/comming-soon.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery.countdown.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="339">
-              <caret line="4297" column="0" lean-forward="true" selection-start-line="4297" selection-start-column="0" selection-end-line="4297" selection-end-column="0" />
+              <caret line="4297" column="0" lean-forward="false" selection-start-line="4297" selection-start-column="0" selection-end-line="4297" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="967" column="0" lean-forward="true" selection-start-line="967" selection-start-column="0" selection-end-line="967" selection-end-column="0" />
+              <caret line="967" column="0" lean-forward="false" selection-start-line="967" selection-start-column="0" selection-end-line="967" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -514,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521710830348</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="follow us on text converted">
+      <created>1521712128727</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1521712128727</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,6 +754,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,6 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -801,6 +809,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="77" column="49" lean-forward="false" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="4297" column="0" lean-forward="true" selection-start-line="4297" selection-start-column="0" selection-end-line="4297" selection-end-column="0" />
+          <caret line="4297" column="0" lean-forward="false" selection-start-line="4297" selection-start-column="0" selection-end-line="4297" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -873,7 +882,7 @@
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="967" column="0" lean-forward="true" selection-start-line="967" selection-start-column="0" selection-end-line="967" selection-end-column="0" />
+          <caret line="967" column="0" lean-forward="false" selection-start-line="967" selection-start-column="0" selection-end-line="967" selection-end-column="0" />
           <folding />
         </state>
       </provider>
