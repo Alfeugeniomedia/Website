@@ -49,6 +49,8 @@ class ThankYou(View):
 class Webinar(View):
     def get(self, request):
         return render(request, 'webinar.html')
+
+
 class Webinar1(View):
     def get(self, request):
         return render(request, 'webinar1.html')
