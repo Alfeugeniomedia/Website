@@ -20,6 +20,9 @@ class Contact(View):
     def get(self, request):
         return render(request, 'contact.html')
 
+class WebinarPackage(View):
+    def get(self, request):
+        return render(request, 'webinarpackage.html')
 
 class Courses(View):
     def get(self, request):

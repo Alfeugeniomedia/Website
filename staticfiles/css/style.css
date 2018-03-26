@@ -1141,6 +1141,7 @@ footer{
 .fc-day-grid-event .fc-content{
   white-space: inherit !important;
 }
+.innerhead{margin-bottom: 30px;}
 /* Course Funnel */
 .course_funnel_banner{
   background-color: rgb(54, 57, 64);
@@ -1158,6 +1159,8 @@ footer{
   text-align: center;
   font-family: "PlayfairDisplay-Bold";
 }
+.packagehead{font-size: 40px;}
+
 .border-gray{
   border-top: 1px solid #ccc;
   width: 100%;
