@@ -1139,6 +1139,9 @@ footer{
   text-align: right;
 }
 
+.fc-day-grid-event .fc-content{
+  white-space: inherit !important;
+}
 /* Course Funnel */
 .course_funnel_banner{
   background-color: rgb(54, 57, 64);
