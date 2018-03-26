@@ -60,8 +60,8 @@
       <file leaf-file-name="webinar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/webinar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="262" column="66" lean-forward="true" selection-start-line="262" selection-start-column="66" selection-end-line="262" selection-end-column="66" />
+            <state relative-caret-position="176">
+              <caret line="139" column="66" lean-forward="false" selection-start-line="139" selection-start-column="66" selection-end-line="139" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -390,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522052337178</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="video url updated">
+      <created>1522062590488</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1522062590488</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -791,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webinar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="262" column="66" lean-forward="true" selection-start-line="262" selection-start-column="66" selection-end-line="262" selection-end-column="66" />
+        <state relative-caret-position="176">
+          <caret line="139" column="66" lean-forward="false" selection-start-line="139" selection-start-column="66" selection-end-line="139" selection-end-column="66" />
           <folding />
         </state>
       </provider>
