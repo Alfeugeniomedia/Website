@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01979b6d-e645-46e6-b1eb-2baaf0d805a0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/forsale.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/gurrenty.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/homes.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/homes2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/staticfiles/images/forsale.jpeg" />
-      <change beforePath="$PROJECT_DIR$/.idea/Website.iml" afterPath="$PROJECT_DIR$/.idea/Website.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Website/django" afterPath="$PROJECT_DIR$/Website/django" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/style.css" afterPath="$PROJECT_DIR$/staticfiles/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/templates/webinarpackage.html" afterPath="$PROJECT_DIR$/templates/webinarpackage.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1271,7 +1260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522065698470</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Thursday 12 Webinar Date updated">
+      <created>1522129869256</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1522129869256</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
