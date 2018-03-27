@@ -1215,13 +1215,39 @@ footer{
   margin-right: 20px;
   float: right;
 }
-
-
-
-
-
-
-
+.what_you_get{background: transparent}
+.what_you_get .funnel_list li{
+  height: auto;
+}
+.what_you_get .package_list{
+  text-align: left;
+}
+.what_you_get .package_head{
+    padding: 20px 0 0;
+}
+.what_you_get .package_list li ul{
+  padding-left: 35px;
+  margin-top: 20px;
+}
+.what_you_get .package_list li ul li{
+  list-style: disc;
+  min-height: auto;
+  padding:2px;
+  border-bottom: none;
+}
+.what_you_get .funnel_head {
+    padding: 0 0 35px;
+}
+.webinar_packages p{
+  font-size: 18px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 30px;
+  line-height: 2;
+}
+.webinar_packages h3{
+  margin: 0 0 25px;
+}
 
 .column,.inner-column,.layout,.row-compose,.widget-row{
     position:relative
