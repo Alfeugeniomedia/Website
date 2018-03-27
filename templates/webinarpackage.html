@@ -11,6 +11,7 @@
 	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
 
 <body>
@@ -133,17 +134,17 @@
 					<img src="{% static 'images/webinarpackage.jpg' %}" class="img-responsive">
 				</div>
 				<div class="col-md-7">
-					<form class="form_builder">
+					<form class="form_builder" method="post" id="theForm" name="theForm">{% csrf_token %}
 						<div class="col-md-12 form-group">
 							<lable>Email</lable>
 							<input type="email" class="form-control" placeholder="Enter Paypal Email">
 						</div>
 
-						<div class="col-md-12 form-group">
+						<div class="col-md-12 form-group" id="paypal-button-container" name="paypal-button-container">
 
-							<button class="btn btn-success btn-block" style="font-size: 18px">
+							<!--<button class="btn btn-success btn-block" style="font-size: 18px">
 								<strong>Pay $997.00</strong>
-							</button>
+							</button>-->
 						</div>
                         <div class="col-md-12 empty_div form-group">
 
@@ -152,6 +153,65 @@
 					</form>
 				</div>
 			</div>
+            <script>
+
+        paypal.Button.render({
+
+            env: 'production', // sandbox | production
+
+            // PayPal Client IDs - replace with your own
+            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+            client: {
+                sandbox:    '{{ client_id }}',
+                production: '{{ live_id }}'
+            },
+
+            // Show the buyer a 'Pay Now' button in the checkout flow
+            commit: true,
+
+            // payment() is called when the button is clicked
+            payment: function(data, actions) {
+
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: { total: '{{ amount }}', currency: '{{ currency }}' }
+                            }
+                        ]
+                    }
+                });
+            },
+
+            // onAuthorize() is called when the buyer approves the payment
+            onAuthorize: function(data, actions) {
+
+                // Make a call to the REST api to execute the payment
+                return actions.payment.execute().then(function() {
+                    console.log('in api function - payment approved');
+                    //document.getElementById('id_confirmation').value = "true";
+                    //document.getElementById('id_amount').value = {{ amount }};
+                    //document.theForm.submit();
+                });
+            }
+
+        }, '#paypal-button-container');
+
+        function dummyClick() {
+            document.getElementById('id_confirmation').value = "true";
+            document.getElementById('id_amount').value = {{ amount }};
+            document.theForm.submit();
+        }
+    </script>
+
+
+
+<form method="post" id="theForm" name="theForm" action="">
+    {% csrf_token %}
+    {{ paypalForm.amount }}
+    {{ paypalForm.confirmation }}
+</form>
 			<div class="clearfix"></div>
 
             <section class="coaching what_you_get">

@@ -11,6 +11,7 @@
 	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
 
 <body>
@@ -87,12 +88,12 @@
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      	<ul class="nav navbar-nav">
 
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="coaching.html">COACHING</a></li>
-				<li class="active"><a href="courses.html">COURSES</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-				<li><a href="contact.html">contact</a></li>
-				<li class="active"><a href="signup.html" class="hidden-lg hidden-md">Sign Up</a></li>
+				<li><a href="{% url 'about' %}">ABOUT</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'courses' %}">COURSES</a></li>
+    <li><a href="{% url 'events' %}">EVENTS</a></li>
+    <li><a href="{% url 'contact' %}">contact</a></li>
+
 		    </ul>
 		    <ul class="nav navbar-nav pull-right nav2">
 		    	<li class="dropdown">
@@ -168,13 +169,74 @@
 							<div class="clearfix"></div>
 
 							<button class="btn btn-success btn-block" style="font-size: 18px">
-								<strong>Pay $4.00</strong>
+								<strong>Pay ${{ amout }}</strong>
 							</button>
 						</div>
 
 					</form>
 				</div>
 			</div>
+            <div id="paypal-button-container" name="paypal-button-container"></div>
+                        <script>
+
+        paypal.Button.render({
+
+            env: 'sandbox', // sandbox | production
+
+            // PayPal Client IDs - replace with your own
+            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+            client: {
+                sandbox:    '{{ client_id }}',
+                //production:
+            },
+
+            // Show the buyer a 'Pay Now' button in the checkout flow
+            commit: true,
+
+            // payment() is called when the button is clicked
+            payment: function(data, actions) {
+
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: { total: '{{ amount }}', currency: '{{ currency }}' }
+                            }
+                        ]
+                    }
+                });
+            },
+
+            // onAuthorize() is called when the buyer approves the payment
+            onAuthorize: function(data, actions) {
+
+                // Make a call to the REST api to execute the payment
+                return actions.payment.execute().then(function() {
+                    console.log('in api function');
+                    document.getElementById('id_confirmation').value = "true";
+                    document.getElementById('id_amount').value = {{ amount }};
+                    document.theForm.submit();
+                });
+            }
+
+        }, '#paypal-button-container');
+
+        function dummyClick() {
+            document.getElementById('id_confirmation').value = "true";
+            document.getElementById('id_amount').value = {{ amount }};
+            document.theForm.submit();
+        }
+    </script>
+
+
+
+<form method="post" id="theForm" name="theForm" action="">
+    {% csrf_token %}
+    {{ paypalForm.amount }}
+    {{ paypalForm.confirmation }}
+</form>
+
 			<div class="clearfix"></div>
 
 			<div class="col-md-12 what_you_get">

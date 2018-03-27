@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
+from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
 
 
@@ -21,8 +22,15 @@ class Contact(View):
         return render(request, 'contact.html')
 
 class WebinarPackage(View):
-    def get(self, request):
-        return render(request, 'webinarpackage.html')
+    def get(self, request, amount):
+        amount = float(amount)
+        data = {
+            'amount': amount,
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request, 'webinarpackage.html', data)
 
 class Courses(View):
     def get(self, request):
@@ -79,6 +87,11 @@ class Signup(View):
 
 
 class CourseFunnel(View):
-    def get(self, request):
-        return render(request, 'course-funnel.html')
-
+    def get(self, request, amount):
+        amount = float(amount)
+        data = {
+            'amount': amount,
+            'client_id': CLIENT_ID,
+            'currency': 'USD'
+        }
+        return render(request, 'course-funnel.html', data)
