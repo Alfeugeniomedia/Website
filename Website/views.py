@@ -35,7 +35,10 @@ class WebinarPackage(View):
 
 class WebinarPayoutPackage(View):
     def get(self, request, amount):
-        amount = float(amount)
+        try:
+            amount = float(amount)
+        except:
+            return render(request, 'index.html')
         data = {
             'amount': amount,
             'client_id': CLIENT_ID,
