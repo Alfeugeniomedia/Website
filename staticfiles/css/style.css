@@ -1084,8 +1084,10 @@ button.close{
   display: block;
   margin-bottom: 10px;
 }
-
-
+.xcomponent-outlet, .paypal-button.paypal-button-color-gold{
+    width: 100% !important;
+    height: 60px  !important;;
+}
 
 
 /* Footer Top */
