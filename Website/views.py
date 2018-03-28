@@ -21,7 +21,19 @@ class Contact(View):
     def get(self, request):
         return render(request, 'contact.html')
 
+
 class WebinarPackage(View):
+    def get(self, request):
+        data = {
+            'amount': 997,
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request, 'webinarpackage.html', data)
+
+
+class WebinarPayoutPackage(View):
     def get(self, request, amount):
         amount = float(amount)
         data = {
