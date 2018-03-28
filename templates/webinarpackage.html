@@ -128,21 +128,21 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12 form_area">
-				<div class="col-md-5">
+				<div class="col-md-5 col-sm-5">
 					<img src="{% static 'images/webinarpackage.jpg' %}" class="img-responsive">
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-7 col-sm-7">
 					<form class="form_builder" method="post" id="theForm" name="theForm">{% csrf_token %}
 						<div class="col-md-12 form-group">
 
 						</div>
 
                         <div class="col-md-12 form-group">
-							<div class="border-gray"></div>
-							<div class="order-sum">Order Summary</div>
 
-							<div class="col-md-6 nopadding form-group">Exclusive Webinar Package <br> <i>30 day money back guarentee!</i></div>
-							<div class="col-md-6 nopadding form-group text-right">
+							<div class="order-sum webinar_order_summary">Order Summary</div>
+
+							<div class="col-md-6 col-sm-6 nopadding form-group">Exclusive Webinar Package <br> <i>30 day money back guarentee!</i></div>
+							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
 								<strong>$997.00</strong>
 							</div>
 							<div class="clearfix"></div>
@@ -162,7 +162,9 @@
 
 					</form>
 				</div>
+                <div class="clearfix"></div>
 			</div>
+
             <script>
 
         paypal.Button.render({
@@ -311,15 +313,16 @@
 			</div>
 
             <div class="col-md-12 join_us">
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4">
 					<img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8">
 					<div class="funnel_heading_sub">
 						30 day Money Back Guarantee
 					</div>
 					<p> I am so confident that this package will not only give you the confidence to kick start and further advance your Real Estate Investing career, but will provide you the tools, tactics and strategies to succeed in reaching your dreams, that I personally guarantee if you’re not satisfied with your purchase, I will send your money back, no questions asked!</p>
 				</div>
+                <div class="clearfix"></div>
 			</div>
 	</section>
 
@@ -384,9 +387,7 @@
 
 </script>
 
-<style>
 
-    </style>
     
 </body>
 </html>
