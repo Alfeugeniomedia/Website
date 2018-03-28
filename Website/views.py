@@ -52,6 +52,7 @@ class Courses(View):
         return render(request, 'courses1.html')
 
 
+
 class Events(View):
     def get(self, request):
         return render(request, 'events.html')
