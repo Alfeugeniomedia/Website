@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
+from django.core.mail import send_mail
+from Website.settings import EMAIL_HOST
 from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
 
@@ -20,6 +22,14 @@ class CommingSoon(View):
 class Contact(View):
     def get(self, request):
         return render(request, 'contact.html')
+
+    def post(self, request):
+        data = request.POST
+        email = data['email']
+        name = data['name']
+        message = data['message'] + '\n\n email:' + email + '   \n\n\nname: ' + name
+        send_mail(subject='Contact Us', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
+        return render(request, 'thank-you.html')
 
 
 class WebinarPackage(View):

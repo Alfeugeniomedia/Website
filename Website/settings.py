@@ -130,4 +130,11 @@ CLIENT_ID = 'AZ8aV9C5F2aiy8A7QwQ5T9bvfJZNrYnQcSt3f0FrrpLcq-dqldBYfqJICc-gLM0rEoV
 CLIENT_SECRET = 'EGwmMItw_q3dH7yvBQofI2NqCFMZ-u7-qKivSd73fSSn1s41yUdS-p-LKUFRpWySD15VfeMJAAH8Nsq7'
 
 LIVE_CLIENT_ID = 'ARp6MQSxo_Ap1NIJsqGh-qew853ee-lZccapmFv5mrIYrb7fhvUqhsNF9FbGBOzWx1t1PIXpoeUpUvAH'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'billharloffcoaching@gmail.com'
+EMAIL_HOST_PASSWORD = 'Developer00!'
+EMAIL_USE_TLS = True
+
 
