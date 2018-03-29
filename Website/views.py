@@ -44,13 +44,9 @@ class WebinarPackage(View):
 
 
 class EasyPayments(View):
-    def get(self, request, amount):
-        try:
-            amount = float(amount)
-        except:
-            return render(request, 'index.html')
+    def get(self, request):
         data = {
-            'amount': amount,
+            'amount': 333,
             'client_id': CLIENT_ID,
             'currency': 'USD',
             'live_id': LIVE_CLIENT_ID
