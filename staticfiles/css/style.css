@@ -949,11 +949,11 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
   background: -webkit-linear-gradient(top, #272C2E 50%,#000000 50%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #272C2E 50%,#000000 50%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   margin: 15px;
-  padding: 20px;
-  height: 125px;
+  padding: 15px;
+  height: 105px;
 }
 .days,.hours,.minutes, .seconds{
-  font-size: 60px;
+  font-size: 50px;
 }
 .time-name{
   font-size: 22px;

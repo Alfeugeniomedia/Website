@@ -949,11 +949,11 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
   background: -webkit-linear-gradient(top, #272C2E 50%,#000000 50%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #272C2E 50%,#000000 50%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   margin: 15px;
-  padding: 20px;
-  height: 125px;
+  padding: 15px;
+  height: 105px;
 }
 .days,.hours,.minutes, .seconds{
-  font-size: 60px;
+  font-size: 50px;
 }
 .time-name{
   font-size: 22px;
@@ -985,21 +985,6 @@ tr:first-child > td > .fc-day-grid-event{margin:0;}
   width: 100%;
   margin-top: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1171,6 +1156,10 @@ footer{
   margin-top: 15px;
   font-weight: 700;
 }
+.webinar_order_summary{
+    margin-top: 60px;
+}
+
 .form_area{
   border-bottom: 1px dashed gray;
   padding-bottom: 70px;
@@ -4122,8 +4111,9 @@ form[data-form-id] button:disabled{
       right: 2%;
       width: 285px;
   }
-
-
+  .webinar_order_summary{
+    margin-top: 20px;
+  }
 
 }
 

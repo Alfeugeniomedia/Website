@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'webinar$', Webinar.as_view(), name='webinar'),
     url(r'webinar1$', Webinar1.as_view(), name='webinar1'),
+    url(r'easterspecial', EasterSpecial.as_view(), name='easterspecial'),
     #url(r'course-funnel/(?P<amount>.+)$', CourseFunnel.as_view(), name='course_funnel'),
     #url(r'webinarpackage$', WebinarPackage.as_view(), name='webinarpackage'),
     url(r'3easypayments', EasyPayments.as_view(), name='3easypayments'),

@@ -53,6 +53,15 @@ class EasyPayments(View):
         }
         return render(request, '3easypayments.html', data)
 
+class EasterSpecial(View):
+    def get(self, request):
+        data = {
+            'amount': 97,
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request, 'easterspecial.html', data)
 
 class WebinarPayoutPackage(View):
     def get(self, request, amount):
