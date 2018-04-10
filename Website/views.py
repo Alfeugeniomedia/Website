@@ -15,6 +15,16 @@ class Coaching(View):
     def get(self, request):
         return render(request, 'coaching.html')
 
+class LiveCourses(View):
+    def get(self, request):
+        data = {
+            'amount': 19.97,
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request, 'livestreamcourses.html', data)
+
 class CommingSoon(View):
     def get(self, request):
         return render(request, 'comming-soon.html')
