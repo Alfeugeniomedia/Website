@@ -171,8 +171,7 @@
 	  	</div>
 	</div>
     </div>
-
-        <script src="{% static 'js/moment.min.js' %}"></script>
+	<script src="{% static 'js/moment.min.js' %}"></script>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
@@ -183,7 +182,6 @@
 			 	$(".fa-bars").toggle();
 			 });
 
-
         $('#calendar').fullCalendar({
           defaultDate: '2018-04-01',
           editable: true,
@@ -193,21 +191,27 @@
 
           },
           events: [
+			{% if data %}
+			{% for events in data %}
             {
-              title: 'Live Stream Real Estate Investing Bootcamp',
-              start: '2018-04-12T00:00:00',
+              title: '{{events.title}}',
+              start: '{{events.event_date}}',
               allDay : false
             },
+			{% endfor %}
+			{% else %}
+			        No categories at present.
+			{% endif %}
 
-            {
-              title: ' Team Building Networking Webinar',
-              start: '2018-04-19T14:00:00',
-            },
+            // {
+            //   title: ' Team Building Networking Webinar',
+            //   start: '2018-04-19T14:00:00',
+            // },
 
-            {
-              title: 'Real Estate Investing Success Q&A Webinar',
-              start: '2018-04-26T14:00:00'
-            }
+            // {
+            //   title: 'Real Estate Investing Success Q&A Webinar',
+            //   start: '2018-04-26T14:00:00'
+            // }
           ]
         });
 

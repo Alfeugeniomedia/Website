@@ -4303,3 +4303,4 @@ form[data-form-id] button:disabled{
   .testimonial .title{ font-size: 12px;width: 210px;margin-left: -105px; }
   .testimonial .post{ font-size: 11px; }
 }
+.block-center{float: none !important;margin: 0 auto !important;}

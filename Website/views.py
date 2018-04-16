@@ -4,7 +4,30 @@ from django.core.mail import send_mail
 from Website.settings import EMAIL_HOST
 from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
+from Website.forms import LoginForm
+from Website.models import EventsForm
 
+class CreateEve(View):
+    def get(self, request): 
+        data=EventsForm.objects.all()
+        return render(request, 'createevents.html',{'data':data})
+
+    def post(self, request):
+        data= request.POST
+        saved= 'FALSE'
+        title=data['title']
+        description = data['description']
+        date=data['date'];
+        saved = False
+        try:
+            EventsForm.objects.get(event_date=date)
+        except EventsForm.DoesNotExist:
+            events= EventsForm(title=title,description=description,event_date=date)
+            events.save()
+            saved= True
+        # events.title=title
+        # events.description=description
+        return render(request,'createevents.html',{'saved':saved})
 
 class Homepage(View):
     def get(self, request):
@@ -40,6 +63,8 @@ class Contact(View):
         message = data['message'] + '\n\n email:' + email + '   \n\n\nname: ' + name
         send_mail(subject='Contact Us', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
         return render(request, 'thank-you.html')
+
+
 
 
 class WebinarPackage(View):
@@ -95,7 +120,8 @@ class Courses(View):
 
 class Events(View):
     def get(self, request):
-        return render(request, 'events.html')
+        data=EventsForm.objects.all()
+        return render(request, 'events.html',{'data':data})
 
 
 class Testimonials(View):
@@ -151,3 +177,57 @@ class CourseFunnel(View):
             'currency': 'USD'
         }
         return render(request, 'course-funnel.html', data)
+
+
+class FixnFlips(View):
+    def get(self, request):
+        return render(request, 'fixnflips.html')
+
+class WholeSale(View):
+    def get(self, request):
+        return render(request, 'wholesalingcontractnassignment.html')
+
+class ExistingFinance(View):
+    def get(self, request):
+        return render(request, 'subjecttoexistingfinance.html')
+
+class ExistingFinance(View):
+    def get(self, request):
+        return render(request, 'subjecttoexistingfinance.html')
+
+class ShortSale(View):
+    def get(self, request):
+        return render(request, 'completeshortsaleprocess.html')
+
+class BronzePackage(View):
+    def get(self,request):
+        data = {
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request, 'bronzepackage.html',data)
+
+class SilverPackage(View):
+    def get(self,request):
+        data = {
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request ,'silverpackage.html',data)
+
+class GoldPackage(View):
+    def get(self,request):
+        data = {
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+        }
+        return render(request,'goldpackage.html',data)
+
+
+
+
+
+  
