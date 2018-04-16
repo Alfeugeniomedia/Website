@@ -1,5 +1,4 @@
 {% load static %}
-{{ client_id }}
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,7 +73,7 @@
 		<div class="clearfix"></div>
 	</header>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default" id="top">
 	  <div class="container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -124,8 +123,8 @@
 	<section class="course_funnel_banner text-white">
 		<div class="container">
 			<div class="col-md-12">
-				<div class="funnel_head packagehead">24 HOUR LIMITED TIME OFFER - 80% OFF</div>
-				<h3 class="text-center innerhead">Available only to “Complete Short Sale Process” Webinar Attendees!</h3>
+				<div class="funnel_head packagehead">Gold Plan Coaching Membership Access</div>
+				<h3 class="text-center innerhead">Join today and you’ll start your investing career in your first 30 days, guaranteed!</h3>
 			</div>
 			<div class="clearfix"></div>
             <div class="col-md-12 form_area">
@@ -142,9 +141,9 @@
 
 							<div class="order-sum webinar_order_summary">Order Summary</div>
 
-							<div class="col-md-6 col-sm-6 nopadding form-group">Exclusive Webinar Package <br> <i>30 day money back guarentee!</i></div>
+							<div class="col-md-6 col-sm-6 nopadding form-group">3 Months Gold Plan Membership <br> <i>30 day money back guarentee!</i></div>
 							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
-								<strong>$997.00</strong>
+								<strong>$1497.00</strong>
 							</div>
 							<div class="clearfix"></div>
 
@@ -190,7 +189,7 @@
                     payment: {
                         transactions: [
                             {
-                                amount: { total: '{{ amount }}', currency: '{{ currency }}' }
+                                amount: { total: '1497', currency: '{{ currency }}' }
                             }
                         ]
                     }
@@ -213,7 +212,7 @@
 
         function dummyClick() {
             document.getElementById('id_confirmation').value = "true";
-            document.getElementById('id_amount').value = {{ amount }};
+            document.getElementById('id_amount').value = '1497';
             document.theForm.submit();
         }
     </script>
@@ -227,45 +226,6 @@
 </form>
 			<div class="clearfix"></div>
         </div>
-
-        <section class="comming_soon bg-info">
-            <div class="container">
-                <div class="col-md-12">
-                    <div class="section_head_inner text-white font_play">Offer Ends 12pm PST , 3pm EST</div>
-
-                    <div class="widget">
-                        <div class="lp-countdown">
-                            <div class="countdown-container">
-                                <div class="time-section-wrap">
-                                    <div class="time-section">
-                                        <div class="time-wrapper"> <span class="days" id="days">0</span> </div>
-                                        <div class="time-name">Days</div>
-                                    </div>
-                                </div>
-                                <div class="time-section-wrap">
-                                    <div class="time-section">
-                                        <div class="time-wrapper"> <span class="hours" id="hours">0</span> </div>
-                                        <div class="time-name">Hours</div>
-                                    </div>
-                                </div>
-                                <div class="time-section-wrap">
-                                    <div class="time-section">
-                                        <div class="time-wrapper"> <span class="minutes" id="minutes">0</span> </div>
-                                        <div class="time-name">Minutes</div>
-                                    </div>
-                                </div>
-                                <div class="time-section-wrap">
-                                    <div class="time-section">
-                                        <div class="time-wrapper"> <span class="seconds" id="seconds">0</span> </div>
-                                        <div class="time-name">Seconds</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 	    <div class="clearfix"></div>
 
 		<div class="container">
@@ -273,30 +233,13 @@
             <section class="coaching what_you_get">
                 <div class="container">
                     <div class="col-md-12 form-group text-center">
-                        <div class="section_head_inner font_play text-white">Exclusive - 24 Hour Limited Time Package <br>$4,997+ VALUE for only $997 (80% OFF!!!)</div>
-                        <p class="inner_heading">Package Includes</p>
+                        <div class="section_head_inner font_play text-white" style="color:#deab23">Gold Plan Coaching Membership </div>
+                        <p class="inner_heading">Membership Includes</p>
                     </div>
                     <div class="clearfix"></div>
+                  
                     <div class="col-md-4">
-                        <div class="package_box text-black">
-                            <div class="package_head bronze">
-                                <p class="text-white font_play">5 Live-Stream Courses with Bill:</p>
-        {#						<p class="text-white"><sup>$</sup>497<sub>/month</sub></p>#}
-        {#						<button class="btn btn_start btn-sm">Start Now !</button>#}
-                                <img src="{% static 'images/forsale.jpeg' %}" class="img-responsive">
-                            </div>
-                            <ul class="package_list">
-                                <li><strong>Complete Short Sale Process </strong>- Take a deep dive step-by-step through the Complete Short Sale Process, and get full access to all the contracts, scripts and tactics needed to close the best short sale deals in <em><u>2-3 months from start to finish!</u></em> "</li>
-                                <li><strong>Wholesaling / Assignment of Contract</strong> - Make <em><u>$5,000 minimum per deal </u></em>in your first 60 days by Wholesaling Properties!</li>
-                                <li><strong>Finding Motivated Sellers</strong> - In <em><u>less than 30 days</u></em>, learn how to build a full stream of deals flowing directly to your business before the listings hit the MLS!</li>
-                                <li><strong>Subject to Existing Financing</strong> - Start investing in Real Estate instantly with absolutely <em><u>NO money down and NO bank financing!</u></em></li>
-                                <li><strong>Fix & Flip Rehabs / Dealing with Contractors</strong> - Learn<em><u> what to look for and what to avoid </u></em>by using the strategies Bill has developed over his 38 year career as a residential and commercial investor and developer</li>
-                                <li class="more_pages"><button class="btn btn-info btn-block">$985 VALUE!!!</button> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="package_box premium text-black">
+                        <div class="package_box premium text-black" style="float:none;margin:0 auto">
                             <div class="package_head silver">
                                 <p class="font_play">3-Month Bronze Plan Membership:</p>
                                 <img src="{% static 'images/homes.jpg' %}" class="img-responsive">
@@ -305,31 +248,7 @@
                                 <li>Unlimited access to the entirety of B.H. Coaching’s resource library with training courses, contracts, marketing materials and much more! </li>
                                 <li> Unlimited email access to Bill’s personally trained staff to support you during the implementation of Bill’s tactics & strategies!</li>
                                 <li>Access to B.H. Coaching’s monthly Real Estate Investing Success Webinar, LIVE w/ Bill!</li>
-                                <li class="more_pages"><button class="btn btn-info btn-block">$1,491 VALUE!!!</button> </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="package_box text-black">
-                            <div class="package_head gold">
-                                <p class="text-white font_play">B.H. Coaching’s Deal Network:</p>
-                                <img src="{% static 'images/homes2.jpg' %}" class="img-responsive">
-                            </div>
-                            <ul class="package_list">
-                                <li>Get full access to B.H. Coaching's national database, built during Bill’s 38 year illustrious career, brimful of:
-                                    <ul>
-                                        <li>Investors</li>
-                                        <li>Bird dogs</li>
-                                        <li>Rehabbers</li>
-                                        <li>Wholesalers</li>
-                                        <li>Contractors</li>
-                                        <li>Attorneys</li>
-                                        <li>Motivated sellers</li>
-                                        <li>AND MORE!</li>
-                                    </ul>
-                                </li>
-                                <li class="more_pages"><button class="btn btn-info btn-block">Priceless !!!</button> </li>
+                                <!-- <li class="more_pages"><button class="btn btn-info btn-block">$1,491 VALUE!!!</button> </li> -->
 
                             </ul>
                         </div>
@@ -337,36 +256,28 @@
                 </div>
             </section>
 
-			<div class="col-md-12 what_you_get webinar_packages">
-				<div class="funnel_head packagehead text-right">INSTANT SIGN UP BONUS:</div>
-                <p>Sign up by 12:30pm PST, 3:30pm EST and we’ll provide you with an additional bonus of full lifetime access to <strong><em><u>Stanford MBA and Real Estate Expert, Symon He’s, 11 On-Demand Real Estate Investment and Business Courses</u></em></strong> to further equip you with the tools you need to evaluate Real Estate investment opportunities and <em><u>pick winners instantly!</u></em></p>
-               <div class="more_pages text-center">
-                    <button class="btn btn-info">$1,670 VALUE!</button>
-               </div>
-			</div>
 
+            <div class="col-md-12 join_us">
+                <div class="col-md-4 col-sm-4">
+                    <img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="funnel_heading_sub">
+                        30 day Money Back Guarantee
+                    </div>
+                    <p> I am so confident that this package will not only give you the confidence to kick start and further advance your Real Estate Investing career, but will provide you the tools, tactics and strategies to succeed in reaching your dreams, that I personally guarantee if you’re not satisfied with your purchase, I will send your money back, no questions asked!</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
 			<div class="col-md-12 what_you_get webinar_packages">
 				<div class="funnel_head packagehead text-right">THIS PACKAGE HAS NEVER BEEN OFFERED BEFORE!!!</div>
                 <p> And there's never been a better time to invest in Real Estate, so <strong>Bill and Symon </strong>are taking their investments to the next level by <strong>looking for people</strong> who are <strong><em><u>serious about making money </u></em></strong> in Real Estate & <strong><em><u>partnering on Deals</u></em></strong>.</p>
                <div class="more_pages text-center">
                    <h3>Purchase today, and join the network!</h3>
-                    <button class="btn btn-info">PURCHASE TODAY!</button>
+                    <a class="btn btn-info" href="#top">PURCHASE TODAY!</a>
                    <br>
                    <img src="{% static 'images/gurrenty.png' %}" class="img-responsive" style="max-width: 200px; margin: 25px auto 0">
                </div>
-			</div>
-
-            <div class="col-md-12 join_us">
-				<div class="col-md-4 col-sm-4">
-					<img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
-				</div>
-				<div class="col-md-8 col-sm-8">
-					<div class="funnel_heading_sub">
-						30 day Money Back Guarantee
-					</div>
-					<p> I am so confident that this package will not only give you the confidence to kick start and further advance your Real Estate Investing career, but will provide you the tools, tactics and strategies to succeed in reaching your dreams, that I personally guarantee if you’re not satisfied with your purchase, I will send your money back, no questions asked!</p>
-				</div>
-                <div class="clearfix"></div>
 			</div>
 	</section>
 
@@ -391,38 +302,6 @@
 	<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
-    <script>
-// Set the date we're counting down to
-var countDownDate = new Date("March 29, 2018 15:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').innerHTML = days;
-    document.getElementById('hours').innerHTML = hours;
-    document.getElementById('minutes').innerHTML = minutes;
-    document.getElementById('seconds').innerHTML = seconds;
-
-    // If the count down is over, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
-</script>
-
     <script type="text/javascript">
     	$(document).ready(function(){
 			 $(".dropdown-toggle").click(function(){
@@ -431,39 +310,6 @@ var x = setInterval(function() {
 			 });  				 
   		});
     </script>
-
-    <script>
-
-  $(document).ready(function() {
-
-    $('#calendar').fullCalendar({
-      defaultDate: '2018-03-12',
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'All Day Event',
-          start: '2018-03-01'
-        },
-        
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-03-09T16:00:00'
-        },
-        
-        {
-          title: 'Birthday Party',
-          start: '2018-03-13T07:00:00'
-        }
-      ]
-    });
-
-  });
-
-</script>
-
-
     
 </body>
 </html>

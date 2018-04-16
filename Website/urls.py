@@ -35,6 +35,16 @@ urlpatterns = [
     url(r'courses$', Courses.as_view(), name='courses'),
     url(r'testimonials$', Testimonials.as_view(), name='testimonials'),
     url(r'about$', About.as_view(), name='about'),
-    url(r'events$', Events.as_view(), name='events'),
+    url(r'^createevents$', CreateEve.as_view(), name='createeve'),
+    url(r'^events$', Events.as_view(), name='events'),
+    url(r'^fixnflips$', FixnFlips.as_view(), name='fixnflips'),
+    url(r'^wholesalingcontractnassignment$', WholeSale.as_view(), name='wholesalingcontractnassignment'),
+    url(r'^subjecttoexistingfinance$', ExistingFinance.as_view(), name='subjecttoexistingfinance'),
+    url(r'^completeshortsaleprocess$', ShortSale.as_view(), name='completeshortsaleprocess'),
+    url(r'^brozepackage$', BronzePackage.as_view(), name='brozepackage'),
+    url(r'^silverpackage$', SilverPackage.as_view(), name='silverpackage'),
+    url(r'^goldpackage$', GoldPackage.as_view(), name='goldpackage'),
     url(r'', Homepage.as_view(), name='index'),
+
+
 ]
