@@ -191,27 +191,21 @@
 
           },
           events: [
-			{% if data %}
-			{% for events in data %}
             {
-              title: '{{events.title}}',
-              start: '{{events.event_date}}',
+              title: 'Live Stream Real Estate Investing Bootcamp',
+              start: '2018-04-12T00:00:00',
               allDay : false
             },
-			{% endfor %}
-			{% else %}
-			        No categories at present.
-			{% endif %}
 
-            // {
-            //   title: ' Team Building Networking Webinar',
-            //   start: '2018-04-19T14:00:00',
-            // },
+            {
+              title: ' Team Building Networking Webinar',
+              start: '2018-04-19T14:00:00',
+            },
 
-            // {
-            //   title: 'Real Estate Investing Success Q&A Webinar',
-            //   start: '2018-04-26T14:00:00'
-            // }
+            {
+              title: 'Real Estate Investing Success Q&A Webinar',
+              start: '2018-04-26T14:00:00'
+            }
           ]
         });
 
