@@ -16,6 +16,10 @@
     	footer {
     		padding-bottom: 30px;
     	}
+        .paypal-button paypal-button-number-0 img
+        {
+            display: none;
+        }
     </style>
 
 
@@ -127,7 +131,7 @@
 	<section class="course_funnel_banner text-white">
 		<div class="container">
 			<div class="col-md-12">
-				<div class="funnel_head packagehead">COMPLETE SHORT SALE PROCESS</div>
+				<div class="funnel_head packagehead">FINDING MOTIVATED SELLERS</div>
 				<h3 class="text-center innerhead">Register today for the limited-space livestream instruction plus course packet!</h3>
 			</div>
 			<div class="clearfix"></div>
@@ -145,13 +149,13 @@
 
 							<div class="order-sum webinar_order_summary">Order Summary</div>
 
-							<div class="col-md-6 col-sm-6 nopadding form-group">Complete Short Sale Process + Course Packet <br> <i>30 day money back guarentee!</i></div>
+							<div class="col-md-6 col-sm-6 nopadding form-group">Finding Motivated Sellers + Course Packet <br> <i>30 day money back guarentee!</i></div>
 							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
 								<strong>$19.97</strong>
 							</div>
 							<div class="clearfix"></div>
 
-							<div id="paypal-button-container" name="paypal-button-container" style="width: 100% !important"></div>
+							<div id="paypal-button-container" name="paypal-button-container" style="width: 100% !important" onLoad="nodisplay()"></div>
 						</div>
 
 						<div class="col-md-12 form-group"  id="paypal-button-container" name="paypal-button-container">
@@ -232,7 +236,7 @@
         <section class="comming_soon bg-info">
             <div class="container">
                 <div class="col-md-12">
-                    <div class="section_head_inner text-white font_play">Offer Ends 12pm PST , 3pm EST</div>
+                    <div class="section_head_inner text-white font_play">Offer Ends 12pm EST</div>
 
                     <div class="widget">
                         <div class="lp-countdown">
@@ -274,7 +278,7 @@
             <section class="coaching what_you_get">
                 <div class="container">
                     <div class="col-md-12 form-group text-center">
-                        <div class="section_head_inner font_play text-white">Exclusive - Limited Time Offer - ONLY $19.97<br>Complete Short Sale Process Livestream Instruction plus Course Packet</div>
+                        <div class="section_head_inner font_play text-white">Finding Motivated Sellers<br> Livestream Instruction + Course Packet</div>
                         <!-- <p class="inner_heading">Package Includes</p> -->
                     </div>
                     <div class="col-md-12">
@@ -283,11 +287,11 @@
                         </div>
                         <div class="col-md-6">
                             <ul class="funnel_list">
-                                <li>Take a 90-minute deep dive step-by-step thru the Complete Short Sale Process!</li>
-                                <li>Learn how to immediately Make Money by investing in Short Sales! </li>
-                                <li>Ask Bill all your questions during the 30-minute LIVE Q/A session!</li>
-                                <li>Get all-access to Bill's <u>Short Sale Course Packet</u> with all the contracts, forms, and scripts, you'll need to succeed!</li>
-                                <li>Join the Deal Network for full access to the national database of investors, rehabbers, wholesalers, and much more!</li>
+                                <li>Where to find Motivated Sellers</li>
+                                <li>Top 6 reasons WHY someone is motivated to sell </li>
+                                <li>What do you offer a Motivated Seller</li>
+                                <li>Clues to a Great Deal</li>
+                                <li>How to connect with a Motivated Seller</li>
                             </ul>
                         </div>
                     </div>
@@ -344,7 +348,7 @@
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
     <script>
 // Set the date we're counting down to
-var countDownDate = new Date("April 12, 2018 12:00:00").getTime();
+var countDownDate = new Date("April 17, 2018 12:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -411,6 +415,16 @@ var x = setInterval(function() {
     });
 
   });
+
+    window.onload=function(){
+        console.log('test',$('.paypal-button'))
+        setInterval(function() {
+            $('.paypal-button-logo').on('load', function(){
+                $('.paypal-button-logo').hide();
+                console.log('img loaded');
+            });
+        }, 500);
+    }
 
 </script>
 
