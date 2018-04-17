@@ -27,6 +27,7 @@ class CreateEve(View):
             # events_data=EventsForm.objects.get(event_date=date)
             EventsForm.objects.get(event_date=date)
         except EventsForm.DoesNotExist: 
+            # events= EventsForm(title=title,description=description)
             events= EventsForm(title=title,description=description,event_date=date)
             events.save()
             saved= True
