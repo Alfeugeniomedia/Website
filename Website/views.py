@@ -6,11 +6,13 @@ from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
 from Website.forms import LoginForm
 from Website.models import EventsForm
+import datetime
 
 class CreateEve(View):
     def get(self, request): 
         data=EventsForm.objects.all()
-        return render(request, 'createevents.html',{'data':data})
+        today = datetime.datetime.today()
+        return render(request, 'createevents.html',{'data':data,'today':today})
 
     def post(self, request):
         data= request.POST
@@ -18,16 +20,19 @@ class CreateEve(View):
         title=data['title']
         description = data['description']
         date=data['date'];
+        today = datetime.datetime.today()
+        check = False
         saved = False
         try:
+            # events_data=EventsForm.objects.get(event_date=date)
             EventsForm.objects.get(event_date=date)
-        except EventsForm.DoesNotExist:
+        except EventsForm.DoesNotExist: 
             events= EventsForm(title=title,description=description,event_date=date)
             events.save()
             saved= True
         # events.title=title
         # events.description=description
-        return render(request,'createevents.html',{'saved':saved})
+        return render(request,'createevents.html',{'saved':saved,'today':today,'date':date,'check':check})
 
 class Homepage(View):
     def get(self, request):
