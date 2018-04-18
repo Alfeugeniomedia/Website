@@ -1,5 +1,5 @@
-# from django.contrib import admin
+from django.contrib import admin
 
-# from .models import EventsForm
+from .models import EventsForm
 
-# admin.site.register(EventsForm)
+admin.site.register(EventsForm)
