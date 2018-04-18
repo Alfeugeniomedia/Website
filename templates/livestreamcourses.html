@@ -2,23 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="BillHarlOff">
-	<meta name="author" content="Taqi Raza Khan">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BillHarlOff Webinar Package</title>
-	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
-	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="description" content="BillHarlOff">
+    <meta name="author" content="Taqi Raza Khan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillHarlOff Webinar Package</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <style type="text/css">
-    	footer {
-    		padding-bottom: 30px;
-    	}
-        .paypal-button paypal-button-number-0 img
-        {
-            display: none;
+        footer {
+            padding-bottom: 30px;
         }
     </style>
 
@@ -26,152 +22,152 @@
 </head>
 
 <body>
-	<!-- Navbar Default -->
-	<header>
-		<div class="container topheader">
-			<div class="row">
-				<div class="col-md-6 col-sm-8">
-					<ul class="left-list">
-						<li>
-							<a href="">
-								<i class="fa fa-clock-o"></i>
-								24/7 Availible
-							</a>
-						</li>
-						<li>
-							<a href="tel:+17709194877">
-								<i class="fa fa-phone"></i>
-								+1 (770) 919 4877
-							</a>
-						</li>
-						<li>
-							<a href="mailto:info@billharloff.com">
-								<i class="fa fa-envelope"></i>
-								info@billharloff.com
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<ul class="right-list">
-						<li>
-							<a href="">
-								<i class="fa fa-facebook"></i>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<i class="fa fa-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/in/bill-harloff-7a77b469/">
-								<i class="fa fa-linkedin"></i>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<i class="fa fa-google"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</header>
+    <!-- Navbar Default -->
+    <header>
+        <div class="container topheader">
+            <div class="row">
+                <div class="col-md-6 col-sm-8">
+                    <ul class="left-list">
+                        <li>
+                            <a href="">
+                                <i class="fa fa-clock-o"></i>
+                                24/7 Availible
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17709194877">
+                                <i class="fa fa-phone"></i>
+                                +1 (770) 919 4877
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@billharloff.com">
+                                <i class="fa fa-envelope"></i>
+                                info@billharloff.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-4">
+                    <ul class="right-list">
+                        <li>
+                            <a href="">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/bill-harloff-7a77b469/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-google"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
 
-	<nav class="navbar navbar-default">
-	  <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt="BillHarlOff" class="img-responsive"></a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      	<ul class="nav navbar-nav">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt="BillHarlOff" class="img-responsive"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
 
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="coaching.html">COACHING</a></li>
-				<li class="active"><a href="courses.html">COURSES</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-				<li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="coaching.html">COACHING</a></li>
+                <li class="active"><a href="courses.html">COURSES</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">contact</a></li>
 
-		    </ul>
-		    <ul class="nav navbar-nav pull-right nav2">
-		    	<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<span class="fa fa-bars"></span>
-						<span class="visibility-hidden">Less <i class="fa fa-times"></i></span>
-					</a>
-					<ul class="dropdown-menu pull-left">
+            </ul>
+            <ul class="nav navbar-nav pull-right nav2">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="fa fa-bars"></span>
+                        <span class="visibility-hidden">Less <i class="fa fa-times"></i></span>
+                    </a>
+                    <ul class="dropdown-menu pull-left">
                       <li><a href="{% url 'testimonials' %}">TESTIMONIALS</a></li>
-					  <li><a href="{% url 'comming-soon' %}">SUCCESS STORIES</a></li>
-					  <li><a href="{% url 'comming-soon' %}">SELF ASSESSMENTS</a></li>
-					  <li><a href="{% url 'comming-soon' %}">GROWTH SOLUTIONS</a></li>
-					  <li><a href="{% url 'comming-soon' %}">MEDIA LIBRARY</a></li>
-					  <li class="seprator"><a href="#"></a></li>
-					  <li><a href="{% url 'comming-soon' %}">BREAKTHROUGH MOBILE</a></li>
-					  <li><a href="{% url 'comming-soon' %}">GET INVOLVED</a></li>
-					  <li><a href="{% url 'comming-soon' %}">WE’RE HIRING</a></li>
-					  <li><a href="{% url 'comming-soon' %}">TERMS OF SERVICE</a></li>
-					  <li><a href="{% url 'comming-soon' %}">PRIVACY POLICY</a></li>
-					</ul>
-				</li>
-		    </ul>
-	    </div>
-	  </div>
-	</nav>
-	<div class="clearfix"></div>
+                      <li><a href="{% url 'comming-soon' %}">SUCCESS STORIES</a></li>
+                      <li><a href="{% url 'comming-soon' %}">SELF ASSESSMENTS</a></li>
+                      <li><a href="{% url 'comming-soon' %}">GROWTH SOLUTIONS</a></li>
+                      <li><a href="{% url 'comming-soon' %}">MEDIA LIBRARY</a></li>
+                      <li class="seprator"><a href="#"></a></li>
+                      <li><a href="{% url 'comming-soon' %}">BREAKTHROUGH MOBILE</a></li>
+                      <li><a href="{% url 'comming-soon' %}">GET INVOLVED</a></li>
+                      <li><a href="{% url 'comming-soon' %}">WE’RE HIRING</a></li>
+                      <li><a href="{% url 'comming-soon' %}">TERMS OF SERVICE</a></li>
+                      <li><a href="{% url 'comming-soon' %}">PRIVACY POLICY</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="clearfix"></div>
 
 
-	<section class="course_funnel_banner text-white">
-		<div class="container">
-			<div class="col-md-12">
-				<div class="funnel_head packagehead">FINDING MOTIVATED SELLERS</div>
-				<h3 class="text-center innerhead">Register today for the limited-space livestream instruction plus course packet!</h3>
-			</div>
-			<div class="clearfix"></div>
+    <section class="course_funnel_banner text-white">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="funnel_head packagehead">FIX & FLIP REHABS</div>
+                <h3 class="text-center innerhead">Register today for the limited-space livestream instruction plus course packet!</h3>
+            </div>
+            <div class="clearfix"></div>
             <div class="col-md-12 form_area">
-				<div class="col-md-5 col-sm-5">
-					<img src="{% static 'images/webinarpackage.jpg' %}" class="img-responsive">
-				</div>
-				<div class="col-md-7 col-sm-7">
-					<form class="form_builder" method="post" id="theForm" name="theForm">{% csrf_token %}
-						<div class="col-md-12 form-group">
+                <div class="col-md-5 col-sm-5">
+                    <img src="{% static 'images/webinarpackage.jpg' %}" class="img-responsive">
+                </div>
+                <div class="col-md-7 col-sm-7">
+                    <form class="form_builder" method="post" id="theForm" name="theForm">{% csrf_token %}
+                        <div class="col-md-12 form-group">
 
-						</div>
+                        </div>
 
                         <div class="col-md-12 form-group">
 
-							<div class="order-sum webinar_order_summary">Order Summary</div>
+                            <div class="order-sum webinar_order_summary">Order Summary</div>
 
-							<div class="col-md-6 col-sm-6 nopadding form-group">Finding Motivated Sellers + Course Packet <br> <i>30 day money back guarentee!</i></div>
-							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
-								<strong>$19.97</strong>
-							</div>
-							<div class="clearfix"></div>
+                            <div class="col-md-6 col-sm-6 nopadding form-group">Fix & Flip Rehabs + Course Packet <br> <i>30 day money back guarentee!</i></div>
+                            <div class="col-md-6 col-sm-6 nopadding form-group text-right">
+                                <strong>$19.97</strong>
+                            </div>
+                            <div class="clearfix"></div>
 
-							<div id="paypal-button-container" name="paypal-button-container" style="width: 100% !important" onLoad="nodisplay()"></div>
-						</div>
+                            <div id="paypal-button-container" name="paypal-button-container" style="width: 100% !important"></div>
+                        </div>
 
-						<div class="col-md-12 form-group"  id="paypal-button-container" name="paypal-button-container">
+                        <div class="col-md-12 form-group"  id="paypal-button-container" name="paypal-button-container">
 
-							<!--<button class="btn btn-success btn-block" style="font-size: 18px">
-								<strong>Pay $997.00</strong>
-							</button>-->
-						</div>
+                            <!--<button class="btn btn-success btn-block" style="font-size: 18px">
+                                <strong>Pay $997.00</strong>
+                            </button>-->
+                        </div>
                         <div class="col-md-12 empty_div form-group">
 
-						</div>
+                        </div>
 
-					</form>
-				</div>
+                    </form>
+                </div>
                 <div class="clearfix"></div>
-			</div>
+            </div>
 
             <script>
 
@@ -230,7 +226,7 @@
     {{ paypalForm.amount }}
     {{ paypalForm.confirmation }}
 </form>
-			<div class="clearfix"></div>
+            <div class="clearfix"></div>
         </div>
 
         <section class="comming_soon bg-info">
@@ -271,14 +267,14 @@
                 </div>
             </div>
         </section>
-	    <div class="clearfix"></div>
+        <div class="clearfix"></div>
 
-		<div class="container">
+        <div class="container">
 
             <section class="coaching what_you_get">
                 <div class="container">
                     <div class="col-md-12 form-group text-center">
-                        <div class="section_head_inner font_play text-white">Finding Motivated Sellers<br> Livestream Instruction + Course Packet</div>
+                        <div class="section_head_inner font_play text-white">Fix & Flip Rehabs <br>Livestream Instruction + Course Packet!</div>
                         <!-- <p class="inner_heading">Package Includes</p> -->
                     </div>
                     <div class="col-md-12">
@@ -287,11 +283,11 @@
                         </div>
                         <div class="col-md-6">
                             <ul class="funnel_list">
-                                <li>Where to find Motivated Sellers</li>
-                                <li>Top 6 reasons WHY someone is motivated to sell </li>
-                                <li>What do you offer a Motivated Seller</li>
-                                <li>Clues to a Great Deal</li>
-                                <li>How to connect with a Motivated Seller</li>
+                                <li>How to locate reliable Contractors</li>
+                                <li>Flip Tips </li>
+                                <li>What not to do</li>
+                                <li>Why you should always use a Contractor Agreement Form</li>
+                                <li>What to look for in a flip</li>
                             </ul>
                         </div>
                     </div>
@@ -301,17 +297,17 @@
             </section>
 
             <div class="col-md-12 what_you_get join_us">
-				<div class="col-md-4 col-sm-4">
-					<img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
-				</div>
-				<div class="col-md-8 col-sm-8">
-					<div class="funnel_heading_sub">
-						30 day Money Back Guarantee
-					</div>
-					<p> I am so confident that this package will not only give you the confidence to kick start and further advance your Real Estate Investing career, but will provide you the tools, tactics and strategies to succeed in reaching your dreams, that I personally guarantee if you’re not satisfied with your purchase, I will send your money back, no questions asked!</p>
-				</div>
+                <div class="col-md-4 col-sm-4">
+                    <img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="funnel_heading_sub">
+                        30 day Money Back Guarantee
+                    </div>
+                    <p> I am so confident that this package will not only give you the confidence to kick start and further advance your Real Estate Investing career, but will provide you the tools, tactics and strategies to succeed in reaching your dreams, that I personally guarantee if you’re not satisfied with your purchase, I will send your money back, no questions asked!</p>
+                </div>
                 <div class="clearfix"></div>
-			</div>
+            </div>
 
             <div class="col-md-12 what_you_get webinar_packages">
                 <div class="funnel_head packagehead text-right">THERE’S NEVER BEEN A BETTER TIME TO <br/>INVEST IN REAL ESTATE!!!</div>
@@ -323,32 +319,32 @@
                    <img src="{% static 'images/gurrenty.png' %}" class="img-responsive" style="max-width: 200px; margin: 25px auto 0">
                </div>
             </div>
-	</section>
+    </section>
 
-	<div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 
-	<footer class="footer">
-		<div class="container">
-			<div class="col-md-5 col-sm-6">
+    <footer class="footer">
+        <div class="container">
+            <div class="col-md-5 col-sm-6">
                 <div class="follow-us" style="font-size: 29px;padding-left: 0%;">
                     <a href="https://mailchi.mp/9acf17dcf3b8/top5financingyourflipstrategies">DOWNLOAD BILL’S TOP 5 FINANCING STRATEGIES!</a>
                 </div>
-			</div>
-			<div class="col-md-7 col-sm-6">
-				<p class="copy-rights">©2018 • PRIVACY POLICY</p>
-			</div>
-			<div class="company-info">BILL HARLOFF, Instructor & Coach</div>
-		</div>
-	</footer>
-	
-	<script src="{% static 'js/moment.min.js' %}"></script>
-	<script src="{% static 'js/jquery.min.js' %}"></script>
+            </div>
+            <div class="col-md-7 col-sm-6">
+                <p class="copy-rights">©2018 • PRIVACY POLICY</p>
+            </div>
+            <div class="company-info">BILL HARLOFF, Instructor & Coach</div>
+        </div>
+    </footer>
+    
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
     <script>
 // Set the date we're counting down to
-var countDownDate = new Date("April 17, 2018 12:00:00").getTime();
+var countDownDate = new Date("April 19, 2018 12:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -379,12 +375,12 @@ var x = setInterval(function() {
 </script>
 
     <script type="text/javascript">
-    	$(document).ready(function(){
-			 $(".dropdown-toggle").click(function(){
-			 	$(".visibility-hidden").toggle();
-			 	$(".fa-bars").toggle();
-			 });  				 
-  		});
+        $(document).ready(function(){
+             $(".dropdown-toggle").click(function(){
+                $(".visibility-hidden").toggle();
+                $(".fa-bars").toggle();
+             });                 
+        });
     </script>
 
     <script>
@@ -415,16 +411,6 @@ var x = setInterval(function() {
     });
 
   });
-
-    window.onload=function(){
-        console.log('test',$('.paypal-button'))
-        setInterval(function() {
-            $('.paypal-button-logo').on('load', function(){
-                $('.paypal-button-logo').hide();
-                console.log('img loaded');
-            });
-        }, 500);
-    }
 
 </script>
 
