@@ -4324,3 +4324,5 @@ form[data-form-id] button:disabled{
   .testimonial .post{ font-size: 11px; }
 }
 .block-center{float: none;margin: 0 auto}
+.bullet-style ul{list-style: inherit !important;}
+.bullet-style ul li{padding: 12px;}

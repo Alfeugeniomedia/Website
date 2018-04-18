@@ -87,7 +87,7 @@
 	      	<ul class="nav navbar-nav">
 
 				<li><a href="about.html">ABOUT</a></li>
-				<li class="active"><a href="coaching.html">COACHING</a></li>
+				<li class="active"><a href="{% url 'coaching' %}">COACHING</a></li>
 				<li ><a href="courses.html">COURSES</a></li>
 				<li><a href="events.html">EVENTS</a></li>
 				<li><a href="contact.html">contact</a></li>
@@ -239,13 +239,12 @@
                     <div class="clearfix"></div>
                   
                     <div class="col-md-4 block-center">
-                        <div class="package_box premium text-black" style="float:none;margin:0 auto">
-                            <ul class="package_list">
+                        <div class="bullet-style" style="float:none;margin:0 auto">
+                            <ul class="">
                                 <li>Unlimited access to the entirety of B.H. Coaching’s resource library with training courses, contracts, marketing materials and much more! </li>
                                 <li> Unlimited email access to Bill’s personally trained staff to support you during the implementation of Bill’s tactics & strategies!</li>
                                 <li>Access to B.H. Coaching’s monthly Real Estate Investing Success Webinar, LIVE w/ Bill!</li>
                                 <!-- <li class="more_pages"><button class="btn btn-info btn-block">$1,491 VALUE!!!</button> </li> -->
-
                             </ul>
                         </div>
                     </div>
@@ -253,7 +252,7 @@
             </section>
 
 
-            <div class="col-md-12 join_us">
+            <div class="col-md-12 join_us what_you_get">
                 <div class="col-md-4 col-sm-4">
                     <img src="/assets/images/bill_course_funnel.jpg" class="img-responsive">
                 </div>
