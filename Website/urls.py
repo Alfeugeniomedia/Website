@@ -19,6 +19,7 @@ from .views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'fiftypercentoff', OffPercent.as_view(), name='percentoff'),
     url(r'webinar$', Webinar.as_view(), name='webinar'),
     url(r'webinar1$', Webinar1.as_view(), name='webinar1'),
     url(r'livestreamcourse$', LiveCourses.as_view(), name='livestreamcourse'),

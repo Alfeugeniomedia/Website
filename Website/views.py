@@ -228,9 +228,20 @@ class GoldPackage(View):
         data = {
             'client_id': CLIENT_ID,
             'currency': 'USD',
-            'live_id': LIVE_CLIENT_ID
+            'live_id': LIVE_CLIENT_ID,
+            
         }
         return render(request,'goldpackage.html',data)
+
+class OffPercent(View):
+    def get(self,request):
+        data = {
+            'client_id': CLIENT_ID,
+            'currency': 'USD',
+            'live_id': LIVE_CLIENT_ID
+            
+        }
+        return render(request,'50percentOff.html', data)
 
 
 

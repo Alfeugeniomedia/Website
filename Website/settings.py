@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'Website'
 ]
 
-MIDDLEWARE_CLASSES   = [
+MIDDLEWARE_CLASSES  = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
