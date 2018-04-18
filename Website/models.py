@@ -14,12 +14,8 @@ class EventsForm(models.Model):
 	description= models.TextField(max_length=50)
 	event_date=models.DateField()
 
-	def __unicode__(self):
-			return self.content
-
-	def get_user(self):
-			return self.user.__unicode__()
-
+	# def __unicode__(self):
+	# 		return self.content
 	# def save(self, **kwargs):
 	# 		super(Post, self).save(**kwargs)
 
