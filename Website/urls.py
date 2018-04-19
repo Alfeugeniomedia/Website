@@ -21,10 +21,9 @@ from . import views as core_views
 from forms import LoginForm
 
 urlpatterns = [
-    url(r'', Homepage.as_view(), name='index'),
-    # url(r'^login$', LoginUser.as_view(), name='login'),
-    # url(r'^signup$', SignupUser.as_view(), name='signup'),
-    # url(r'^logout$', Logout.as_view(), name='logout'),
+    url(r'^login/$', LoginUser.as_view(), name='login'),
+    url(r'^signup$', SignupUser.as_view(), name='signup'),
+    url(r'^logout/$', Logout.as_view(), name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'fiftypercentoff', OffPercent.as_view(), name='percentoff'),
     url(r'webinar$', Webinar.as_view(), name='webinar'),
@@ -52,6 +51,7 @@ urlpatterns = [
     url(r'^brozepackage$', BronzePackage.as_view(), name='brozepackage'),
     url(r'^silverpackage$', SilverPackage.as_view(), name='silverpackage'),
     url(r'^goldpackage$', GoldPackage.as_view(), name='goldpackage'),
+    url(r'', Homepage.as_view(), name='index'),
 
 
 ]
