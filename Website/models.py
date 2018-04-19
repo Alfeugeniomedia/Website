@@ -19,5 +19,11 @@ class EventsForm(models.Model):
 	# def save(self, **kwargs):
 	# 		super(Post, self).save(**kwargs)
 
+class Front_Users(models.Model):
+	SALT_SIZE = 8
 
+	name= models.CharField(max_length=30)
+	email= models.CharField(max_length=50)
+	password=models.CharField(max_length=100)
+	date_joined=models.CharField(max_length=50)
 

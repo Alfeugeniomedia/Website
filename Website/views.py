@@ -5,8 +5,89 @@ from Website.settings import EMAIL_HOST
 from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
 from Website.forms import LoginForm
-from Website.models import EventsForm
+from Website.models import *
 import datetime
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.hashers import PBKDF2PasswordHasher
+
+
+class SignupUser(View):
+    def get(self, request):
+        if not request.session.get('logged_in', None):
+            return render(request, 'registration/signup.html')
+        else:
+            # return render(request, 'index.html')
+            return redirect('/')
+
+
+    def post(self , request):
+        data= request.POST
+        hasher=PBKDF2PasswordHasher()
+        name=data['name']
+        email=data['email']
+        password=data['password']
+        password2=data['c_password']
+        date_joined=datetime.datetime.now()
+        message=''
+        if(password == password2):
+            password=hasher.encode(password=password,salt='salt',iterations=50000)
+            try:
+                # events_data=EventsForm.objects.get(event_date=date)
+                Front_Users.objects.get(email=email)
+                return render(request, 'registration/signup.html',{'message':'Email Already exists '})                
+            except Front_Users.DoesNotExist: 
+                events= Front_Users(name=name,email=email,password=password,date_joined=date_joined)
+                events.save()
+                request.session['logged_in']=True
+                request.session['username']=email
+                print('You signed up successfully')
+                return render(request, 'index.html')
+        else:
+            return render(request, 'registration/signup.html',{'message':'Passwords do not match'})
+
+class Logout(View):
+    def get(self,request):
+        if request.session.get('logged_in', None):
+            del request.session['logged_in']
+            del request.session['username']
+            # return render(request, 'registration/login.html')
+            return redirect('/login/')
+        else:
+            return redirect('/')
+
+
+
+
+class LoginUser(View):
+    def get(self, request):
+        data=Front_Users.objects.all()
+        if not request.session.get('logged_in', None):
+            return render(request, 'registration/login.html',{'data':data})
+        else:
+            # return render(request, 'index.html',{'data':data})
+            return redirect('/')
+
+
+    def post(self , request):
+        data= request.POST
+        hasher=PBKDF2PasswordHasher()
+        email=data['email']
+        password=data['password']
+        message=''
+        password=hasher.encode(password=password,salt='salt',iterations=50000)
+        try:
+            # events_data=EventsForm.objects.get(event_date=date)
+            Front_Users.objects.get(email=email,password=password)
+            request.session['logged_in']=True
+            request.session['username']=email
+            return render(request, 'index.html')
+        except Front_Users.DoesNotExist: 
+            # events= EventsForm(title=title,description=description)
+            print('uer not logged in')
+            return render(request, 'registration/login.html',{'message':'Email Does not exists '})
+# 
 
 class CreateEve(View):
     def get(self, request): 

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block navbar %}
+    <li><a href="{% url 'about' %}">ABOUT</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'courses' %}">COURSES</a></li>
+    <li class=""><a href="{% url 'events' %}">EVENTS</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+{% block content %}
+<!-- {{today}} -->
+
+
+<!-- {% if date %}
+	{{date}}
+{% endif %}
+{{check}} -->
+	<section class="events_banner">
+		<div class="container">
+			<h1 class="section_head text-center">SignUp</h1>
+			  <h2>Login</h2>
+			  <div class="block-center text-center">
+				  <form method="post">
+				    {% csrf_token %}
+				    {{ form.as_p }}
+				    <button type="submit">SignUp</button>
+				  </form>
+			  </div>
+		</div>
+	</section>
+
+	<section class="events">
+		
+	</section>
+    <div align="center" style="padding: 20px; font-size: 15px;"><strong>NOTE:</strong> Schedule is subject to change. Please do not make travel arrangements until you have received a confirmation.</div>
+	<div class="clearfix"></div>
+
+{% endblock %}

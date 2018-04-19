@@ -9,6 +9,8 @@
     <li class="active"><a href="{% url 'courses' %}">COURSES</a></li>
     <li><a href="{% url 'events' %}">EVENTS</a></li>
     <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+    
 {% endblock %}
 
 {% block content %}
@@ -150,63 +152,66 @@
                         </a>
 					</div>
 					<!--additional cources -->
-					<!-- <div class="col-md-4 col-sm-6 form-group">
-                        <a href="{% url 'comming-soon' %}">
-						<div class="courses_list">
-					        <div class="col-md-12 form-group">
-					        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
-						        <h2 class="font_play">How to Fix your Credit and Secure Financing</h2>
+					<div class="view_more_cources fade_out disp_none">
+						
+						<div class="col-md-4 col-sm-6 form-group">
+	                        <a href="{% url 'comming-soon' %}">
+							<div class="courses_list">
+						        <div class="col-md-12 form-group">
+						        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
+							        <h2 class="font_play">How to Fix your Credit and Secure Financing</h2>
 
-					        </div>
-					        <div class="col-md-12 nopadding">
-					            <img class="img-responsive" src="{% static 'images/fixyourcreadit.jpg' %}" alt="">
-					        </div>
-					        <div class="col-md-12 text_course">
+						        </div>
+						        <div class="col-md-12 nopadding">
+						            <img class="img-responsive" src="{% static 'images/fixyourcreadit.jpg' %}" alt="">
+						        </div>
+						        <div class="col-md-12 text_course">
 
-					          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
+						          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
 
-					        </div>
-					      </div>
-                        </a>
+						        </div>
+						      </div>
+	                        </a>
+						</div>
+						<div class="col-md-4 col-sm-6 form-group">
+	                        <a href="{% url 'comming-soon' %}">
+							<div class="courses_list">
+						        <div class="col-md-12 form-group">
+						        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
+							        <h2 class="font_play">Real Estate Negotiation</h2>
+
+						        </div>
+						        <div class="col-md-12 nopadding">
+						            <img class="img-responsive" src="{% static 'images/realestatenegotiation.jpg' %}" alt="">
+						        </div>
+						        <div class="col-md-12 text_course">
+
+						          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
+
+						        </div>
+						      </div>
+	                        </a>
+						</div>
+						<div class="col-md-4 col-sm-6 form-group">
+	                        <a href="{% url 'comming-soon' %}">
+							<div class="courses_list">
+						        <div class="col-md-12 form-group">
+						        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
+							        <h2 class="font_play">Extreme Leadership: How to Build your Real Estate Investment Business</h2>
+
+						        </div>
+						        <div class="col-md-12 nopadding">
+						            <img class="img-responsive" src="{% static 'images/buildrealestate.jpg' %}" alt="">
+						        </div>
+						        <div class="col-md-12 text_course">
+
+						          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
+
+						        </div>
+						      </div>
+	                        </a>
+						</div>
 					</div>
-					<div class="col-md-4 col-sm-6 form-group">
-                        <a href="{% url 'comming-soon' %}">
-						<div class="courses_list">
-					        <div class="col-md-12 form-group">
-					        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
-						        <h2 class="font_play">Real Estate Negotiation</h2>
-
-					        </div>
-					        <div class="col-md-12 nopadding">
-					            <img class="img-responsive" src="{% static 'images/realestatenegotiation.jpg' %}" alt="">
-					        </div>
-					        <div class="col-md-12 text_course">
-
-					          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
-
-					        </div>
-					      </div>
-                        </a>
-					</div>
-					<div class="col-md-4 col-sm-6 form-group">
-                        <a href="{% url 'comming-soon' %}">
-						<div class="courses_list">
-					        <div class="col-md-12 form-group">
-					        	<p class="course_type active"> <i class="fa fa-bookmark"></i> Real Estate</p>
-						        <h2 class="font_play">Extreme Leadership: How to Build your Real Estate Investment Business</h2>
-
-					        </div>
-					        <div class="col-md-12 nopadding">
-					            <img class="img-responsive" src="{% static 'images/buildrealestate.jpg' %}" alt="">
-					        </div>
-					        <div class="col-md-12 text_course">
-
-					          <p class="auther_area"><img src="{% static 'images/auther_image.png' %}" class="img-round img-responsive"><strong class="active">Bill Harloff  <span class="pull-right text-black">Comming Soon</span></strong></p>
-
-					        </div>
-					      </div>
-                        </a>
-					</div> -->
 					<!--additional cources ends-->
 
 
@@ -229,7 +234,7 @@
 				  <li><a href="#">9</a></li>
 				  <li class="active bg-info"><a href="#">Next</a></li>
 				</ul>  -->
-				<button class="btn btn-info">View More</button>
+				<button class="btn btn-info view_more">View More</button>
 			</div>
         </div>
 	</section>
@@ -267,6 +272,17 @@
            $("#view_more").hide();
 
        });
+       $('.view_more').on('click',function(){
+       	if($('.view_more_cources').hasClass('fade_in')){
+       		$('.view_more_cources').removeClass('fade_in');
+       		$('.view_more_cources').addClass('fade_out');
+       		$('.view_more_cources').slideUp();
+       	}else if($('.view_more_cources').hasClass('fade_out')){
+       		$('.view_more_cources').removeClass('fade_out');
+       		$('.view_more_cources').addClass('fade_in');
+       		$('.view_more_cources').slideDown();
+       	}
+       })
     });
     </script>
 {% endblock %}

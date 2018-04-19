@@ -16,8 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from .views import *
+from django.contrib.auth import views as auth_views
+from . import views as core_views
+from forms import LoginForm
 
 urlpatterns = [
+    url(r'^login/$', LoginUser.as_view(), name='login'),
+    url(r'^signup$', SignupUser.as_view(), name='signup'),
+    url(r'^logout/$', Logout.as_view(), name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'fiftypercentoff', OffPercent.as_view(), name='percentoff'),
     url(r'webinar$', Webinar.as_view(), name='webinar'),

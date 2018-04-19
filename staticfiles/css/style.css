@@ -3960,7 +3960,7 @@ form[data-form-id] button:disabled{
     margin-bottom: 8px;
     display: inline-block;
 }
-.pom-agile input[type="text"], .pom-agile input[type="password"] {
+.pom-agile input[type="text"], .pom-agile input[type="password"],.pom-agile input[type="email"] {
     outline: none;
     border: none;
     background: transparent;
@@ -4326,3 +4326,12 @@ form[data-form-id] button:disabled{
 .block-center{float: none;margin: 0 auto}
 .bullet-style ul{list-style: inherit !important;}
 .bullet-style ul li{padding: 12px;}
+.nav-login a{color: #43bdfe !important;font-size: 17px;}
+.navbar-nav > li{margin-right: 16px;}
+.signup_banner{background: none !important}
+.sub-main-w3{background: rgb(230, 232, 232);}
+.sub-main-w3 label{color : #43bdfe !important;}
+.sub-main-w3 h2{color : #43bdfe !important;}
+.right-w3l input[type="submit"]{background: #43bdfe;}
+.alr_acc a{ color: #43bdfe }
+.disp_none{display: none}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block navbar %}
+
+    <li><a href="{% url 'about' %}">ABOUT</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'courses' %}">COURSES</a></li>
+    <li><a href="{% url 'events' %}">EVENTS</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    {% if request.session.logged_in != None %}
+    	<li class="nav-login dropdown">
+    		<!-- <a class="dropdown-toggle jax-link" data-toggle="dropdown" href="#"> -->
+    			<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
+    		  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
+                    <!-- <li> -->
+                        <a href="{% url 'logout' %}">Logout</a>
+                    <!-- </li> -->
+                <!-- </ul> -->
+    	</li>
+    {% else %}
+    <li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section class="signup_banner">
+		<div class="container">
+			<div class="col-md-6 col-md-offset-6 col-sm-12 nopaddingmobile text-black block-center">
+				<div class="sub-main-w3">
+					<h2 class="section_head_inner2">Sign Up</h2>
+					<div class="text-center">
+                    	<span style="color: red;">{{ message }}</span>
+					</div>
+					<form action="{% url 'signup' %}" method="post">{% csrf_token %}
+						<label>Name</label>
+						<div class="pom-agile">
+							<span class="fa fa-user-o" aria-hidden="true"></span>
+							<input placeholder="Full Name" name="name" class="user" required="" type="text">
+						</div>
+						<label>Email</label>
+						<div class="pom-agile">
+							<span class="fa fa-envelope-o" aria-hidden="true"></span>
+							<input placeholder="Email" name="email" class="user" required="" type="email">
+						</div>
+						<label>Password</label>
+						<div class="pom-agile">
+							<span class="fa fa-key" aria-hidden="true"></span>
+							<input placeholder="Password" name="password" class="pass" required="" type="password">
+						</div>
+						<label>Confirm Password</label>
+						<div class="pom-agile">
+							<span class="fa fa-key" aria-hidden="true"></span>
+							<input placeholder="Confirm Password" name="c_password" class="pass" required="" type="password">
+						</div>
+						<div class="sub-w3l">
+							<div class="sub-agile">
+								<!-- <input id="brand1" name="brand1" value="" type="checkbox"> -->
+								<!-- <label for="brand1"> -->
+									<!-- <span></span>I accept all terms and condition</label> -->
+							</div>
+
+							<div class="clear"></div>
+						</div>
+						<div class="right-w3l">
+							<input value="Sign Up" type="submit">
+						</div>
+					</br>
+						<div class="text-center alr_acc">Already have an account? <span class="sign"><a href="{% url 'login' %}">Log In</a></span></div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% endblock %}

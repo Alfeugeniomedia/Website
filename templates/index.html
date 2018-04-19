@@ -8,6 +8,19 @@
     <li><a href="{% url 'courses' %}">COURSES</a></li>
     <li><a href="{% url 'events' %}">EVENTS</a></li>
     <li><a href="{% url 'contact' %}">Contact</a></li>
+    {% if request.session.logged_in != None %}
+    	<li class="nav-login dropdown">
+    		<!-- <a class="dropdown-toggle jax-link" data-toggle="dropdown" href="#"> -->
+    			<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
+    		  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
+                    <!-- <li> -->
+                        <a href="{% url 'logout' %}">Logout</a>
+                    <!-- </li> -->
+                <!-- </ul> -->
+    	</li>
+    {% else %}
+    <li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+    {% endif %}
 {% endblock %}
 
 
@@ -125,7 +138,47 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <div id="testimonial-slider" class="owl-carousel">
-                        <div class="testimonial">
+                    	  <div class="testimonial">
+                          <!--   <div class="pic">
+                                <img class="img-circle" src="{% static 'images/ChuckCraven.jpg' %}" style="width: 80px;height:80px;">
+                            </div>
+                            <p class="description">
+                               Bill’s course was an eye opener! If you want to make money in this business, you have to be honest and help people succeed. Bill’s courses under promise, and over deliver!
+
+                            </p>
+                            <h3 class="title">Hamo Sarokhani
+                                <span class="post"> </span>
+                            </h3>
+                        </div> -->
+                        <!-- <div class="testimonial">
+                            <div class="pic">
+                                <img class="img-circle" src="{% static 'images/img-user1.png' %}" style="width: 80px;height:80px;">
+                            </div>
+                            <p class="description">
+                                I really cannot believe you just helped me profit 5,000 on my 1st Assignment of Contract deal. Your coaching program was without a doubt the best investment I have ever made in myself. Never would have believed I could make this kind of money. Without you I would not of even known how to start. Thank U!
+                            </p>
+                            <h3 class="title">Matt
+                                <span class="post"> - Web Developer</span>
+                            </h3>
+                        </div> -->
+
+                         <div class="testimonial">
+                            <div class="pic">
+                                <img class="img-circle" src="{% static 'images/ChuckCraven.jpg' %}" style="width: 80px;height:80px;">
+                            </div>
+                            <p class="description">
+                               BH Coaching,
+								Thank you so much for helping me have a lot of success in real estate over a number of years. I attended several of your boot camps and learned so much. You were at the top of your game in the early 2000’s specializing in short sales and teaching others how to be successful too. Your knowledge of real estate is both incredible and valuable. Although the big recession hit in 2008/2009 and affected everyone tremendously, I was still able to find deals and flip houses employing the methods I learned through your boot camps.
+								Your teaching and coaching has been tremendous and helped me profit on every deal I have ever done. I would definitely recommend your coaching to anyone who wishes to succeed in the real estate industry.
+								Thanks again and much success to you in the future.
+
+                            </p>
+                            <h3 class="title">Chuck Craven
+                                <span class="post"> </span>
+                            </h3>
+                        </div>
+
+                         <div class="testimonial">
                             <div class="pic">
                                 <img class="img-circle" src="{% static 'images/img-user1.png' %}" style="width: 80px;height:80px;">
                             </div>
