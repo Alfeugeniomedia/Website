@@ -4327,3 +4327,4 @@ form[data-form-id] button:disabled{
 .bullet-style ul{list-style: inherit !important;}
 .bullet-style ul li{padding: 12px;}
 .nav-login a{color: #43bdfe;font-size: 17px;}
+.navbar-nav.nav2{margin: 3px 0 0 15px !important}
