@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+   
+</style>
 </head>
 
 <body>
@@ -94,6 +96,7 @@
 					</a>
 					<ul class="dropdown-menu pull-left">
                       <li><a href="{% url 'testimonials' %}">TESTIMONIALS</a></li>
+					  <li><a href="{% url 'comming-soon' %}">Blogs</a></li>
 					  <li><a href="{% url 'comming-soon' %}">SUCCESS STORIES</a></li>
 					  <li><a href="{% url 'comming-soon' %}">SELF ASSESSMENTS</a></li>
 					  <li><a href="{% url 'comming-soon' %}">GROWTH SOLUTIONS</a></li>
@@ -161,8 +164,9 @@
 				</div>
 				<div class="text_area_pop">
 					<div class="popup_head font_play active">Investing in real estate has never been easier</div>
-					<p>Ready to get started?</p>
-					<button class="btn btn-info">Get Access</button>
+					<p class="popup_subhead">Ready to get started?</p>
+					<!-- <p class="popup_subhead2">Ready to get started?</p> -->
+					<a href='/thank_you'><button class="btn btn-info" >Get Access</button></a>
 				</div>
 				<div class="clearfix"></div>
 
@@ -183,30 +187,65 @@
 			 });
 
         $('#calendar').fullCalendar({
-          defaultDate: '2018-04-01',
+          
           editable: true,
           eventLimit: true,
+          displayEventTime : false,
+          timeFormat:'H(:mm)',
             eventClick: function(calEvent, jsEvent, view) {
+
+                $('#myModal2 .popup_head').html('');
+                $('#myModal2 .popup_head').html(calEvent.title);
+                $('#myModal2 .popup_subhead').html('');
+                $('#myModal2 .popup_subhead').html(calEvent.event_time);
+
                 $('#myModal2').modal('show');
+               
+
+   				 //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+   				 //alert('View: ' + view.name);
+
+    // change the border color just for fun
+   				 $(this).css('border-color', 'green');
 
           },
+          
           events: [
-            {
-              title: 'Live Stream Real Estate Investing Bootcamp',
-              start: '2018-04-12T00:00:00',
-              allDay : false
-            },
+          {% if data %}
+          	{% for event in data %}
+          		{
+	              title: '{{event.title}}',
+				  event_time: '{{event.event_time}}',
+	              start: '{{event.event_date }} ',
+	              time:'{{event.event_time}}',
 
-            {
-              title: ' Team Building Networking Webinar',
-              start: '2018-04-19T14:00:00',
-            },
+	              allDay : false,
+	              
+	              
+	              
+            	},
+            	 //console.log({{title}})
+          		
+          	{% endfor %}
+          {% endif %}
 
-            {
-              title: 'Real Estate Investing Success Q&A Webinar',
-              start: '2018-04-26T14:00:00'
-            }
+            // {
+            //   title: 'Live Stream Real Estate Investing Bootcamp',
+            //   start: '2018-04-12T00:00:00',
+            //   allDay : false
+            // },
+
+            // {
+            //   title: ' Team Building Networking Webinar',
+            //   start: '2018-04-19T14:00:00',
+            // },
+
+            // {
+            //   title: 'Real Estate Investing Success Q&A Webinar',
+            //   start: '2018-04-26T14:00:00'
+            // }
           ]
+           //	timeFormat: 'H(:mm)'
         });
 
       });

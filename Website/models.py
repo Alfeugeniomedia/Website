@@ -8,12 +8,12 @@ class Users(User):
 			verbose_name = 'Users'
 
 
-class EventsForm(models.Model):
+class Events(models.Model):
 
 	title= models.CharField(max_length=30)
 	description= models.TextField(max_length=50)
-	event_date=models.DateField(max_length=50)
-
+	event_date=models.DateField()
+	event_time= models.TimeField()
 	# def __unicode__(self):
 	# 		return self.content
 	# def save(self, **kwargs):
@@ -22,8 +22,9 @@ class EventsForm(models.Model):
 class Front_Users(models.Model):
 	SALT_SIZE = 8
 
-	name= models.CharField(max_length=30)
+	name= models.CharField(max_length=100)
 	email= models.CharField(max_length=50)
-	password=models.CharField(max_length=100)
+	password=models.CharField(max_length=255)
 	date_joined=models.CharField(max_length=50)
+	redirect_to=models.CharField(max_length= 50)
 

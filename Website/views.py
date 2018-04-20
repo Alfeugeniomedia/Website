@@ -6,6 +6,7 @@ from Website.settings import CLIENT_ID, LIVE_CLIENT_ID
 from Website.models import Users
 from Website.forms import LoginForm
 from Website.models import *
+from Website.models import Events as EventsModel
 import datetime
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
@@ -43,7 +44,7 @@ class SignupUser(View):
                 request.session['logged_in']=True
                 request.session['username']=email
                 print('You signed up successfully')
-                return render(request, 'index.html')
+                return redirect('/thank_you')
         else:
             return render(request, 'registration/signup.html',{'message':'Passwords do not match'})
 
@@ -102,16 +103,25 @@ class CreateEve(View):
         description = data['description']
         date=data['date'];
         today = datetime.datetime.today()
+        formatedDate = today.strftime("%Y-%m-%d")
+        form_date = datetime.datetime.strptime(date, "%Y-%m-%d")
+        # print(today)
+        print(formatedDate)
+        print(form_date)
         check = False
         saved = False
-        try:
-            # events_data=EventsForm.objects.get(event_date=date)
-            EventsForm.objects.get(event_date=date)
-        except EventsForm.DoesNotExist: 
-            # events= EventsForm(title=title,description=description)
-            events= EventsForm(title=title,description=description,event_date=date)
-            events.save()
-            saved= True
+        if form_date < today:
+            check = False
+        else:
+            print('test')
+            try:
+                # events_data=EventsForm.objects.get(event_date=date)
+                Events.objects.get(event_date=date)
+            except Events.DoesNotExist: 
+                # events= EventsForm(title=title,description=description)
+                events= Events(title=title,description=description,event_date=date)
+                events.save()
+                saved= True
         # events.title=title
         # events.description=description
         return render(request,'createevents.html',{'saved':saved,'today':today,'date':date,'check':check})
@@ -207,7 +217,8 @@ class Courses(View):
 
 class Events(View):
     def get(self, request):
-        data=EventsForm.objects.all()
+        data=EventsModel.objects.all()
+        # print(data)
         return render(request, 'events.html',{'data':data})
 
 

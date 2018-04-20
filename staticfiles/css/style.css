@@ -4336,3 +4336,5 @@ form[data-form-id] button:disabled{
 .alr_acc a{ color: #43bdfe }
 .disp_none{display: none}
 .navbar-nav.nav2{margin: 3px 0 0 15px !important;}
+.signup_banner{background: none !important}
+.courses_list .block_minheight{min-height: 116px;}
