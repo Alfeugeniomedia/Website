@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^signup$', SignupUser.as_view(), name='signup'),
     url(r'^logout/$', Logout.as_view(), name='logout'),
     url(r'^admin/', admin.site.urls),
+    url(r'^event_access$', Event_access.as_view(), name='event_access'),
     url(r'fiftypercentoff', OffPercent.as_view(), name='percentoff'),
     url(r'webinar$', Webinar.as_view(), name='webinar'),
     url(r'webinar1$', Webinar1.as_view(), name='webinar1'),

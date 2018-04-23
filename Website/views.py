@@ -86,7 +86,7 @@ class LoginUser(View):
             return render(request, 'index.html')
         except Front_Users.DoesNotExist: 
             # events= EventsForm(title=title,description=description)
-            print('uer not logged in')
+            # print('user not logged in')
             return render(request, 'registration/login.html',{'message':'Email Does not exists '})
 # 
 
@@ -125,6 +125,17 @@ class CreateEve(View):
         # events.title=title
         # events.description=description
         return render(request,'createevents.html',{'saved':saved,'today':today,'date':date,'check':check})
+
+class Event_access(View):
+    def get(self,request,title):
+        print(title);
+
+    def post(self,request):
+        data=request.POST
+        print(data.title)
+
+
+
 
 class Homepage(View):
     def get(self, request):

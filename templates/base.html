@@ -163,10 +163,12 @@
 					<img src="{% static 'images/popup_image.jpg' %}" class="img-responsive">
 				</div>
 				<div class="text_area_pop">
-					<div class="popup_head font_play active">Investing in real estate has never been easier</div>
-					<p class="popup_subhead">Ready to get started?</p>
+					<div class="popup_head font_play active"></div>
+					<p class="popup_subhead2"></p>
+					<p class="popup_subhead"></p>
+					
 					<!-- <p class="popup_subhead2">Ready to get started?</p> -->
-					<a href='/thank_you'><button class="btn btn-info" >Get Access</button></a>
+					<a id="access_btn_link" href="/thank_you" ><button id="get_access_btn" class="btn btn-info" >Get Access</button></a>
 				</div>
 				<div class="clearfix"></div>
 
@@ -193,12 +195,14 @@
           displayEventTime : false,
           timeFormat:'H(:mm)',
             eventClick: function(calEvent, jsEvent, view) {
-
+            	// var url="event"
                 $('#myModal2 .popup_head').html('');
                 $('#myModal2 .popup_head').html(calEvent.title);
                 $('#myModal2 .popup_subhead').html('');
                 $('#myModal2 .popup_subhead').html(calEvent.event_time);
-
+                $('#myModal2 .popup_subhead2').html('');
+                $('#myModal2 .popup_subhead2').html(calEvent.description);
+                // $('#access_btn_link').attr('href',url);
                 $('#myModal2').modal('show');
                
 
@@ -218,7 +222,7 @@
 				  event_time: '{{event.event_time}}',
 	              start: '{{event.event_date }} ',
 	              time:'{{event.event_time}}',
-
+	              description:'{{event.description}}',
 	              allDay : false,
 	              
 	              

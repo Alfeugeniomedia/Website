@@ -9,6 +9,8 @@ class Users(User):
 
 
 class Events(models.Model):
+	def __unicode__(self):
+	 		return self.title
 
 	title= models.CharField(max_length=30)
 	description= models.TextField(max_length=50)
@@ -20,6 +22,8 @@ class Events(models.Model):
 	# 		super(Post, self).save(**kwargs)
 
 class Front_Users(models.Model):
+	def __unicode__(self):
+	 		return self.name
 	SALT_SIZE = 8
 
 	name= models.CharField(max_length=100)
