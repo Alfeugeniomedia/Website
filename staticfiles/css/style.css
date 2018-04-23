@@ -392,12 +392,14 @@ header{
 .main_text:before, .main_text:after{
   content: '';
   position: absolute;
-  top: 18px;
+  top: 55px;
   height: 70px;
   width: 3px;
   background: #000;
   z-index: 9999;
   left: -45px;
+  font-size: 40px;
+
 }
 .main_text:after{
   content: '\f175';
@@ -408,6 +410,7 @@ header{
   z-index: 0;
   width: 0;
   height: 0;
+  font-size: 31px;
 }
 
 /* Team */
@@ -4339,3 +4342,102 @@ form[data-form-id] button:disabled{
 .signup_banner{background: none !important}
 .courses_list .block_minheight{min-height: 116px;}
 .join_us{padding: 60px 14px 60px !important;}
+
+
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 12px;
+    
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white
+
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
+}
+.nav-login a.logd_in{color: black !important; font-size: 14px !important;}
+.nav-login a.logd_in:hover {color: #43bdfe !important; font-size: 14px !important;}
+
+#profilesidebar
+{
+  border-right: solid 1px grey;
+}
+/*.nav-tabs>li{
+  float: none !important;
+
+}*/
+.tab {
+    
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #43bdfe;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #43bdfe ;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    
+    
+    width: 100%;
+    border-left: none;
+    height: auto;
+}

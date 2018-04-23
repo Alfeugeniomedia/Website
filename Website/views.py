@@ -41,6 +41,7 @@ class SignupUser(View):
             except Front_Users.DoesNotExist: 
                 events= Front_Users(name=name,email=email,password=password,date_joined=date_joined)
                 events.save()
+                
                 request.session['logged_in']=True
                 request.session['username']=email
                 print('You signed up successfully')
@@ -80,9 +81,11 @@ class LoginUser(View):
         password=hasher.encode(password=password,salt='salt',iterations=50000)
         try:
             # events_data=EventsForm.objects.get(event_date=date)
-            Front_Users.objects.get(email=email,password=password)
+
+            user_data=Front_Users.objects.get(email=email,password=password)
+            request.session['name']=user_data.name
             request.session['logged_in']=True
-            request.session['username']=email
+            request.session['username']=user_data.email
             return render(request, 'index.html')
         except Front_Users.DoesNotExist: 
             # events= EventsForm(title=title,description=description)
@@ -347,7 +350,15 @@ class OffPercent(View):
         return render(request,'50percentOff.html', data)
 
 
+class Profile(View):
+    def get(self,request):
+        
+        return render(request,'profile.html')
 
-
+class Blogs(View):
+    def get(self,request):
+        
+        return render(request,'blogs.html')
+        
 
   

@@ -52,6 +52,9 @@ urlpatterns = [
     url(r'^brozepackage$', BronzePackage.as_view(), name='brozepackage'),
     url(r'^silverpackage$', SilverPackage.as_view(), name='silverpackage'),
     url(r'^goldpackage$', GoldPackage.as_view(), name='goldpackage'),
+    url(r'^profile$', Profile.as_view(), name='profile'),
+    # url(r'^changepassword$', Changepassword.as_view(), name='changepassword'),
+    url(r'^blogs$', Blogs.as_view(), name='blogs'),
     url(r'', Homepage.as_view(), name='index'),
 
 

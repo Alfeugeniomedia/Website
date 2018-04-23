@@ -14,7 +14,14 @@
     			<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
     		  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
                     <!-- <li> -->
-                        <a href="{% url 'logout' %}">Logout</a>
+                    	<div class="dropdown">
+ 						<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 						 <div class="dropdown-content">
+ 						 	<a class="logd_in" href="/profile">Profile</a>
+ 						    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
+ 						 </div>
+						</div>
+                       
                     <!-- </li> -->
                 <!-- </ul> -->
     	</li>

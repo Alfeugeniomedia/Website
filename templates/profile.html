@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+
+    <li class="active"><a href="{% url 'about' %}">ABOUT</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'courses' %}">COURSES</a></li>
+    <li><a href="{% url 'events' %}">EVENTS</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+	 {% if request.session.logged_in != None %}
+		<li class="nav-login dropdown">
+			<!-- <a class="dropdown-toggle jax-link" data-toggle="dropdown" href="#"> -->
+				<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
+			  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
+	                <!-- <li> -->
+	                 <div class="dropdown">
+ 						<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 						 <div class="dropdown-content">
+ 						 	<a class="logd_in" href="/profile">Profile</a>
+ 						    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
+ 						 </div>
+						</div>
+	                <!-- </li> -->
+	            <!-- </ul> -->
+		</li>
+	{% else %}
+	<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+	
+	{% endif %}
+
+{% endblock %}
+
+
+{% load static %}
+
+
+{% block content %}
+<br>
+	<div class='container-fluid'>
+		<h1>Welcome! {{request.session.name}}</h1>
+		<div class='row'>
+			<div class='col-md-3' id='profilesidebar'>
+	<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'profile')" id="defaultOpen">Profile</button>
+  <button class="tablinks" onclick="openCity(event, 'password')">Change Password</button>
+  <button class="tablinks" onclick="openCity(event, 'subs')">My Subscription</button>
+</div>
+
+				<br>
+				
+			</div>
+			<div class='col-md-9'>
+				<div id="profile" class="tabcontent">
+  <div class="container">
+  <h2>Profile</h2>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" style='width:60%' disabled class="form-control" id="email" placeholder="{{request.session.username}}"" name="email">
+
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" style='width:60%'  class="form-control" id="name" placeholder="{{request.session.name}}"" name="name">
+        
+
+      </div>
+    </div>
+   
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+<div id="password" class="tabcontent">
+  <h2>Change Password</h2>
+   <div class="container">
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+    	<label class="control-label col-sm-2" ></label>
+      <div class="col-sm-10">
+        <input type="password" style='width:60%'  class="form-control" id="previouspass" placeholder="Previous Password" name="previouspass">
+
+
+      </div>
+    </div>
+    <div class="form-group">
+    	<label class="control-label col-sm-2" ></label>
+      <div class="col-sm-10">
+          <input type="password" style='width:60%'  class="form-control" id="newpass" placeholder="New Password" name="newpass">
+        
+
+      </div>
+    </div>
+   
+    
+    <div class="form-group">
+    	<label class="control-label col-sm-2" ></label>
+      <div class="col-sm-10">
+          <input type="password" style='width:60%'  class="form-control" id="confirmpass" placeholder="Confirm Password" name="confirmpass">
+        
+
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Change Password</button>
+        <br><br>
+      </div>
+    </div>
+
+  </form>
+</div> 
+</div>
+
+<div id="subs" class="tabcontent">
+  <h3>My Subscriptions</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+ <!--  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>{{request.session.name}}</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Change Passsword</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+     <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+   <!-- <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div> -->
+			</div> 
+		</div>
+	</div>
+	
+    
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+    
+
+{% endblock %}
