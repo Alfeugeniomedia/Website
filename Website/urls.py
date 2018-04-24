@@ -55,6 +55,7 @@ urlpatterns = [
     url(r'^profile$', Profile.as_view(), name='profile'),
     # url(r'^changepassword$', Changepassword.as_view(), name='changepassword'),
     url(r'^blogs$', Blogs.as_view(), name='blogs'),
+    url(r'^update_name$', Update_name.as_view(), name='update_name'),
     url(r'', Homepage.as_view(), name='index'),
 
 

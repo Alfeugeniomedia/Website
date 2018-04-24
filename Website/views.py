@@ -361,4 +361,24 @@ class Blogs(View):
         return render(request,'blogs.html')
         
 
-  
+class Update_name(View):
+    def post(self,request):
+        data=request.POST
+        updatename=data['name']
+        # email=data['email']
+        currentemail=request.session['username']
+        #print(name)
+        #print(email)
+      
+                # events_data=EventsForm.objects.get(event_date=date)
+        try:
+            obj=Front_Users.objects.get(email=currentemail)
+            obj.name = updatename
+            obj.save()
+            print('You signed up successfully')
+            return redirect('/thank_you')
+        except Front_Users.DoesNotExist:
+            print('test')
+            return render(request, 'profile.html',{'message':'Passwords do not match'})
+   
+

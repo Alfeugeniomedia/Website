@@ -32,3 +32,4 @@ class Front_Users(models.Model):
 	date_joined=models.CharField(max_length=50)
 	redirect_to=models.CharField(max_length= 50)
 
+
