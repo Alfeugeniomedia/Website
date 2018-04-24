@@ -38,12 +38,13 @@
 					<h2 class="section_head_inner2">Log In</h2>
                     <div class="text-center">	
                     	<span style="color: red;">{{ message }}</span>
+                    	
                     </div>
 					<form action="{% url 'login' %}" method="post">{% csrf_token %}
 						<label>Email</label>
 						<div class="pom-agile">
 							<span class="fa fa-envelope-o" aria-hidden="true"></span>
-							<input placeholder="Email" name="email" class="user" required="" type="text">
+							<input placeholder="Email" name="email" class="user" required="" type="email" value={{email}}>
 						</div>
 						<label>Password</label>
 						<div class="pom-agile">

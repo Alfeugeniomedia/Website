@@ -1,28 +1,6 @@
 {% extends 'base.html' %}
 
-{% block navbar %}
 
-    <li class="active"><a href="{% url 'about' %}">ABOUT</a></li>
-    <li><a href="{% url 'coaching' %}">COACHING</a></li>
-    <li><a href="{% url 'courses' %}">COURSES</a></li>
-    <li><a href="{% url 'events' %}">EVENTS</a></li>
-    <li><a href="{% url 'contact' %}">Contact</a></li>
-	 {% if request.session.logged_in != None %}
-		<li class="nav-login dropdown">
-			<!-- <a class="dropdown-toggle jax-link" data-toggle="dropdown" href="#"> -->
-				<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
-			  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
-	                <!-- <li> -->
-	                    <a href="{% url 'logout' %}">Logout</a>
-	                <!-- </li> -->
-	            <!-- </ul> -->
-		</li>
-	{% else %}
-	<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
-	
-	{% endif %}
-
-{% endblock %}
 
 
 {% load static %}

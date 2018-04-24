@@ -86,6 +86,31 @@
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      	<ul class="nav navbar-nav nav3">
                 {% block navbar %}
+                <li class="active"><a href="{% url 'about' %}">ABOUT</a></li>
+    <li><a href="{% url 'coaching' %}">COACHING</a></li>
+    <li><a href="{% url 'courses' %}">COURSES</a></li>
+    <li><a href="{% url 'events' %}">EVENTS</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+	 {% if request.session.logged_in != None %}
+		<li class="nav-login dropdown">
+			<!-- <a class="dropdown-toggle jax-link" data-toggle="dropdown" href="#"> -->
+				<!-- {{request.session.username}}<b class="caret"></b>  </a> -->
+			  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
+	                <!-- <li> -->
+	                 <div class="dropdown">
+ 						<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 						 <div class="dropdown-content">
+ 						 	<a class="logd_in" href="/profile">Profile</a>
+ 						    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
+ 						 </div>
+						</div>
+	                <!-- </li> -->
+	            <!-- </ul> -->
+		</li>
+	{% else %}
+	<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+	
+	{% endif %}
                 {% endblock %}
 		    </ul>
 		    <ul class="nav navbar-nav pull-right nav2">

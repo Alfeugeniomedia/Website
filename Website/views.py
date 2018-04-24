@@ -44,6 +44,7 @@ class SignupUser(View):
                 
                 request.session['logged_in']=True
                 request.session['username']=email
+                request.session['name']=name
                 print('You signed up successfully')
                 return redirect('/thank_you')
         else:
@@ -54,6 +55,7 @@ class Logout(View):
         if request.session.get('logged_in', None):
             del request.session['logged_in']
             del request.session['username']
+            del request.session['name']
             # return render(request, 'registration/login.html')
             return redirect('/login/')
         else:
@@ -72,6 +74,27 @@ class LoginUser(View):
             return redirect('/')
 
 
+    # def post(self , request):
+    #     data= request.POST
+    #     hasher=PBKDF2PasswordHasher()
+    #     email=data['email']
+    #     password=data['password']
+    #     message=''
+    #     password=hasher.encode(password=password,salt='salt',iterations=50000)
+    #     try:
+    #         # events_data=EventsForm.objects.get(event_date=date)
+
+    #         user_data=Front_Users.objects.get(email=email,password=password)
+
+    #         request.session['name']=user_data.name
+    #         request.session['logged_in']=True
+    #         request.session['username']=user_data.email
+    #         return render(request, 'profile.html')
+    #     except Front_Users.DoesNotExist: 
+    #         # events= EventsForm(title=title,description=description)
+    #         # print('user not logged in')          
+    #         return render(request, 'registration/login.html',{'message':'Email Does not exists '})
+# 
     def post(self , request):
         data= request.POST
         hasher=PBKDF2PasswordHasher()
@@ -82,16 +105,22 @@ class LoginUser(View):
         try:
             # events_data=EventsForm.objects.get(event_date=date)
 
-            user_data=Front_Users.objects.get(email=email,password=password)
-            request.session['name']=user_data.name
-            request.session['logged_in']=True
-            request.session['username']=user_data.email
-            return render(request, 'index.html')
+            Front_Users.objects.get(email=email)
+            try:
+                user_data=Front_Users.objects.get(password=password)
+                request.session['name']=user_data.name
+                request.session['logged_in']=True
+                request.session['username']=user_data.email
+                return render(request, 'profile.html')
+
+            except Front_Users.DoesNotExist:
+                return render(request,'registration/login.html',{'message':'Password entered is Incorrect'})
+
         except Front_Users.DoesNotExist: 
             # events= EventsForm(title=title,description=description)
             # print('user not logged in')
-            return render(request, 'registration/login.html',{'message':'Email Does not exists '})
-# 
+            
+            return render(request,'registration/login.html',{'message':'Email Does not exists ','email':email})
 
 class CreateEve(View):
     def get(self, request): 
@@ -352,8 +381,10 @@ class OffPercent(View):
 
 class Profile(View):
     def get(self,request):
-        
-        return render(request,'profile.html')
+        if not request.session.get('logged_in', None):
+            return redirect('index')
+        else:
+            return render(request,'profile.html')
 
 class Blogs(View):
     def get(self,request):
@@ -362,6 +393,10 @@ class Blogs(View):
         
 
 class Update_name(View):
+    def get(self,request):
+        return redirect('/profile')
+
+
     def post(self,request):
         data=request.POST
         updatename=data['name']
@@ -374,11 +409,52 @@ class Update_name(View):
         try:
             obj=Front_Users.objects.get(email=currentemail)
             obj.name = updatename
+            #print(obj.name)
             obj.save()
-            print('You signed up successfully')
-            return redirect('/thank_you')
+            request.session['name']=updatename
+            return render(request, 'profile.html',{'message':'Details Updated'})
         except Front_Users.DoesNotExist:
             print('test')
             return render(request, 'profile.html',{'message':'Passwords do not match'})
+
+class Update_pass(View):
+    def get(self,request):
+        return redirect('/profile')
+    def post(self,request):
+        data=request.POST
+        oldpass=data['oldpass']
+        newpass=data['newpass']
+        conpass=data['conpass']
+        currentemail=request.session['username']
+        hasher=PBKDF2PasswordHasher()
+        obj=Front_Users.objects.get(email=currentemail)
+        dbpass= obj.password
+        print(dbpass)
+        oldpass=hasher.encode(password=oldpass,salt='salt',iterations=50000)
+        print(oldpass)
+        if oldpass==dbpass:
+            if newpass == conpass:
+                
+                try:
+                    obj=Front_Users.objects.get(email=currentemail)
+                    newpass=hasher.encode(password=newpass,salt='salt',iterations=50000)
+                    obj.password = newpass
+                    obj.save()
+                    return render(request, 'profile.html',{'message':'Password Updated'})
+                except Front_Users.DoesNotExist:
+                    return render(request, 'profile.html',{'message':'Something went wrong, please try again'})                   
+
+
+            else:
+                return render(request, 'profile.html',{'message':'Confirm Password is not the same'})
+        else:
+            return render(request, 'profile.html',{'message':'Old Password Entered Incorrectly'})
+        #print(checkpass)
+        #print(oldpass)
+        # print(newpass)
+        # print(conpass)
+        
+        return redirect('/profile')
+
    
 
