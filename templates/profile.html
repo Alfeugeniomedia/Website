@@ -9,14 +9,14 @@
 {% block content %}
 
 <br>
-	<div class='container-fluid'>
+	<div class='container' id='profilecontainer' >
 		
 		<div class='row'>
-			<div class='col-md-3 '>
-				<h1>Welcome! {{request.session.name}} </h1>
+			<div class='col-md-4 '>
+				<h2>Welcome! {{request.session.name}} </h2>
 			</div>
 			<br>
-			<div class='col-md-9 '>
+			<div class='col-md-8 '>
 
 					{% if message %}
 					<script>
@@ -32,7 +32,7 @@
 			</div>
 		</div>	
 		<hr>
-		<div class='row'>
+		<div class='row' >
 			<div class='col-md-3' id='profilesidebar'>
 	<div class="tab">
   <button class="tablinks proflink" onclick="openCity(event, 'profile')" id="defaultOpen">Profile</button>
@@ -45,7 +45,7 @@
 			</div>
 			<div class='col-md-9'>
 				<div id="profile" class="tabcontent">
-  <div class="container">
+  
 
   <!-- <span style="color: red;">{{ message }}</span> -->
   <div class="text-center">
@@ -71,17 +71,17 @@
       </div>
     </div>
     <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default" style='background-color: #43bdfe'>Update</button>
+      <div class="col-sm-10">
+       <center> <button type="submit" class="btn btn-default" style='background-color: #43bdfe'>Update</button></center>
       </div>
     </div>
   </form>
-</div>
+
 </div>
 
 <div id="password" class="tabcontent">
 
-   <div class="container">
+   
   <form class="form-horizontal" action="/update_pass" method='POST'>
   	{% csrf_token %}
     <div class="form-group">
@@ -114,29 +114,19 @@
     </div>
 
     <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Change Password</button>
+      <div class="col-sm-10 ">
+        <center><button type="submit" class="btn btn-default" style='background-color: #43bdfe'>Change Password</button></center>
         <br><br>
       </div>
     </div>
 
   </form>
-</div> 
+
 </div>
 
 <div id="subs" class="tabcontent">
   <h3>My Subscriptions</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>*Feature Coming Soon*</p>
 </div>
 
 			</div> 

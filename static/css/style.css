@@ -3941,7 +3941,7 @@ form[data-form-id] button:disabled{
     margin-bottom: 8px;
     display: inline-block;
 }
-.pom-agile input[type="text"], .pom-agile input[type="password"] {
+.pom-agile input[type="text"], .pom-agile input[type="password"],.pom-agile input[type="email"] {
     outline: none;
     border: none;
     background: transparent;
@@ -4393,11 +4393,13 @@ form[data-form-id] button:disabled{
 /* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #43bdfe;
+    color:#fff;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
     background-color: #43bdfe ;
+    color:#fff;
 }
 
 /* Style the tab content */
@@ -4408,4 +4410,8 @@ form[data-form-id] button:disabled{
     width: 100%;
     border-left: none;
     height: auto;
+}
+#profilecontainer
+{
+  min-height: 500px;
 }
