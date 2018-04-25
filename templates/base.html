@@ -12,6 +12,8 @@
 	<link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
    
 </style>
@@ -203,9 +205,76 @@
 	</div>
     </div>
 	<script src="{% static 'js/moment.min.js' %}"></script>
-	<script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
     <script src="{% static 'js/fullcalendar.min.js' %}"></script>
+    
+
+     <script >
+    $(document).ready(function() {
+
+    	function show_message(message){
+    		$('#message').html(message);
+			$('#alert_box').addClass('alert alert-danger');
+			$('#alert_box').slideDown();
+			setTimeout(function(){
+				$('#alert_box').slideUp();
+				$('#message').html('');
+				$('#alert_box').removeClass('alert alert-danger');
+			},4000);
+    	}
+    	$('#lgnbtn').on('click',function() {
+    	
+	    	var email = $("#email2").val() 
+
+	    	var password = $('#password2').val()
+	    	var data = $("#loginform").serialize();
+	    	var package=$('#link').val();
+	    		if ($.trim(email).length == 0) 
+	    		{
+	    			show_message('Please Enter you Email');
+		            $('#email2').focus();
+	    			e.preventDefault();
+	    		}
+
+	    		if ($.trim(password).length == 0) 
+	    		{
+	    			show_message('Please Enter you Password');
+		            $('#password2').focus();
+	    			e.preventDefault();
+	    		}
+	    	
+		    $.ajax({
+
+		        type: "POST",
+		        url: "relogin",
+		        data: data,
+		        success: function(data)
+		        {
+		            if(data==1)
+		            {
+		            	
+		            	 window.location = package;
+		            }
+		            if(data==2)
+		            {	
+		            	show_message('Password Incorrect');
+		            	$('#password2').focus();
+		            	//	$('#message').html('');
+		            	// alert('password incorrect')
+		            }
+		            if(data==3)
+		            {
+		            	show_message("Email is not registered with us");
+		            	$('#email2').focus();
+		            }
+		            
+		        }
+		    });
+
+});
+
+});
+</script>
     <script type="text/javascript">
     	$(document).ready(function(){
 			 $(".dropdown-toggle").click(function(){
@@ -296,6 +365,18 @@
     });
     });
     </script>
+
+    <script>
+    	function cpkg(data)
+    	{
+    		console.log('test')
+    		$('#link').val(data);
+    		var check=$('#link').val();
+    		console.log(check)
+    		$('#myModal2').modal();
+    	}
+    </script>
+
     {% block script %}
     {% endblock %}
 

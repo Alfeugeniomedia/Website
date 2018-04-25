@@ -57,7 +57,11 @@ urlpatterns = [
     url(r'^blogs$', Blogs.as_view(), name='blogs'),
     url(r'^update_name$', Update_name.as_view(), name='update_name'),
     url(r'^update_pass$', Update_pass.as_view(), name='update_pass'),
+    url(r'^test$', Test.as_view(), name='test'),
+    url(r'^relogin$',handleajax.as_view(), name='relogin'),
+    url(r'^forgotpass$',Forgotpass.as_view(), name='forgotpass'),
     url(r'', Homepage.as_view(), name='index'),
+
 
 
 ]

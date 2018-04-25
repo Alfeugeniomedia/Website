@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Events
-from .models import Front_Users
+from .models import *
+# from .models import Front_Users
 from django import forms
 import datetime
 
@@ -25,3 +25,6 @@ class EventsAdmin(admin.ModelAdmin):
 
 admin.site.register(Events,EventsAdmin)
 admin.site.register(Front_Users)
+admin.site.register(Member_user)
+admin.site.register(Membership)
+

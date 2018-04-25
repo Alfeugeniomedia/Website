@@ -12,7 +12,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import PBKDF2PasswordHasher
-
+from django.http import JsonResponse
 
 class SignupUser(View):
     def get(self, request):
@@ -73,28 +73,6 @@ class LoginUser(View):
             # return render(request, 'index.html',{'data':data})
             return redirect('/')
 
-
-    # def post(self , request):
-    #     data= request.POST
-    #     hasher=PBKDF2PasswordHasher()
-    #     email=data['email']
-    #     password=data['password']
-    #     message=''
-    #     password=hasher.encode(password=password,salt='salt',iterations=50000)
-    #     try:
-    #         # events_data=EventsForm.objects.get(event_date=date)
-
-    #         user_data=Front_Users.objects.get(email=email,password=password)
-
-    #         request.session['name']=user_data.name
-    #         request.session['logged_in']=True
-    #         request.session['username']=user_data.email
-    #         return render(request, 'profile.html')
-    #     except Front_Users.DoesNotExist: 
-    #         # events= EventsForm(title=title,description=description)
-    #         # print('user not logged in')          
-    #         return render(request, 'registration/login.html',{'message':'Email Does not exists '})
-# 
     def post(self , request):
         data= request.POST
         hasher=PBKDF2PasswordHasher()
@@ -119,7 +97,7 @@ class LoginUser(View):
         except Front_Users.DoesNotExist: 
             # events= EventsForm(title=title,description=description)
             # print('user not logged in')
-            
+
             return render(request,'registration/login.html',{'message':'Email Does not exists ','email':email})
 
 class CreateEve(View):
@@ -456,5 +434,77 @@ class Update_pass(View):
         
         return redirect('/profile')
 
-   
+class Test(View):
+    def get(self,request):
+         obj=Front_Users.objects.get(email='dummy911@gmail.com')
+         data=obj.name
+         return render(request, 'test.html',{'message':data})        
 
+class Relogin(View):
+    def get(self,request):
+         
+         return render(request, 'coaching.html')
+    def post(self,request):
+        data= request.POST
+        hasher=PBKDF2PasswordHasher()
+        email=data['email']
+        password=data['password']
+        message=''
+        password=hasher.encode(password=password,salt='salt',iterations=50000)
+        try:
+            # events_data=EventsForm.objects.get(event_date=date)
+
+            Front_Users.objects.get(email=email)
+            try:
+                user_data=Front_Users.objects.get(password=password)
+                request.session['name']=user_data.name
+                request.session['logged_in']=True
+                request.session['username']=user_data.email
+                return 1
+
+            except Front_Users.DoesNotExist:
+                return render(request,'coaching.html',{'message':'Password entered is Incorrect'})
+
+        except Front_Users.DoesNotExist: 
+            # events= EventsForm(title=title,description=description)
+            # print('user not logged in')
+
+            return render(request,'coaching.html',{'message':'Email Does not exists ','email':email})
+
+class handleajax(View):
+
+    def post(self,request):
+        data=request.POST
+        email=data['email2']
+        password=data['password2']
+        hasher=PBKDF2PasswordHasher()
+        password=hasher.encode(password=password,salt='salt',iterations=50000)
+        result=['email'+email,'password'+password]
+        try:
+           
+            Front_Users.objects.get(email=email)
+            try:
+                user_data=Front_Users.objects.get(password=password)
+                request.session['name']=user_data.name
+                request.session['logged_in']=True
+                request.session['username']=user_data.email
+                return JsonResponse(1, safe=False)
+            except Front_Users.DoesNotExist:
+                return JsonResponse(2, safe=False)
+
+        except Front_Users.DoesNotExist: 
+            # events= EventsForm(title=title,description=description)
+            # print('user not logged in')
+
+           return JsonResponse(3, safe=False)
+
+
+
+class Forgotpass(View):
+    def get(self,request):
+         
+         return render(request, 'forgotpass.html')
+
+    def post(self,request):
+
+          return redirect('/thank_you')       

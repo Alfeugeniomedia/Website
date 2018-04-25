@@ -1,10 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
-
-
 {% block content %}
+ 
     <section class="coaching_banner">
 		<div class="container">
 			<h1 class="section_head text-center">Coaching</h1>
@@ -26,7 +23,12 @@
 					<div class="package_head bronze">
 						<p class="text-white font_play">Bronze Plan</p>
 						<p class="text-white"><sup>$</sup>497<sub>/month</sub></p>
-                        <a href="{% url 'brozepackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                       
+                        {% if request.session.logged_in != None %}
+                        	 <a href="{% url 'brozepackage' %}"><button class="btn btn_start btn-sm" >Start Now !</button></a>
+                        {% else %}
+    						<a><button class="btn btn_start btn-sm" onclick="cpkg('brozepackage')">Start Now !</button></a>
+    					{% endif %}
 					</div>
 					<ul class="package_list">
 						<li>Unlimited access to the entirety of B.H Coaching’s resource library for training courses, contracts, marketing materials, and more</li>
@@ -44,7 +46,12 @@
 					<div class="package_head silver">
 						<p class="font_play">Silver</p>
 						<p class="text-black"><sup>$</sup>997<sub>/month</sub></p>
-                        <a href="{% url 'silverpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                        
+                        {% if request.session.logged_in != None %}
+                        	 <a href="{% url 'silverpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                        {% else %}
+    						<a><button class="btn btn_start btn-sm" onclick="cpkg('silverpackage')">Start Now !</button></a>
+    					{% endif %}
 					</div>
 					<ul class="package_list">
 						<li>Everything in the Bronze Plan, plus</li>
@@ -63,7 +70,11 @@
 					<div class="package_head gold">
 						<p class="text-white font_play">Gold</p>
 						<p class="text-white"><sup>$</sup>1,497<sub>/month</sub></p>
-                        <a href="{% url 'goldpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                       {% if request.session.logged_in != None %}
+                        	 <a href="{% url 'goldpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                        {% else %}
+    						<a><button class="btn btn_start btn-sm" onclick="cpkg('goldpackage')">Start Now !</button></a>
+    					{% endif %}
 					</div>
 					<ul class="package_list">
 						<li>Everything in the Silver Plan, plus</li>
@@ -73,6 +84,8 @@
                         <li>
                             3 month commitment w/ 30 day money back guarantee
                         </li>
+                        
+                        
 					</ul>
 				</div>
 			</div>
@@ -84,5 +97,45 @@
 			WE STRIVE <br> TO HELP YOU GROW!
 		</div>
 	</div>
+	<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+   
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:15px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4><span class="glyphicon glyphicon-lock"></span> Please login to continue</h4></center>
+          {% if message %}
+          	{{ message }}
+          {% endif %}
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form"  id='loginform'>
+          	<div class="  alert-dismissible text-center" id="alert_box">
+   					<p id='message'></p>
+   					</div>
+          	
+          	{% csrf_token %}
+            <div class="form-group">
+            	<input type='hidden' name='link' id='link'>
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="email" class="form-control" placeholder="Enter email" name='email2' id="email2">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="password2" placeholder="Enter password" name='password2'>
+            </div>
+              <button type="button" id="lgnbtn" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button> -->
+          <center><p>Not a member? <a href="{% url 'signup'%}">Sign Up</a></p></center>
+          <!-- <p>Forgot <a href="#">Password?</a></p> -->
+        </div>
+      </div>
+      
+    </div>
+  </div> 
 
 {% endblock %}

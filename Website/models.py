@@ -32,4 +32,21 @@ class Front_Users(models.Model):
 	date_joined=models.CharField(max_length=50)
 	redirect_to=models.CharField(max_length= 50)
 
+	
+class Membership(models.Model):
+	def __unicode__(self):
+	 		return self.title
+	title=models.CharField(max_length=255)
+	price=models.CharField(max_length=100)
+	description=models.CharField(max_length=255)
 
+
+class Member_user(models.Model):
+	
+
+	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
+	membership_id=models.ForeignKey(Membership,on_delete=models.CASCADE)
+	date=models.DateField()
+	expiry_date=models.DateField()
+
+	

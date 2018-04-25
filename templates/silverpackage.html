@@ -91,7 +91,20 @@
 				<li><a href="{% url 'courses' %}">COURSES</a></li>
 				<li><a href="{% url 'events' %}">EVENTS</a></li>
 				<li><a href="{% url 'contact' %}">contact</a></li>
-    			<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+    			{% if request.session.logged_in != None %}
+					<li class="nav-login dropdown">
+	                 	<div class="dropdown">
+ 							<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 							<div class="dropdown-content">
+ 							 	<a class="logd_in" href="/profile">Profile</a>
+ 							    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
+ 							</div>
+						</div>
+					</li>
+				{% else %}
+					<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+	
+				{% endif %}
 
 		    </ul>
 		    <ul class="nav navbar-nav pull-right nav2">
@@ -142,7 +155,7 @@
 
 							<div class="order-sum webinar_order_summary" >Order Summary</div>
 
-							<div class="col-md-6 col-sm-6 nopadding form-group">3 Months Bronze Plan Membership <br> <i>30 day money back guarentee!</i></div>
+							<div class="col-md-6 col-sm-6 nopadding form-group">3 Months Silver Plan Membership <br> <i>30 day money back guarentee!</i></div>
 							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
 								<strong>$997.00</strong>
 							</div>
