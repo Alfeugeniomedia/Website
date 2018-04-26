@@ -13,6 +13,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import PBKDF2PasswordHasher
 from django.http import JsonResponse
+import random
 
 class SignupUser(View):
     def get(self, request):
@@ -508,3 +509,80 @@ class Forgotpass(View):
     def post(self,request):
 
           return redirect('/thank_you')       
+
+class Checkemail(View):
+    def get(self,request):
+        return render(request, 'forgotpass.html')
+
+    def post(self,request):
+        data=request.POST
+        email=data['email']
+        print(email)
+        try:
+           
+            data=Front_Users.objects.get(email=email)
+            n= random.randint(12,52)
+            hasher=PBKDF2PasswordHasher()
+            stack=hasher.encode(password=n,salt='salt',iterations=56)
+            email2=data.email
+            message="reset_password/?key="+stack+"&email="+email2
+            print(message)
+            data.key=""
+            data.save()
+            data.key=stack
+            data.save()
+
+            #send_mail(subject='Password Recovery', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
+            return render(request,'forgotpass.html',{'message':'Email has been sent'})
+
+        except Front_Users.DoesNotExist: 
+            print('email not found->'+email)
+            return render(request,'forgotpass.html',{'message':'Email Not Found'})
+
+
+class Reset_password(View):
+    def get(self,request):
+        key=request.GET.get('key')
+        email=request.GET.get('email')
+        # print('key below')
+        # print(key)
+        try:
+            fromdb=Front_Users.objects.get(email=email)
+            if key == fromdb.key:
+                print('key verified') 
+                key=fromdb.key
+            
+                print('key found below')
+            # print(key)
+                return render(request,'updatepassword.html',{'message':key})
+            else:
+                return render(request,'forgotpass.html',{'message':'Something Went Wrong, Please request a new reset link'})
+
+        except Front_Users.DoesNotExist:
+            print('key NOT found')
+            return render(request,'forgotpass.html',{'message':'Password Link either Expired or Used in the past'})
+
+    def post(self,request):
+        data=request.POST
+        key=data['key']
+        newpass=data['newpass']
+        conpass=data['conpass']
+        print(key)
+        print(newpass)
+        print(conpass)
+        hasher=PBKDF2PasswordHasher()
+        try:
+            obj=Front_Users.objects.get(key=key)
+            newpass=hasher.encode(password=newpass,salt='salt',iterations=50000)
+            obj.password = newpass
+            obj.key=""
+            obj.save()
+            return render(request, 'registration/login.html',{'message':'Password Updated'})
+        except Front_Users.DoesNotExist:
+            return render(request, 'login.html',{'message':'Something went wrong, please try again'})                   
+
+
+
+       
+
+

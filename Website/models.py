@@ -30,7 +30,7 @@ class Front_Users(models.Model):
 	email= models.CharField(max_length=50)
 	password=models.CharField(max_length=255)
 	date_joined=models.CharField(max_length=50)
-	redirect_to=models.CharField(max_length= 50)
+	key=models.TextField(max_length=255)
 
 	
 class Membership(models.Model):

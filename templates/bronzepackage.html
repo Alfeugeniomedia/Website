@@ -91,7 +91,20 @@
 				<li><a href="{% url 'courses' %}">COURSES</a></li>
 				<li><a href="{% url 'events' %}">EVENTS</a></li>
 				<li><a href="{% url 'contact' %}">contact</a></li>
-    			<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+    			{% if request.session.logged_in != None %}
+					<li class="nav-login dropdown">
+	                 	<div class="dropdown">
+ 							<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 							<div class="dropdown-content">
+ 							 	<a class="logd_in" href="/profile">Profile</a>
+ 							    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
+ 							</div>
+						</div>
+					</li>
+				{% else %}
+					<li class="nav-login"><a href="{% url 'login' %}">Login/Signup</a></li>
+	
+				{% endif %}
 
 
 		    </ul>

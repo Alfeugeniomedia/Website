@@ -20,6 +20,7 @@ from django.contrib.auth import views as auth_views
 from . import views as core_views
 from forms import LoginForm
 
+
 urlpatterns = [
     url(r'^login/$', LoginUser.as_view(), name='login'),
     url(r'^signup$', SignupUser.as_view(), name='signup'),
@@ -31,8 +32,6 @@ urlpatterns = [
     url(r'webinar1$', Webinar1.as_view(), name='webinar1'),
     url(r'livestreamcourse$', LiveCourses.as_view(), name='livestreamcourse'),
     url(r'easterspecial', EasterSpecial.as_view(), name='easterspecial'),
-    #url(r'course-funnel/(?P<amount>.+)$', CourseFunnel.as_view(), name='course_funnel'),
-    #url(r'webinarpackage$', WebinarPackage.as_view(), name='webinarpackage'),
     url(r'3easypayments', EasyPayments.as_view(), name='3easypayments'),
     url(r'webinarpackage/(?P<amount>.+)$', WebinarPayoutPackage.as_view(), name='webinar_payout'),
     url(r'signup$', Signup.as_view(), name='signup'),
@@ -53,13 +52,17 @@ urlpatterns = [
     url(r'^silverpackage$', SilverPackage.as_view(), name='silverpackage'),
     url(r'^goldpackage$', GoldPackage.as_view(), name='goldpackage'),
     url(r'^profile$', Profile.as_view(), name='profile'),
-    # url(r'^changepassword$', Changepassword.as_view(), name='changepassword'),
     url(r'^blogs$', Blogs.as_view(), name='blogs'),
     url(r'^update_name$', Update_name.as_view(), name='update_name'),
     url(r'^update_pass$', Update_pass.as_view(), name='update_pass'),
     url(r'^test$', Test.as_view(), name='test'),
     url(r'^relogin$',handleajax.as_view(), name='relogin'),
     url(r'^forgotpass$',Forgotpass.as_view(), name='forgotpass'),
+    url(r'^checkemail$',Checkemail.as_view(), name='checkemail'),
+    url(r'^reset_password/$',Reset_password.as_view(), name='reset_password'),
+
+
+
     url(r'', Homepage.as_view(), name='index'),
 
 
