@@ -132,8 +132,8 @@ LIVE_CLIENT_ID = 'ARp6MQSxo_Ap1NIJsqGh-qew853ee-lZccapmFv5mrIYrb7fhvUqhsNF9FbGBO
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'billharloffcoaching@gmail.com'
-EMAIL_HOST_PASSWORD = 'Developer00!'
+EMAIL_HOST_USER = 'expert.developer.it@gmail.com'
+EMAIL_HOST_PASSWORD = 'technical@123'
 EMAIL_USE_TLS = True
 
 
