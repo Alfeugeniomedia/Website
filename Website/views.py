@@ -46,7 +46,6 @@ class SignupUser(View):
                 request.session['logged_in']=True
                 request.session['username']=email
                 request.session['name']=name
-                print('You signed up successfully')
                 return redirect('/thank_you')
         else:
             return render(request, 'registration/signup.html',{'message':'Passwords do not match'})
@@ -532,7 +531,7 @@ class Checkemail(View):
             data.key=stack
             data.save()
 
-            #send_mail(subject='Password Recovery', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
+            send_mail(subject='Password Recovery', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
             return render(request,'forgotpass.html',{'message':'Email has been sent'})
 
         except Front_Users.DoesNotExist: 
@@ -544,22 +543,13 @@ class Reset_password(View):
     def get(self,request):
         key=request.GET.get('key')
         email=request.GET.get('email')
-        # print('key below')
-        # print(key)
         try:
-            fromdb=Front_Users.objects.get(email=email)
+            fromdb=Front_Users.objects.get(key=key)
             if key == fromdb.key:
-                print('key verified') 
-                key=fromdb.key
-            
-                print('key found below')
-            # print(key)
                 return render(request,'updatepassword.html',{'message':key})
             else:
                 return render(request,'forgotpass.html',{'message':'Something Went Wrong, Please request a new reset link'})
-
         except Front_Users.DoesNotExist:
-            print('key NOT found')
             return render(request,'forgotpass.html',{'message':'Password Link either Expired or Used in the past'})
 
     def post(self,request):

@@ -4434,3 +4434,10 @@ form[data-form-id] button:disabled{
 #profilecontainer{
   min-height: 500px;
 }
+.tooltiptext{
+  visibility: none;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

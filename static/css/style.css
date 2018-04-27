@@ -4415,3 +4415,10 @@ form[data-form-id] button:disabled{
 {
   min-height: 500px;
 }
+.tooltiptext{
+  visibility: none;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

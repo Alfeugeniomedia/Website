@@ -15,7 +15,7 @@
     		  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
                     <!-- <li> -->
                     	<div class="dropdown">
- 						<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 						<a>  <button class="dropbtn">{{request.session.name}}</button></a>
  						 <div class="dropdown-content">
  						 	<a class="logd_in" href="/profile">Profile</a>
  						    <a class="logd_in" href="{% url 'logout' %}">Logout</a>

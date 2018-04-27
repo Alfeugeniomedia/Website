@@ -15,6 +15,7 @@
 	<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </style>
 </head>
@@ -100,7 +101,7 @@
 			  	<!-- <ul style="left:0;position: absolute;" class="dropdown-menu "> -->
 	                <!-- <li> -->
 	                 <div class="dropdown">
- 						<a>  <button class="dropbtn">Hello! {{request.session.name}}</button></a>
+ 						<a>  <button class="dropbtn">{{request.session.name}}</button></a>
  						 <div class="dropdown-content">
  						 	<a class="logd_in" href="/profile">Profile</a>
  						    <a class="logd_in" href="{% url 'logout' %}">Logout</a>
@@ -376,6 +377,11 @@
     		$('#myModal2').modal();
     	}
     </script>
+    <script>
+		$(document).ready(function(){
+		    $('#tool').tooltip();   
+		});
+	</script>
 
     {% block script %}
     {% endblock %}

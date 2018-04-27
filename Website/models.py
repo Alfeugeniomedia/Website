@@ -27,7 +27,7 @@ class Front_Users(models.Model):
 	SALT_SIZE = 8
 
 	name= models.CharField(max_length=100)
-	email= models.CharField(max_length=50)
+	email= models.CharField(max_length=50,unique=True)
 	password=models.CharField(max_length=255)
 	date_joined=models.CharField(max_length=50)
 	key=models.TextField(max_length=255)
