@@ -531,7 +531,11 @@ class Checkemail(View):
             data.key=stack
             data.save()
 
-            send_mail(subject='Password Recovery', message=message, from_email=EMAIL_HOST, recipient_list=['valdoconsultingllc@gmail.com'])
+            subject = "Password Recovery"
+            message = message
+            sender = "expertdevelopertest@yopmail.com"
+            to = ["expertdevelopertest@yopmail.com"]
+            send_mail(subject='Contact Us', message=message, from_email=EMAIL_HOST, recipient_list=['expertdevelopertest@yopmail.com'])
             return render(request,'forgotpass.html',{'message':'Email has been sent'})
 
         except Front_Users.DoesNotExist: 
