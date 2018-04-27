@@ -14,6 +14,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import PBKDF2PasswordHasher
 from django.http import JsonResponse
 import random
+from django.utils.crypto import get_random_string
 
 class SignupUser(View):
     def get(self, request):
@@ -520,22 +521,24 @@ class Checkemail(View):
         try:
            
             data=Front_Users.objects.get(email=email)
-            n= random.randint(12,52)
-            hasher=PBKDF2PasswordHasher()
-            stack=hasher.encode(password=n,salt='salt',iterations=56)
+            n= get_random_string(length=32)
+            
+            print(n)
+            # hasher=PBKDF2PasswordHasher()
+            # stack=hasher.encode(password=n,salt='salt',iterations=56)
             email2=data.email
-            message="reset_password/?key="+stack+"&email="+email2
+            message="Hello,\n Please click the below link to reset your password \n\nhttp://billharloff.com/reset_password/?key="+n+"&email="+email2+"\n\nRegards,\nBill"
             print(message)
             data.key=""
             data.save()
-            data.key=stack
+            data.key=n
             data.save()
 
             subject = "Password Recovery"
             message = message
             sender = "expertdevelopertest@yopmail.com"
             to = ["expertdevelopertest@yopmail.com"]
-            send_mail(subject='Contact Us', message=message, from_email=EMAIL_HOST, recipient_list=['expertdevelopertest@yopmail.com'])
+            send_mail(subject=subject, message=message, from_email=EMAIL_HOST, recipient_list=['expertdevelopertest@yopmail.com'])
             return render(request,'forgotpass.html',{'message':'Email has been sent'})
 
         except Front_Users.DoesNotExist: 
