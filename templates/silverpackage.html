@@ -216,6 +216,7 @@
                 // Make a call to the REST api to execute the payment
                 return actions.payment.execute().then(function() {
                     console.log('in api function - payment approved');
+                    
                     //document.getElementById('id_confirmation').value = "true";
                     //document.getElementById('id_amount').value = {{ amount }};
                     //document.theForm.submit();

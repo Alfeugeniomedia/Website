@@ -49,4 +49,10 @@ class Member_user(models.Model):
 	date=models.DateField()
 	expiry_date=models.DateField()
 
+# class user_roles(models.Model):
+# 	email=models.CharField(max_length=100,unique=True)
+# 	role=models.CharField(max_length=100)
+# 	description=models.CharField(max_length=100)
+	
+
 	

@@ -4255,10 +4255,10 @@ form[data-form-id] button:disabled{
   position: relative;
 }
 .testimonial .description:before{
-  content: "\f10d";
+  
   font-family: 'FontAwesome';
   font-size: 25px;
-  color: #337ab7;
+  color: red;
   position: absolute;
   top: -20px;
   left: -5px;
@@ -4374,7 +4374,7 @@ form[data-form-id] button:disabled{
 .dropdown:hover .dropbtn {
     background-color: white;
 }
-.nav-login a.logd_in{color: black !important; font-size: 14px !important;}
+.nav-login a.logd_in{color: black !important; font-size: 10px !important;}
 .nav-login a.logd_in:hover {color: #43bdfe !important; font-size: 14px !important;}
 
 #profilesidebar
@@ -4441,3 +4441,8 @@ form[data-form-id] button:disabled{
     visibility: visible;
     opacity: 1;
 }
+#m_area
+{
+  font-size: 10px !important;
+}
+

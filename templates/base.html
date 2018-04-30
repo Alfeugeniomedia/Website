@@ -89,7 +89,7 @@
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      	<ul class="nav navbar-nav nav3">
                 {% block navbar %}
-                <li class="active"><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
     <li><a href="{% url 'coaching' %}">COACHING</a></li>
     <li><a href="{% url 'courses' %}">COURSES</a></li>
     <li><a href="{% url 'events' %}">EVENTS</a></li>
@@ -124,7 +124,7 @@
 					</a>
 					<ul class="dropdown-menu pull-left">
                       <li><a href="{% url 'testimonials' %}">TESTIMONIALS</a></li>
-					  <li><a href="{% url 'comming-soon' %}">Blogs</a></li>
+					  <li><a href="http://BillHarlOff.com/blog/">Blogs</a></li>
 					  <li><a href="{% url 'comming-soon' %}">SUCCESS STORIES</a></li>
 					  <li><a href="{% url 'comming-soon' %}">SELF ASSESSMENTS</a></li>
 					  <li><a href="{% url 'comming-soon' %}">GROWTH SOLUTIONS</a></li>
@@ -362,7 +362,7 @@
     navigation:true,
 
     navigationText:["",""],
-    autoPlay:6000
+    autoPlay:20000
     });
     });
     </script>
@@ -381,6 +381,31 @@
 		$(document).ready(function(){
 		    $('#tool').tooltip();   
 		});
+	</script>
+	<script>
+		$('#yourLink').click(function(){
+  		$('#tooltip').slideDown();
+		});
+		$('#yourLink').click(function(){
+  		$('#tooltip').delay(8000).slideUp();
+		});
+
+		$('#yourLink2').click(function(){
+  		$('#tooltip2').slideDown();
+		});
+		$('#yourLink2').click(function(){
+  		$('#tooltip2').delay(8000).slideUp();
+		});
+
+		$('#yourLink3').click(function(){
+  		$('#tooltip3').slideDown();
+		});
+		$('#yourLink3').click(function(){
+  		$('#tooltip3').delay(8000).slideUp();
+		});
+	</script>
+	<script>
+		
 	</script>
 
     {% block script %}

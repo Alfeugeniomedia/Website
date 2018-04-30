@@ -526,6 +526,7 @@ class Checkemail(View):
             print(n)
             # hasher=PBKDF2PasswordHasher()
             # stack=hasher.encode(password=n,salt='salt',iterations=56)
+           
             email2=data.email
             message="Hello,\n Please click the below link to reset your password \n\nhttp://billharloff.com/reset_password/?key="+n+"&email="+email2+"\n\nRegards,\nBill"
             print(message)
@@ -538,7 +539,7 @@ class Checkemail(View):
             message = message
             sender = "expertdevelopertest@yopmail.com"
             to = ["expertdevelopertest@yopmail.com"]
-            send_mail(subject=subject, message=message, from_email=EMAIL_HOST, recipient_list=['expertdevelopertest@yopmail.com'])
+            send_mail(subject=subject, message=message, from_email=EMAIL_HOST, recipient_list=[email2])
             return render(request,'forgotpass.html',{'message':'Email has been sent'})
 
         except Front_Users.DoesNotExist: 
