@@ -86,7 +86,7 @@ class LoginUser(View):
 
             Front_Users.objects.get(email=email)
             try:
-                user_data=Front_Users.objects.get(password=password)
+                user_data=Front_Users.objects.get(password=password,email=email)
                 request.session['name']=user_data.name
                 request.session['logged_in']=True
                 request.session['username']=user_data.email
@@ -526,7 +526,7 @@ class Checkemail(View):
             print(n)
             # hasher=PBKDF2PasswordHasher()
             # stack=hasher.encode(password=n,salt='salt',iterations=56)
-           
+
             email2=data.email
             message="Hello,\n Please click the below link to reset your password \n\nhttp://billharloff.com/reset_password/?key="+n+"&email="+email2+"\n\nRegards,\nBill"
             print(message)
@@ -575,9 +575,9 @@ class Reset_password(View):
             obj.password = newpass
             obj.key=""
             obj.save()
-            return render(request, 'registration/login.html',{'message':'Password Updated'})
+            return render(request, 'registration/login.html',{'message':'Password Updated, Please Log-in with you new credentials'})
         except Front_Users.DoesNotExist:
-            return render(request, 'login.html',{'message':'Something went wrong, please try again'})                   
+            return render(request, 'registration/login.html',{'message':'Something Went Wrong, Try After Sometime'})                  
 
 
 
