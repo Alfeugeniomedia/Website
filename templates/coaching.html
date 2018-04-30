@@ -23,7 +23,7 @@
 				<div class="package_box">
 					<div class="package_head bronze">
 
-            <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:20px;color:black"></i><div class="showme">
+            <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:30px;color:black"></i><div class="showme">
                 <h4><b>Choose Your Plan Based Your Goals:</b><br></h4>
               <b>“I’m ready to get started” <br>
 
@@ -55,7 +55,7 @@
           </div>
 
                           <div id="yourLink"><i class="fa fa-info-circle pull-right" style="font-size:20px;color:black"></i></div> -->
-						<p class="text-white font_play">Bronze Plan</p>
+						<p class="text-white font_play">Bronze</p>
 						<p class="text-white"><sup>$</sup>497<sub>/month</sub></p>
                        
                         {% if request.session.logged_in != None %}
@@ -81,7 +81,7 @@
 				<div class="package_box premium">
 					<div class="package_head silver">
 
-             <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:20px;color:black"></i><div class="showme">
+             <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:30px;color:black"></i><div class="showme">
                 <h4><b>Choose Your Plan Based Your Goals:</b><br></h4>
               <b>“I’m ready to take it to the next level”<br>
 
@@ -120,7 +120,7 @@
                         {% if request.session.logged_in != None %}
                         	 <a href="{% url 'silverpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
                         {% else %}
-    						<a><button class="btn btn_start btn-sm" onclick="cpkg('silverpackage')">Start Now !</button></a>
+    						<a><button class="btn btn_start btn-sm" disabled onclick="cpkg('silverpackage')">Coming Soon !</button></a>
     					{% endif %}
 					</div>
 					<ul class="package_list">
@@ -138,7 +138,7 @@
 				<div class="package_box">
 					<div class="package_head gold">
 
-            <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:20px;color:black"></i><div class="showme">
+            <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:30px;color:black"></i><div class="showme">
                 <h4><b>Choose Your Plan Based Your Goals:</b><br></h4>
                <b>“Now I’m really serious” <br>
 
@@ -175,7 +175,7 @@
                        {% if request.session.logged_in != None %}
                         	 <a href="{% url 'goldpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
                         {% else %}
-    						<a><button class="btn btn_start btn-sm" onclick="cpkg('goldpackage')">Start Now !</button></a>
+    						<a><button class="btn btn_start btn-sm" disabled onclick="cpkg('goldpackage')">Coming Soon !</button></a>
     					{% endif %}
 					</div>
 					<ul class="package_list">
