@@ -302,7 +302,7 @@ header{
   transition: 0.4s;
 }*/
 .navbar-nav > li {
-  margin-right: 30px;
+  margin-right: 16px;
 }
 .navbar-nav > li:last-child{
   margin-right: 0;
