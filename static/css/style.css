@@ -4316,7 +4316,7 @@ form[data-form-id] button:disabled{
 .dropbtn {
     background-color: transparent;
     color: black;
-    padding: 12px;
+    padding: 14px;
     font-size: 13px;
     border: none;
 }
