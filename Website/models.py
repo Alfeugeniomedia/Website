@@ -31,6 +31,7 @@ class Front_Users(models.Model):
 	password=models.CharField(max_length=255)
 	date_joined=models.CharField(max_length=50)
 	key=models.TextField(max_length=255)
+	
 
 	
 class Membership(models.Model):
@@ -53,6 +54,23 @@ class Member_user(models.Model):
 # 	email=models.CharField(max_length=100,unique=True)
 # 	role=models.CharField(max_length=100)
 # 	description=models.CharField(max_length=100)
+
+class Roles(models.Model):
+	def __unicode__(self):
+			return self.role
+
+	
+	role=models.CharField(max_length=100)
+
+
+class User_roles(models.Model):
+	
+
+	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
+	role_id=models.ForeignKey(Roles,on_delete=models.CASCADE)	
+
+
+
 	
 
 	

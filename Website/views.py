@@ -34,6 +34,7 @@ class SignupUser(View):
         password2=data['c_password']
         date_joined=datetime.datetime.now()
         message=''
+       
         if(password == password2):
             password=hasher.encode(password=password,salt='salt',iterations=50000)
             try:
@@ -47,6 +48,31 @@ class SignupUser(View):
                 request.session['logged_in']=True
                 request.session['username']=email
                 request.session['name']=name
+                
+                #fetch id of the user, get id of basic plan from roles, save both to user_roles table, 
+                #then save the role to session
+                data=Front_Users.objects.get(email=email)
+                uid=data.id
+                print("uid of the new user is:-")
+                print(uid)
+                #fetching role_id of basic
+                getrole=Roles.objects.get(role='Basic')
+                role_id=getrole.id
+                print('role id of Basic is below:-')
+                print(role_id)
+                
+
+
+                setrole=User_roles(user_id=Front_Users.objects.get(id=uid),role_id=Roles.objects.get(role='Basic'))
+                setrole.save()
+
+                get_roleid=User_roles.objects.get(user_id=uid)
+                rid=get_roleid.role_id.id
+                print("the role name of this user is:-")
+                print(rid)
+                request.session['role']=rid
+
+
                 return redirect('/thank_you')
         else:
             return render(request, 'registration/signup.html',{'message':'Passwords do not match'})
@@ -57,6 +83,8 @@ class Logout(View):
             del request.session['logged_in']
             del request.session['username']
             del request.session['name']
+            del request.session['role']
+            
             # return render(request, 'registration/login.html')
             return redirect('/login/')
         else:
@@ -87,9 +115,13 @@ class LoginUser(View):
             Front_Users.objects.get(email=email)
             try:
                 user_data=Front_Users.objects.get(password=password,email=email)
+                uid=user_data.id
                 request.session['name']=user_data.name
                 request.session['logged_in']=True
                 request.session['username']=user_data.email
+                get_roleid=User_roles.objects.get(user_id=uid)
+                rid=get_roleid.role_id.id
+                request.session['role']=rid
                 return render(request, 'profile.html')
 
             except Front_Users.DoesNotExist:
@@ -421,18 +453,12 @@ class Update_pass(View):
                     obj.save()
                     return render(request, 'profile.html',{'message':'Password Updated'})
                 except Front_Users.DoesNotExist:
-                    return render(request, 'profile.html',{'message':'Something went wrong, please try again'})                   
-
-
+                    return render(request, 'profile.html',{'message':'Something went wrong, please try again'})
             else:
                 return render(request, 'profile.html',{'message':'Confirm Password is not the same'})
         else:
             return render(request, 'profile.html',{'message':'Old Password Entered Incorrectly'})
-        #print(checkpass)
-        #print(oldpass)
-        # print(newpass)
-        # print(conpass)
-        
+
         return redirect('/profile')
 
 class Test(View):
@@ -485,10 +511,15 @@ class handleajax(View):
            
             Front_Users.objects.get(email=email)
             try:
-                user_data=Front_Users.objects.get(password=password)
+                user_data=Front_Users.objects.get(password=password,email=email)
+                uid=user_data.id
                 request.session['name']=user_data.name
                 request.session['logged_in']=True
                 request.session['username']=user_data.email
+                get_roleid=User_roles.objects.get(user_id=uid)
+                rid=get_roleid.role_id.id
+                request.session['role']=rid
+               
                 return JsonResponse(1, safe=False)
             except Front_Users.DoesNotExist:
                 return JsonResponse(2, safe=False)

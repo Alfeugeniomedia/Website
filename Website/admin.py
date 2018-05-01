@@ -27,4 +27,6 @@ admin.site.register(Events,EventsAdmin)
 admin.site.register(Front_Users)
 admin.site.register(Member_user)
 admin.site.register(Membership)
+admin.site.register(Roles)
+admin.site.register(User_roles)
 

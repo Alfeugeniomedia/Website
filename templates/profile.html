@@ -13,7 +13,7 @@
 		
 		<div class='row'>
 			<div class='col-md-4 '>
-				<h2>Welcome! {{request.session.name}} </h2>
+				<h2>Welcome! {{request.session.name}} </h2><br>
 			</div>
 			<br>
 			<div class='col-md-8 '>
@@ -39,6 +39,7 @@
   <button class="tablinks passlink" onclick="openCity(event, 'password')">Change Password</button>
   <button class="tablinks" onclick="openCity(event, 'subs')">My Subscription</button>
   <button class="tablinks" onclick="openCity(event, 'tuts')">Traning Courses</button>
+  <button class="tablinks" onclick="openCity(event, 'lib')">Resource Library</button>
 </div>
 
 				<br>
@@ -126,15 +127,258 @@
 </div>
 
 <div id="subs" class="tabcontent">
-  <h3>My Subscriptions</h3>
-  <p>*Feature Coming Soon*</p>
+  <br>
+  {% if request.session.role == 1 %}
+         
+         <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  <center><img src="../assets/images/basic.png" style='width: 40%'></center>
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+    
+      {% elif request.session.role == 2 %}
+
+        
+         <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  <center><img src="../assets/images/bronze.jpg" style='width: 40%'></center>
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+
+      {% elif request.session.role == 3 %}
+
+        
+        <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  <center><img src="../assets/images/silver.jpg" style='width: 30%'></center>
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+         
+      {% elif request.session.role == 4 %}
+
+         <center><img src="../assets/images/gold.png" style='width: 30%'></center>     
+      {% else %}
+          You Don't Have Any Subscriptions   
+      
+  {% endif%}
   
 </div>
 <div id="tuts" class="tabcontent">
   <h3>The Complete Short Sale Process</h3>
   <hr>
-    You need to buy a subscription plan to get access
- <!-- <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+  {% if request.session.role == 1 %}
+      
+
+      <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  Please buy a subscription to gain access to this feature
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='/coaching' class='btn btn-primary'>Subscribe Here</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+
+     
+      {% elif request.session.role == 2 %}
+
+         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+      {% elif request.session.role == 3 %}
+
+         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         
+      {% elif request.session.role == 4 %}
+
+         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>     
+      {% else %}
+          You Don't Have Any Subscriptions   
+      
+  {% endif%}
+    
+
+  
+
+</div>
+<div id="lib" class="tabcontent">
+  <h3>Resourse Library</h3>
+  <hr>
+  {% if request.session.role == 1 %}
+      <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  Please buy a subscription to gain access to this feature
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='/coaching' class='btn btn-primary'>Subscribe Here</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+     
+      {% elif request.session.role == 2 %}
+          <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  Ignite your investing career now!
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='https://drive.google.com/open?id=1b4_DxQTTJkbbrB9SgJuop9oE2NiSudf9' class='btn btn-primary'>Click Here</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+         
+
+
+      {% elif request.session.role == 3 %}
+
+         <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  Ignite your investing career now!
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='https://drive.google.com/open?id=1b4_DxQTTJkbbrB9SgJuop9oE2NiSudf9' class='btn btn-primary'>Click Here</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+         
+      {% elif request.session.role == 4 %}
+
+         <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  Ignite your investing career now!
+                </div>
+                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                  <a href='https://drive.google.com/open?id=1b4_DxQTTJkbbrB9SgJuop9oE2NiSudf9' class='btn btn-primary'>Click Here</a>
+                </div>
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>    
+      {% else %}
+          You Don't Have Any Subscriptions   
+      
+      {% endif%}
+          
+      
+  
+
+
+
+    <!--  -->
+
 </div>
 
 			</div> 
