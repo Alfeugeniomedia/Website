@@ -224,7 +224,7 @@ header{
   background-size: cover
 }
 .navbar-default .navbar-nav > li > a{
-  color: red;
+  color: black;
 }
 .navbar-header{
   min-width: 260px;
