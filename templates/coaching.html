@@ -24,13 +24,13 @@
 					<div class="package_head bronze">
 
             <div class="showhim"><i class="fa fa-info-circle pull-right" style="font-size:30px;color:black"></i><div class="showme" style='position: absolute;position: absolute;
-    background-color: black;
-    left: 15px;
-    right: 15px;
-    top: 75px;
-    z-index: 1;
-    color: #fff;
-    border-radius: 10px'>
+                background-color: black;
+                left: 15px;
+                right: 15px;
+                top: 75px;
+                z-index: 1;
+                color: #fff;
+                border-radius: 10px'>
                 <h4><b>Choose Your Plan Based Your Goals:</b><br></h4>
               <b>“I’m ready to get started” <br>
 
@@ -132,7 +132,7 @@
 						<p class="text-black"><sup>$</sup>997<sub>/month</sub></p>
                         
                         {% if request.session.logged_in != None %}
-                        	 <a href="{% url 'silverpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                        	 <a href="{% url 'silverpackage' %}"><button class="btn btn_start btn-sm" disabled>Coming Soon !</button></a>
                         {% else %}
     						<a><button class="btn btn_start btn-sm" disabled onclick="cpkg('silverpackage')">Coming Soon !</button></a>
     					{% endif %}
@@ -194,7 +194,7 @@
 						<p class="text-white font_play">Gold</p>
 						<p class="text-white"><sup>$</sup>1,497<sub>/month</sub></p>
                        {% if request.session.logged_in != None %}
-                        	 <a href="{% url 'goldpackage' %}"><button class="btn btn_start btn-sm">Start Now !</button></a>
+                        	 <a href="{% url 'goldpackage' %}"><button class="btn btn_start btn-sm" disabled>Coming Soon !</button></a>
                         {% else %}
     						<a><button class="btn btn_start btn-sm" disabled onclick="cpkg('goldpackage')">Coming Soon !</button></a>
     					{% endif %}
