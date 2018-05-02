@@ -73,7 +73,7 @@ class SignupUser(View):
                 request.session['role']=rid
 
 
-                return redirect('/thank_you')
+                return redirect('/profile')
         else:
             return render(request, 'registration/signup.html',{'message':'Passwords do not match'})
 
