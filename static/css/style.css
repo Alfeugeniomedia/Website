@@ -4089,8 +4089,20 @@ form[data-form-id] button:disabled{
   .courses_list img { max-height: 160px;}
   .courses_list h2{font-size: 20px}
       .test_ban {
-      right: 2%;
-      width: 285px;
+          right: 27%;
+          width: 45%;
+          top: 0%;
+  }
+  .testmonial_main_text blockquote{
+    border-left: none;
+    margin: 0;
+    padding: 30px 40px 5px;
+    color: #fff;
+    position: relative;
+    max-width: 100%;
+    padding-top: 52%;
+    
+    
   }
 
 
