@@ -4501,3 +4501,17 @@ display : block;
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+g {
+  border: solid black;
+    border-width: 0 3px 13px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    right: 38px;
+    margin: -6px;
+  
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
