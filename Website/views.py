@@ -15,7 +15,18 @@ from django.contrib.auth.hashers import PBKDF2PasswordHasher
 from django.http import JsonResponse
 import random
 from django.utils.crypto import get_random_string
+import datetime  
+from dateutil.relativedelta import *
+from django.core.cache import cache
 
+def flush():
+    # This works as advertised on the memcached cache:
+    cache.clear()
+    # This manually purges the SQLite cache:
+    cursor = connections['cache_database'].cursor()
+    cursor.execute('DELETE FROM cache_table')
+    transaction.commit_unless_managed(using='cache_database')
+    print('cache clear')
 class SignupUser(View):
     def get(self, request):
         if not request.session.get('logged_in', None):
@@ -83,7 +94,9 @@ class Logout(View):
             del request.session['logged_in']
             del request.session['username']
             del request.session['name']
-            del request.session['role']
+            del request.session['plan']
+            del request.session['expiration']
+
             
             # return render(request, 'registration/login.html')
             return redirect('/login/')
@@ -114,6 +127,7 @@ class LoginUser(View):
 
             Front_Users.objects.get(email=email)
             try:
+                plan="valid"
                 user_data=Front_Users.objects.get(password=password,email=email)
                 uid=user_data.id
                 request.session['name']=user_data.name
@@ -122,6 +136,17 @@ class LoginUser(View):
                 get_roleid=User_roles.objects.get(user_id=uid)
                 rid=get_roleid.role_id.id
                 request.session['role']=rid
+                today = datetime.datetime.today()
+                expiration=get_roleid.exp_date
+                formatedToday = today.strftime("%Y-%m-%d")
+                formatedExpiration = expiration.strftime("%Y-%m-%d")
+                print(formatedToday)
+                print(formatedExpiration)
+                if(formatedExpiration < formatedToday):
+                    plan="expired"
+                print(plan)
+                request.session['plan']=plan
+                request.session['expiration']=formatedExpiration
                 return render(request, 'profile.html')
 
             except Front_Users.DoesNotExist:
@@ -511,6 +536,7 @@ class handleajax(View):
            
             Front_Users.objects.get(email=email)
             try:
+                plan=''
                 user_data=Front_Users.objects.get(password=password,email=email)
                 uid=user_data.id
                 request.session['name']=user_data.name
@@ -519,6 +545,17 @@ class handleajax(View):
                 get_roleid=User_roles.objects.get(user_id=uid)
                 rid=get_roleid.role_id.id
                 request.session['role']=rid
+                today = datetime.datetime.today()
+                expiration=get_roleid.exp_date
+                formatedToday = today.strftime("%Y-%m-%d")
+                formatedExpiration = expiration.strftime("%Y-%m-%d")
+                print(formatedToday)
+                print(formatedExpiration)
+                if(formatedExpiration < formatedToday):
+                    plan="expired"
+                print(plan)
+                request.session['plan']=plan
+                request.session['expiration']=formatedExpiration
                
                 return JsonResponse(1, safe=False)
             except Front_Users.DoesNotExist:
@@ -529,6 +566,65 @@ class handleajax(View):
             # print('user not logged in')
 
            return JsonResponse(3, safe=False)
+
+class PlanUpgradeAjax(View):
+
+    def get(self,request):
+        return redirect('/thank_you')
+
+    def post(self,request):
+
+        data=request.POST
+        email3=request.session['username']
+        amount3=data['amount']
+        today = datetime.date.today()
+        expiration=today+ relativedelta(months=3)
+        print(expiration)
+
+        data=Front_Users.objects.get(email=email3)
+        userid=data.id
+        print('user id below:-')
+        print(userid)
+        plan_is='Basic'
+        if amount3 == '1491.00':
+            plan_is='Bronze'
+
+        elif amount3 == '997.00':
+            plan_is='Silver'
+
+        elif amount3 == '1497.00':
+            plan_is='Gold'
+
+        # print("plan is below:-")
+        # print(plan_is)
+        data2=Roles.objects.get(role=plan_is)
+        roleid=data2.id
+        print("role id below:-")
+        print(roleid)
+        print("sub_date below:-")
+        print(today)
+        print("exp_date is below")
+        print(expiration)
+        print("amount below")
+        print(amount3)
+        try:
+            obj=User_roles.objects.get(user_id=userid)
+            obj.role_id=data2
+            obj.sub_date=today
+            obj.exp_date=expiration
+            obj.amount=amount3
+            obj.save()
+            print("Data Updated")
+            del request.session['logged_in']
+            del request.session['username']
+            del request.session['name']
+            del request.session['role']
+            return JsonResponse(1, safe=False)
+        except User_roles.DoesNotExist:
+            print("error here")    
+        return JsonResponse(email3, safe=False)
+
+
 
 
 

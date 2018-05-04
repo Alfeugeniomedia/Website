@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -158,7 +159,7 @@
 
 							<div class="col-md-6 col-sm-6 nopadding form-group">3 Months Bronze Plan Membership <br> <i>30 day money back guarentee!</i></div>
 							<div class="col-md-6 col-sm-6 nopadding form-group text-right">
-								<strong>$497.00</strong>
+								<strong>$1491.00</strong>
 							</div>
 							<div class="clearfix"></div>
 
@@ -204,7 +205,7 @@
                     payment: {
                         transactions: [
                             {
-                                amount: { total: '447', currency: '{{ currency }}' }
+                                amount: { total: '1491', currency: '{{ currency }}' }
                             }
                         ]
                     }
@@ -215,11 +216,55 @@
             onAuthorize: function(data, actions) {
 
                 // Make a call to the REST api to execute the payment
-                return actions.payment.execute().then(function() {
-                    console.log('in api function - payment approved');
+                return actions.payment.execute().then(function(payment) {
+                    var email=payment.payer.payer_info.email;
+                    var amount =payment.transactions[0].amount.total;
+                    console.log(email,amount,'in api function - payment approved');
                     //document.getElementById('id_confirmation').value = "true";
                     //document.getElementById('id_amount').value = {{ amount }};
+                    function getCookie(name) {
+					    var cookieValue = null;
+						    if (document.cookie && document.cookie !== '') {
+						        var cookies = document.cookie.split(';');
+						        for (var i = 0; i < cookies.length; i++) {
+						            var cookie = jQuery.trim(cookies[i]);
+						            // Does this cookie string begin with the name we want?
+						            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						                break;
+						            }
+						        }
+						    }
+						    return cookieValue;
+						}
+					var csrftoken = getCookie('csrftoken');
+					console.log(csrftoken);
                     //document.theForm.submit();
+                    $.ajax({
+                    	type: "POST",
+                    	url :'/updateplan',
+                    	data: {
+                    		"email":email,
+                    		"amount" :amount
+                    		  },
+                    	beforeSend: function(xhr, settings) {
+					         if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+					             // Only send the token to relative URLs i.e. locally.
+					             xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+					         }
+					     } ,
+                    	success:function(data){
+                    		if(data==1)
+                    		{
+                    			window.location = "/login/";
+                    		}
+                    		else
+                    		{
+                    			console.log("Error");
+                    		}
+                    		//if response is 1 , redirect
+                    	}
+                    });
                 });
             }
 
@@ -227,7 +272,7 @@
 
         function dummyClick() {
             document.getElementById('id_confirmation').value = "true";
-            document.getElementById('id_amount').value = '497';
+            document.getElementById('id_amount').value = '1491';
             document.theForm.submit();
         }
     </script>
@@ -262,7 +307,7 @@
                             <ul class="">
                                 <li>Monthly Group Call with Bill: Monthly REI Success Session- (limit of 5 members per call!)</li>
                                 <li> Unlimited Access to the Entirety of B.H Coaching’s Resource Library for Training Courses, Contracts, Marketing Materials, and More!</li>
-                                <li>Unlimited Email Access to Bill’s Personally Trained Staff of REI Professionals to Support You During the Implementation of Bill's Strategies.</li>
+                                <li>One-on-One Coaching by Bill’s Personally Trained Staff of REI Professionals to Support You During the Implementation of Bill's Strategies.</li>
                                 <li>Access to All of B.H. Coaching’s Monthly Networking Live-Stream Sessions and Webinars.
 								</li>
                             </ul>

@@ -165,13 +165,24 @@
                 <div class='col-md-5'>
                   <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
                 
-                <div class='panel-body'>
-                  <center><img src="../assets/images/bronze.jpg" style='width: 40%'></center>
-                </div>
-                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
-                  <a href='/coaching' class='btn btn-primary'>Upgrade</a>
-                </div>
-              </div>
+                    <div class='panel-body'>
+                        
+                        {% if request.session.plan == 'valid' %}
+                          <center><img src="../assets/images/bronze.jpg" style='width: 40%'></center>
+                       
+                         Valid upto {{request.session.expiration}}
+                         {% else %}
+                          <center><img src="../assets/images/bronze.jpg" style='width: 40%'></center>
+                          Your plan expired on {{request.session.expiration}}
+                       {% endif %}
+                    </div>
+                    {% if request.session.plan != 'valid' %}
+                    <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                       <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                    </div>
+                    {% endif %}
+                    
+                  </div>
                 </div>
               </center>
             </div>
@@ -192,11 +203,21 @@
                   <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
                 
                 <div class='panel-body'>
-                  <center><img src="../assets/images/silver.jpg" style='width: 30%'></center>
+                       {% if request.session.plan == 'valid' %}
+                          <center><img src="../assets/images/silver.jpg" style='width: 30%'></center>
+                       
+                         Valid upto {{request.session.expiration}}
+                         {% else %}
+                          <center><img src="../assets/images/silver.jpg" style='width: 40%'></center>
+                          Your plan expired on {{request.session.expiration}}
+                       {% endif %}
+                 
                 </div>
-                <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
-                  <a href='/coaching' class='btn btn-primary'>Upgrade</a>
-                </div>
+                {% if request.session.plan != 'valid' %}
+                    <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                       <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                    </div>
+                    {% endif %}
               </div>
                 </div>
               </center>
@@ -207,7 +228,39 @@
          
       {% elif request.session.role == 4 %}
 
-         <center><img src="../assets/images/gold.png" style='width: 30%'></center>     
+            
+         <div class='container'>
+          <div class='row'>
+            
+            <div class='col-md-12'>
+              <center>
+                <div class='col-md-2'></div>
+                <div class='col-md-5'>
+                  <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                
+                <div class='panel-body'>
+                  {% if request.session.plan == 'valid' %}
+                          <center><img src="../assets/images/gold.png" style='width: 30%'></center>
+                       
+                         Valid upto {{request.session.expiration}}
+                         {% else %}
+                          <center><img src="../assets/images/gold.png" style='width: 40%'></center>
+                          Your plan expired on {{request.session.expiration}}
+                       {% endif %}
+                 
+                </div>
+                {% if request.session.plan != 'valid' %}
+                    <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                       <a href='/coaching' class='btn btn-primary'>Upgrade</a>
+                    </div>
+                    {% endif %}
+              </div>
+                </div>
+              </center>
+            </div>
+            
+          </div>
+        </div>  
       {% else %}
           You Don't Have Any Subscriptions   
       
@@ -245,17 +298,90 @@
 
      
       {% elif request.session.role == 2 %}
-
+          {% if request.session.plan == 'valid' %}
          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+            {% elif request.session.plan != 'valid'  %}
+              <div class='container'>
+                <div class='row'>
+                  
+                  <div class='col-md-12'>
+                    <center>
+                      <div class='col-md-2'></div>
+                      <div class='col-md-5'>
+                        <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                      
+                      <div class='panel-body'>
+                        Please buy a subscription to gain access to this feature
+                      </div>
+                      <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                        <a href='/coaching' class='btn btn-primary'>Subscribe Here</a>
+                      </div>
+                    </div>
+                      </div>
+                    </center>
+                  </div>
+                  
+                </div>
+              </div>
+          {% endif %}
 
       {% elif request.session.role == 3 %}
 
+        {% if request.session.plan == 'valid' %}
          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            {% elif request.session.plan != 'valid'  %}
+              <div class='container'>
+                <div class='row'>
+                  
+                  <div class='col-md-12'>
+                    <center>
+                      <div class='col-md-2'></div>
+                      <div class='col-md-5'>
+                        <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                      
+                      <div class='panel-body'>
+                        Please buy a subscription to gain access to this feature
+                      </div>
+                      <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                        <a href='/coaching' class='btn btn-primary'>Subscribe Here</a>
+                      </div>
+                    </div>
+                      </div>
+                    </center>
+                  </div>
+                  
+                </div>
+              </div>
+          {% endif %}
          
       {% elif request.session.role == 4 %}
 
-         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>     
+         {% if request.session.plan == 'valid' %}
+         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL72HCXLSaVP3hsljOY9WoZtMCYTE1CfMT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            {% elif request.session.plan != 'valid'  %}
+              <div class='container'>
+                <div class='row'>
+                  
+                  <div class='col-md-12'>
+                    <center>
+                      <div class='col-md-2'></div>
+                      <div class='col-md-5'>
+                        <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
+                      
+                      <div class='panel-body'>
+                        Please buy a subscription to gain access to this feature
+                      </div>
+                      <div class='panel-footer' style='background-color:white;border-radius: 2px;''>
+                        <a href='/coaching' class='btn btn-primary'>Subscribe Here</a>
+                      </div>
+                    </div>
+                      </div>
+                    </center>
+                  </div>
+                  
+                </div>
+              </div>
+          {% endif %}
       {% else %}
           You Don't Have Any Subscriptions   
       

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django import forms
+from datetime import datetime
 
 class Users(User):
 
@@ -34,21 +35,21 @@ class Front_Users(models.Model):
 	
 
 	
-class Membership(models.Model):
-	def __unicode__(self):
-	 		return self.title
-	title=models.CharField(max_length=255)
-	price=models.CharField(max_length=100)
-	description=models.CharField(max_length=255)
+# class Membership(models.Model):
+# 	def __unicode__(self):
+# 	 		return self.title
+# 	title=models.CharField(max_length=255)
+# 	price=models.CharField(max_length=100)
+# 	description=models.CharField(max_length=255)
 
 
-class Member_user(models.Model):
+# class Member_user(models.Model):
 	
 
-	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
-	membership_id=models.ForeignKey(Membership,on_delete=models.CASCADE)
-	date=models.DateField()
-	expiry_date=models.DateField()
+# 	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
+# 	membership_id=models.ForeignKey(Membership,on_delete=models.CASCADE)
+# 	date=models.DateField()
+# 	expiry_date=models.DateField()
 
 # class user_roles(models.Model):
 # 	email=models.CharField(max_length=100,unique=True)
@@ -67,8 +68,11 @@ class User_roles(models.Model):
 	
 
 	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
-	role_id=models.ForeignKey(Roles,on_delete=models.CASCADE)	
-
+	role_id=models.ForeignKey(Roles,on_delete=models.CASCADE)
+	sub_date=models.DateField(default=datetime.now)
+	exp_date=models.DateField(default=datetime.now)
+	amount=models.CharField(max_length=100,blank=True)	
+	
 
 
 	

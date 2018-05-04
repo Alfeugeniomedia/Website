@@ -57,6 +57,7 @@ urlpatterns = [
     url(r'^update_pass$', Update_pass.as_view(), name='update_pass'),
     url(r'^test$', Test.as_view(), name='test'),
     url(r'^relogin$',handleajax.as_view(), name='relogin'),
+    url(r'^updateplan$',PlanUpgradeAjax.as_view(), name='updateplan'),
     url(r'^forgotpass$',Forgotpass.as_view(), name='forgotpass'),
     url(r'^checkemail$',Checkemail.as_view(), name='checkemail'),
     url(r'^reset_password/$',Reset_password.as_view(), name='reset_password'),
