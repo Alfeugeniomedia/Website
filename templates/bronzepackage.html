@@ -242,6 +242,7 @@
 					var csrftoken = getCookie('csrftoken');
 					console.log(csrftoken);
                     //document.theForm.submit();
+
                     $.ajax({
                     	type: "POST",
                     	url :'/updateplan',
@@ -255,10 +256,18 @@
 					             // Only send the token to relative URLs i.e. locally.
 					             xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
 					         }
-					     } ,
+					     },
                     	success:function(data){
+
                     		if(data==1)
                     		{
+                    			// $.ajax({
+                    			// 	type:"GET",
+                    			// 	url:"https://us12.api.mailchimp.com/3.0/lists/ee1b0a667c/members?apikey=4ab7975aea0e30ea38bd8d4cadea5293-us12",
+                    			// 	success: function(res){
+                    			// 		console.log(res);
+                    			// 	}
+                    			// });
                     			window.location = "/login/";
                     		}
                     		else
