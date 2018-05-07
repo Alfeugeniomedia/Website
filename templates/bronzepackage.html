@@ -219,9 +219,11 @@
                 return actions.payment.execute().then(function(payment) {
                     var email=payment.payer.payer_info.email;
                     var amount =payment.transactions[0].amount.total;
-                    console.log(email,amount,'in api function - payment approved');
+                    var tran_id =payment.id;
+                    console.log(email,amount,tran_id,'in api function - payment approved');
                     //document.getElementById('id_confirmation').value = "true";
                     //document.getElementById('id_amount').value = {{ amount }};
+                    
                     function getCookie(name) {
 					    var cookieValue = null;
 						    if (document.cookie && document.cookie !== '') {
@@ -245,7 +247,8 @@
                     	url :'/updateplan',
                     	data: {
                     		"email":email,
-                    		"amount" :amount
+                    		"amount" :amount,
+                    		"tran_id":tran_id
                     		  },
                     	beforeSend: function(xhr, settings) {
 					         if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {

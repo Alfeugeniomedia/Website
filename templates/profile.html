@@ -13,7 +13,14 @@
 		
 		<div class='row'>
 			<div class='col-md-4 '>
-				<h2>Welcome! {{request.session.name}} </h2><br>
+				<h2>Welcome! {{request.session.name}} </h2>
+        email->{{request.session.username}}<br>
+        logged_in->{{request.session.logged_in}}<br>
+        role->{{request.session.role}}<br>
+        plan->{{request.session.plan}}<br>
+        expiration->{{request.session.expiration}}
+
+        <br>
 			</div>
 			<br>
 			<div class='col-md-8 '>
@@ -128,6 +135,10 @@
 
 <div id="subs" class="tabcontent">
   <br>
+ 
+    
+
+
   {% if request.session.role == 1 %}
          
          <div class='container'>
@@ -156,13 +167,14 @@
       {% elif request.session.role == 2 %}
 
         
-         <div class='container'>
+         
           <div class='row'>
-            
+           
             <div class='col-md-12'>
               <center>
-                <div class='col-md-2'></div>
-                <div class='col-md-5'>
+               
+
+              
                   <div class='panel panel-success' style="box-shadow: 1px 1px 20px 2px grey">
                 
                     <div class='panel-body'>
@@ -183,12 +195,12 @@
                     {% endif %}
                     
                   </div>
-                </div>
+              
               </center>
             </div>
-            
-          </div>
+             
         </div>
+        
 
       {% elif request.session.role == 3 %}
 
@@ -261,11 +273,50 @@
             
           </div>
         </div>  
+
       {% else %}
           You Don't Have Any Subscriptions   
       
   {% endif%}
-  
+  <div class='row'> <h3 style='padding-left:5%'>Previous Payments:-</h3><br>
+          <div class='col-md-12' style='overflow-x:scroll;'>
+            
+              <div class='row' style='border-bottom:solid 1px black;padding:5px;margin-bottom: 10px;'>
+                <div class='col-md-3 col-sm-3 col-xs-3'><center><b>Plan</b></center></div>
+                <div class='col-md-3 col-sm-3 col-xs-3'><center><b>Subs.</b></center></div>
+                <div class='col-md-3 col-sm-3 col-xs-3'><center><b>Exp.</b></center></div>
+                <div class='col-md-3 col-sm-3 col-xs-3'><center><b>Paid</b></center></div>
+              </div>
+              
+                {% if data %}
+                  {% for record in data %}
+                    <div class='row' >
+                      <div class='col-md-3 col-sm-3 col-xs-3'>  
+                       
+                       <center> {{record.role_id.role}}</center>
+                      </div>
+                      <div class='col-md-3 col-sm-3 col-xs-3'>
+                        
+                        <center>{{record.sub_date}}</center>
+                      </div>
+                      <div class='col-md-3 col-sm-3 col-xs-3'>
+                        
+                        <center>{{record.exp_date}}</center>
+                      </div>
+                      <div class='col-md-3 col-sm-3 col-xs-3'>
+                        
+                        <center>{{record.amount}}</center>
+                      </div>
+                      </div><hr>
+                  {% endfor %}
+                  {% else %}
+                  No Past Transactions
+                {% endif %}
+
+                
+            
+          </div>
+        </div>
 </div>
 <div id="tuts" class="tabcontent">
   <h3>The Complete Short Sale Process</h3>

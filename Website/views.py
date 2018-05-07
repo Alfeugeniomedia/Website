@@ -19,14 +19,7 @@ import datetime
 from dateutil.relativedelta import *
 from django.core.cache import cache
 
-def flush():
-    # This works as advertised on the memcached cache:
-    cache.clear()
-    # This manually purges the SQLite cache:
-    cursor = connections['cache_database'].cursor()
-    cursor.execute('DELETE FROM cache_table')
-    transaction.commit_unless_managed(using='cache_database')
-    print('cache clear')
+
 class SignupUser(View):
     def get(self, request):
         if not request.session.get('logged_in', None):
@@ -82,7 +75,11 @@ class SignupUser(View):
                 print("the role name of this user is:-")
                 print(rid)
                 request.session['role']=rid
-
+                request.session['plan']='valid'
+                today = datetime.date.today()
+                expiration=today+ relativedelta(months=30)
+                print(expiration)
+                request.session['expiration']='unlimited'
 
                 return redirect('/profile')
         else:
@@ -147,7 +144,7 @@ class LoginUser(View):
                 print(plan)
                 request.session['plan']=plan
                 request.session['expiration']=formatedExpiration
-                return render(request, 'profile.html')
+                return redirect('/profile')
 
             except Front_Users.DoesNotExist:
                 return render(request,'registration/login.html',{'message':'Password entered is Incorrect'})
@@ -420,7 +417,19 @@ class Profile(View):
         if not request.session.get('logged_in', None):
             return redirect('index')
         else:
-            return render(request,'profile.html')
+            username=request.session.get('username')
+            data=Front_Users.objects.get(email=username)
+            uid=data.id
+            print("record below")
+            record=Subscription_log.objects.filter(user_id=uid).order_by('-sub_date')
+            print(uid)
+            for data in record:
+                print("record")
+                print(data.user_id.id)
+            #sub_date=record.amount
+            
+
+            return render(request,'profile.html',{'data':record})
 
 class Blogs(View):
     def get(self,request):
@@ -577,6 +586,8 @@ class PlanUpgradeAjax(View):
         data=request.POST
         email3=request.session['username']
         amount3=data['amount']
+        tran_id=data['tran_id']
+        print(tran_id)
         today = datetime.date.today()
         expiration=today+ relativedelta(months=3)
         print(expiration)
@@ -613,8 +624,22 @@ class PlanUpgradeAjax(View):
             obj.sub_date=today
             obj.exp_date=expiration
             obj.amount=amount3
+            obj.tran_id=tran_id
             obj.save()
             print("Data Updated")
+            print(userid)
+            print(roleid)
+            print(today)
+            print(expiration)
+            print(amount3)
+            
+            try:
+                record=Subscription_log(user_id=data,role_id=data2,sub_date=today,exp_date=expiration,amount=amount3,tran_id=tran_id)
+                record.save()
+                print("SAVED")
+            except:
+                print("data not saved")
+
             del request.session['logged_in']
             del request.session['username']
             del request.session['name']

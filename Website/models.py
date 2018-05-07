@@ -34,28 +34,6 @@ class Front_Users(models.Model):
 	key=models.TextField(max_length=255)
 	
 
-	
-# class Membership(models.Model):
-# 	def __unicode__(self):
-# 	 		return self.title
-# 	title=models.CharField(max_length=255)
-# 	price=models.CharField(max_length=100)
-# 	description=models.CharField(max_length=255)
-
-
-# class Member_user(models.Model):
-	
-
-# 	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
-# 	membership_id=models.ForeignKey(Membership,on_delete=models.CASCADE)
-# 	date=models.DateField()
-# 	expiry_date=models.DateField()
-
-# class user_roles(models.Model):
-# 	email=models.CharField(max_length=100,unique=True)
-# 	role=models.CharField(max_length=100)
-# 	description=models.CharField(max_length=100)
-
 class Roles(models.Model):
 	def __unicode__(self):
 			return self.role
@@ -66,15 +44,18 @@ class Roles(models.Model):
 
 class User_roles(models.Model):
 	
-
 	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
 	role_id=models.ForeignKey(Roles,on_delete=models.CASCADE)
 	sub_date=models.DateField(default=datetime.now)
 	exp_date=models.DateField(default=datetime.now)
-	amount=models.CharField(max_length=100,blank=True)	
+	amount=models.CharField(max_length=100,blank=True)
+	tran_id=models.CharField(max_length=255,blank=True)	
 	
+class Subscription_log(models.Model):
 
-
-	
-
-	
+	user_id=models.ForeignKey(Front_Users,on_delete=models.CASCADE)
+	role_id=models.ForeignKey(Roles,on_delete=models.CASCADE)
+	sub_date=models.CharField(max_length=100)
+	exp_date=models.CharField(max_length=100)
+	amount=models.CharField(max_length=100)
+	tran_id=models.CharField(max_length=255,blank=True)
