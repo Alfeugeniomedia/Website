@@ -640,10 +640,8 @@ class PlanUpgradeAjax(View):
             except:
                 print("data not saved")
 
-            del request.session['logged_in']
-            del request.session['username']
-            del request.session['name']
-            del request.session['role']
+            
+            
             return JsonResponse(1, safe=False)
         except User_roles.DoesNotExist:
             print("error here")    
