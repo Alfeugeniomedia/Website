@@ -4520,7 +4520,7 @@ display : block;
     from {opacity: 0;}
     to {opacity:1 ;}
 }
-g {
+#g {
   border: solid black;
     border-width: 0 3px 13px 0;
     display: inline-block;
